@@ -1,0 +1,168 @@
+desc[compedia-timmy2]:
+
+name = Timmy the Dream Hunter
+icon = compedia-timmy2.png
+machine = pc
+// rootpath = D:\ 
+rootpath = C:\FLAGTWR\TIMMY2
+launch = "C:\Flagtwr\Timmy2\Timmy2.exe" EMME /CFG:C:\FLAGTWR\TIMMY2\itamar2.ini
+osenv = windows 98
+winres = 640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "")
+        if (!!file_exists("C:\\FLAGTWR\\TIMMY2\\ITAMAR2.INI")) { file_save("C:\\FLAGTWR\\TIMMY2\\ITAMAR2.INI", "$$(ITAMAR2_CONTENTS)") }
+        if (is_windows()) {
+            winregistry_import_raw("$$(REGISTRY)");
+        }
+    ]]]
+end
+
+
+config[gamesel]:
+    condition = false
+    title = Game Select
+    option[movie]: name = Filmgurun; launch = "C:\BONNIER\FILMGURU\MOVIE.EXE" EMME /CFG:C:\BONNIER\FILMGURU\movie.ini 
+    option[timmy2]: name = Timmy 2 Demo; launch = "C:\BONNIER\FILMGURU\DEMO2S.EXE" EMME /CFG:C:\BONNIER\FILMGURU\demo2s.ini 
+    option[lost]: name =  Jakten på de försvunna bokstäverna Demo; launch = "C:\BONNIER\FILMGURU\LOSTDEMO.EXE" EMME /CFG:C:\BONNIER\FILMGURU\lostdemo.ini 
+end
+
+
+//
+// 
+//
+fragment[cd-pc-en-961007]:
+    file[]: crc = e5814350; size =       259; name = 16COLOR.ENG
+    file[]: crc = 420c7155; size =     92208; name = _ING.DLL
+    file[]: crc = c259f8ca; size =     12800; name = _ING32.DLL
+    file[]: crc = 3b514083; size =    188960; name = _INGDE.DLL
+    file[]: crc = 1be07fa4; size =      6736; name = _INGDIB.DRV
+    file[]: crc = a2b26dc7; size =      5024; name = _INGPAL.WND
+    file[]: crc = ebc07351; size =      9813; name = _MSSETUP.EXE
+    file[]: crc = b5786357; size =     89504; name = _MSTEST.EXE
+    file[]: crc = 345cd097; size =      1966; name = _VA.386
+    file[]: crc = c43ea956; size =        46; name = AUTORUN.INF
+    file[]: crc = a21d9432; size =   7110251; name = COMMON.B
+    file[]: crc = 1544c6aa; size =   4378082; name = DATA.C
+    file[]: crc = 22fa3eee; size =        24; name = DEMO.TXP
+    file[]: crc = 67f7f817; size =   2091645; name = DEMOE.A
+    file[]: crc = 36b58ab9; size =   5675093; name = DEMOE.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = DEMOE.C
+    file[]: crc = f8e58d5f; size =   7468903; name = DEMOE.D
+    file[]: crc = e876a1c3; size =     50565; name = DEMOE.E
+    file[]: crc = f72c73c8; size =      4204; name = DEMOE.LOD
+    file[]: crc = 22fa3eee; size =        24; name = DEMOE.TXP
+    file[]: crc = e3d39d44; size =     64515; name = ENG.MAP
+    file[]: crc = ef75ea95; size =  18029066; name = GAMES.C
+    file[]: crc = 9fd4f8ec; size =   6085767; name = HELPSVOC.E
+//    file[]: crc = 4f9ecfde; size =       453; name = ITAMAR2.INI
+    file[]: crc = 32d5ebd3; size =     19456; name = LAUNCH.EXE
+    file[]: crc = 093d6d05; size =       928; name = LAUNCH.INI
+    file[]: crc = 22545502; size =   4660286; name = LOGO.E
+    file[]: crc = e2df8487; size =       860; name = LOST.INI
+    file[]: crc = 811fb39c; size =    387840; name = LOSTDEMO.EXE
+    file[]: crc = 8bac66e9; size =     74528; name = MSCOMSTF.DLL
+    file[]: crc = bf70d850; size =     37888; name = MSCUISTE.DLL
+    file[]: crc = 88a53f4a; size =     37888; name = MSCUISTE.FLG
+    file[]: crc = c67066dc; size =     38400; name = MSCUISTF.DLL
+    file[]: crc = bf8f1809; size =     22097; name = MSDETECT.INC
+    file[]: crc = 2bd46f8f; size =     24544; name = MSDETSTF.DLL
+    file[]: crc = 5a9638c2; size =     65440; name = MSINSSTF.DLL
+    file[]: crc = bd3d3075; size =     14928; name = MSSHLSTF.DLL
+    file[]: crc = d342f37d; size =      6144; name = MSUILSTF.DLL
+    file[]: crc = a78c06c1; size =  47248021; name = MUSIC.D
+    file[]: crc = 361160b8; size =   3494190; name = MUSICL.D
+    file[]: crc = dbae0bd8; size =   4052350; name = NREADE.F
+    file[]: crc = 40029d4a; size =      5745; name = NREADE.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADE.OFS
+    file[]: crc = bae84241; size =     11248; name = NREADE.PIC
+    file[]: crc = e6b7c284; size =     22060; name = NREADE.TXP
+    file[]: crc = 693fcf7c; size =   2871622; name = NREADENG.A
+    file[]: crc = 023a2d35; size =  29009087; name = SAME.B
+    file[]: crc = 7a7b8d78; size =     24624; name = SETUP.EXE
+    file[]: crc = 74847fab; size =      1610; name = SETUP.INF
+    file[]: crc = e8ce56f0; size =       676; name = SETUP.LST
+    file[]: crc = 703bc8bd; size =     10580; name = SETUP.MST
+    file[]: crc = 893aa522; size =     56623; name = SETUPAPI.INC
+    file[]: crc = 0dd56659; size =     31932; name = SETUPHLP.DLL
+    file[]: crc = d38ad278; size =      1425; name = SPECS.INC
+    file[]: crc = 6906e0c5; size =    332288; name = TIM1DEMO.EXE
+    file[]: crc = dc151563; size =       748; name = TIM1DEMO.INI
+    file[]: crc = f2817fc4; size =       150; name = TIMMY2.103
+    file[]: crc = 0c922273; size =  24455237; name = TIMMY2.A
+    file[]: crc = b5a611bb; size =    416000; name = TIMMY2.EXE
+    file[]: crc = 9b1625d3; size =     23825; name = TIMMY2.LOD
+    file[]: crc = 7f63e11d; size =         4; name = TIMMY2.TXP
+    file[]: crc = e81ade8a; size =  26344000; name = WINDEMO.A
+    file[]: crc = 6bdf7da4; size =   5100670; name = WINDEMO.B
+    file[]: crc = 83925458; size =     65515; name = WINDEMO.DAT
+    file[]: crc = 62d5a801; size =    279808; name = WINDEMO.EXE
+    file[]: crc = 8accddab; size =       558; name = WINDEMO.INI
+    file[]: crc = e4c51426; size =      1741; name = WINDEMO.LOD
+    file[]: crc = d202ef8d; size =         1; name = WINDEMO.TXP
+    file[]: name = CDDA.SOU; cdda = 136/180/63/96/237/134/185/168/218/119/178
+    // volume name = ''
+
+end
+
+
+
+game[pc-en-961007]:
+    name = English 1996-10-07
+    anchorfile = TIMMY2.EXE
+    imports = cd-pc-en-961007
+//    file[]: crc = 98390ccb; size =       480; name = ITAMAR2.INI
+//    file[]: crc = e2df8487; size =       860; name = LOST.INI
+//    file[]: crc = 811fb39c; size =    387840; name = LOSTDEMO.EXE
+//    file[]: crc = 6906e0c5; size =    332288; name = TIM1DEMO.EXE
+//    file[]: crc = dc151563; size =       748; name = TIM1DEMO.INI
+//    file[]: crc = b5a611bb; size =    416000; name = TIMMY2.EXE
+//    file[]: crc = 62d5a801; size =    279808; name = WINDEMO.EXE
+//    file[]: crc = 8accddab; size =       558; name = WINDEMO.INI
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=ENG
+StartMaximized=Yes
+SaveDir=C:\FLAGTWR\TIMMY2
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=Timmy2.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+define=nopcx hremme
+DataFiles=Timmy2.a  Same.b  Games.c  Music.d Logo.e
+LodFile=Timmy2.Lod
+WindowTitle=Timmy the Dream Hunter
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Timmy the Dream Hunter
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+
+
+
+
+
+]]]
+
+
+
+end
+
+
+
+end

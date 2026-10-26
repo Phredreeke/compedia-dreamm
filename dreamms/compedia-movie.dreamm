@@ -1,0 +1,350 @@
+desc[compedia-movie]:
+
+name = Gordi's Magical Movie Adventure
+icon = compedia-movie.png
+machine = pc
+rootpath = ""
+launch = ""
+osenv = windows 98
+winres = 640x480x8
+CDLABEL = $(NULL)
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+// mount[]: vpath = C:\BONNIER\FILMGURU\; srcpath = $(ifsinstallpath)
+// mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(rootpath)\\MOVIE.INI")) { file_save("$$(rootpath)\\MOVIE.INI", "$$(MOVIE_CONTENTS)") }
+    ]]]
+end
+
+
+game[pc-sv-970108]:
+    name = Swedish 1997-01-08
+    anchorfile = MOVIE.EXE
+    rootpath = C:\BONNIER\FILMGURU\
+    launch = "C:\BONNIER\FILMGURU\MOVIE.EXE" EMME /CFG:C:\BONNIER\FILMGURU\movie.ini 
+    file[]: crc = 7a4ffaed; size =   5926825; name = INTROS.A
+    file[]: crc = 3f4a5e34; size =    458240; name = MOVIE.EXE
+    file[]: crc = e5814350; size =       259; name = CD\16COLOR.ENG
+    file[]: crc = e03a59e8; size =   7110251; name = CD\COMMON.B
+    file[]: crc = 7932f2c4; size =    615226; name = CD\DATA.C
+    file[]: crc = 60b16500; size =  18786589; name = CD\END.G
+    file[]: crc = 9a591aee; size =  12370219; name = CD\GAMES.E
+    file[]: crc = da7b3d05; size =  11210914; name = CD\HELPSVOC.E
+    file[]: crc = 7a4ffaed; size =   5926825; name = CD\INTROS.A
+    file[]: crc = 2d3be3c9; size =      2901; name = CD\INTROS.LOD
+    file[]: crc = 09f6f1e5; size =  43853284; name = CD\INTROSAM.B
+    file[]: crc = 5e707909; size =   1462766; name = CD\LOGO.C
+    file[]: crc = 3f4a5e34; size =    458240; name = CD\MOVIE.EXE
+    file[]: crc = 7f041e9a; size =       754; name = CD\MOVIE.INI
+    file[]: crc = a771e961; size =  24571501; name = CD\MOVIES.A
+    file[]: crc = 6afca3be; size =     24517; name = CD\MOVIES.LOD
+    file[]: crc = 67ed29b9; size =         3; name = CD\MOVIES.TXP
+    file[]: crc = 8bac66e9; size =     74528; name = CD\MSCOMSTF.DLL
+    file[]: crc = 9e43770a; size =     37376; name = CD\MSCUISTE.DLL
+    file[]: crc = 9e43770a; size =     37376; name = CD\MSCUISTF.DLL
+    file[]: crc = bf8f1809; size =     22097; name = CD\MSDETECT.INC
+    file[]: crc = 2bd46f8f; size =     24544; name = CD\MSDETSTF.DLL
+    file[]: crc = df562369; size =     65280; name = CD\MSINSSTF.DLL
+    file[]: crc = 0c1c7e95; size =     14752; name = CD\MSSHLSTF.DLL
+    file[]: crc = d342f37d; size =      6144; name = CD\MSUILSTF.DLL
+    file[]: crc = 361160b8; size =   3494190; name = CD\MUSIC.D
+    file[]: crc = b83b2650; size =  61651679; name = CD\MUSIC.F
+    file[]: crc = 777099d1; size =  24908569; name = CD\PICTURES.D
+    file[]: crc = 20cb72db; size = 341718101; name = CD\ROOMS.C
+    file[]: crc = 202e5d10; size =   3387904; name = CD\SAME.B
+    file[]: crc = 58c95444; size =      1513; name = CD\SPECS.INC
+
+    CDLABEL = 1
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROSWD SWD
+CycleLng=no
+Savedir=C:\BONNIER\FILMGURU
+StartMaximized=yes
+
+[SWD]
+16ColorMessage=16color.eng
+TxpFile=MovieS.txp
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=MovieS.a Same.b Rooms.c Pictures.d Games.e Music.f End.g
+LodFile=MovieS.Lod
+WindowTitle=Filmgurun
+UseHiresFonts=YES
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Filmgurun
+[END]
+
+[INTROSWD]
+16ColorMessage=16color.eng
+TxpFile=MovieS.txp
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=IntroS.a IntroSam.b Logo.c
+LodFile=IntroS.Lod
+WindowTitle=Filmgurun
+UseHiresFonts=YES
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Filmgurun
+[END]
+
+
+
+
+
+]]]
+
+
+end
+
+game[pc-en-011214]:
+    name = English 2001-12-14
+    anchorfile = GORDIE.AVI
+    anchordepth = 1
+    rootpath = C:\COMPEDIA\MOVIE
+    launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI
+//    file[]: crc = c683cebe; size =    395008; name = lost.exe
+//    file[]: crc = af1b45c2; size =       982; name = LOST.INI
+    file[]: crc = 3e9cd6f8; size =    495104; name = MOVIE.EXE
+//    file[]: crc = 9b5014cb; size =      1041; name = MOVIE.INI
+//    file[]: crc = 00bf6230; size =    318976; name = PAINT.EXE
+//    file[]: crc = 71d5ef72; size =       921; name = Paint.ini
+//    file[]: crc = f1b28d3b; size =   1737253; name = SUPERM.EXE
+//    file[]: crc = a4144eaf; size =       414; name = SUPERM.INI
+//    file[]: crc = 81fda41e; size =    327680; name = WINDEMO.EXE
+//    file[]: crc = 49229fdc; size =       510; name = WINDEMO.INI
+    file[]: crc = eb702968; size =        48; name = cd\AUTORUN.INF
+    file[]: crc = 00e23fb7; size =    686758; name = cd\COMP.DIR
+    file[]: crc = cfddb8fc; size =    463475; name = cd\DATA1.CAB
+    file[]: crc = 831d5ee9; size =     35379; name = cd\DATA1.HDR
+    file[]: crc = 212c4f04; size =   1593487; name = cd\DATA2.CAB
+    file[]: crc = 90e69def; size =    437560; name = cd\EXERMENU.AIF
+    file[]: crc = 9b9b3862; size =    215916; name = cd\GAMEMENU.AIF
+    file[]: crc = 3d9a7dc5; size =   8142748; name = cd\GORDIE.AVI
+    file[]: crc = 3a0ab8d7; size =    339565; name = cd\IKERNEL.EX_
+    file[]: crc = db1a7002; size =   1114166; name = cd\INTRO.AIF
+    file[]: crc = b09784fa; size =    700150; name = cd\INTRO.DIR
+    file[]: crc = 198d2f3a; size =   9556503; name = cd\INTROE.A
+    file[]: crc = 02e6fee6; size =  40896741; name = cd\INTROE.B
+    file[]: crc = 53509e4b; size =   2006745; name = cd\INTROE.C
+    file[]: crc = 2aaa4572; size =      2904; name = cd\INTROE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\INTROE.TXP
+    file[]: crc = b9a2c61e; size =     59804; name = cd\LAUNCH1.BMP
+    file[]: crc = 7cb1d0f8; size =    229632; name = cd\LAUNCHER.EXE
+    file[]: crc = c02a498a; size =       435; name = cd\LAYOUT.BIN
+    file[]: crc = a33f325f; size =   1325066; name = cd\MGAMES.DIR
+    file[]: crc = b9ed3a17; size =   1530612; name = cd\MLIMUD.DIR
+    file[]: crc = 267e3254; size =   1376172; name = cd\MMENU.DIR
+    file[]: crc = 3aa568db; size =      2102; name = cd\MOVIE.BMP
+    file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE.ICO
+    file[]: crc = 22385991; size =  29099365; name = cd\MOVIEE.A
+    file[]: crc = aa8d8258; size = 341718101; name = cd\MOVIEE.C
+    file[]: crc = acecb65e; size =  24908569; name = cd\MOVIEE.D
+    file[]: crc = c10d2d03; size =  12370312; name = cd\MOVIEE.E
+    file[]: crc = b83b2650; size =  61651679; name = cd\MOVIEE.F
+    file[]: crc = 01292989; size =  18786589; name = cd\MOVIEE.G
+    file[]: crc = 3a7d5b47; size =     24579; name = cd\MOVIEE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\MOVIEE.TXP
+    file[]: crc = e65b1933; size =   1531248; name = cd\MTIRGUL.DIR
+    file[]: crc = 0696976b; size =   6650164; name = cd\NREADE.A
+    file[]: crc = b935415f; size =   7087545; name = cd\NREADE.B
+    file[]: crc = 58164a85; size =    554764; name = cd\NREADE.C
+    file[]: crc = 361160b8; size =   3494190; name = cd\NREADE.D
+    file[]: crc = 1ac4d998; size =  13175009; name = cd\NREADE.E
+    file[]: crc = 00000000; size =         0; name = cd\NREADE.F
+    file[]: crc = 0d586b30; size =      5830; name = cd\NREADE.LOD
+    file[]: crc = c4008dad; size =        96; name = cd\NREADE.OFS
+    file[]: crc = 943511c0; size =     18278; name = cd\NREADE.PIC
+    file[]: crc = 2de3b26b; size =     11232; name = cd\NREADE.TRS
+    file[]: crc = 0cf4de03; size =     22059; name = cd\NREADE.TXP
+    file[]: crc = 5de6b048; size =   8305265; name = cd\PAINT.A
+    file[]: crc = 0b4a147d; size =      3329; name = cd\PAINT.LOD
+    file[]: crc = 00000000; size =         0; name = cd\PAINT.TXP
+    file[]: crc = 00e23fb7; size =    686758; name = cd\PRELOGO.DIR
+    file[]: crc = 145a8570; size =   3387904; name = cd\SAME.B
+    file[]: crc = 246f329a; size =     54272; name = cd\SETUP.EXE
+    file[]: crc = 721fdc2e; size =       126; name = cd\SETUP.INI
+    file[]: crc = 92cb25d0; size =    140413; name = cd\SETUP.INX
+    file[]: crc = f3e4fc5f; size =      2102; name = cd\WINDEMO.BMP
+    file[]: crc = 26e5d2b6; size =      6738; name = cd\WINDEMO.DAT
+    file[]: crc = 78ed04d4; size =      6011; name = cd\WINDEMO.MNU
+    file[]: crc = 35207fab; size =   5682336; name = cd\ACROBAT\READER.EXE
+    file[]: crc = 5c9a07e4; size =    584062; name = cd\GAMES\CANONHEL.AIF
+    file[]: crc = 8d3f9f15; size =   1724442; name = cd\GAMES\DJDO.DIR
+    file[]: crc = 31931dbc; size =   2689292; name = cd\GAMES\ROSHM.AIF
+    file[]: crc = 011ea48f; size =    447300; name = cd\HIEND\FUNPACK\FUNPCK1A.FLC
+    file[]: crc = a7eb48cc; size =    256708; name = cd\HIEND\FUNPACK\FUNPCK1B.FLC
+    file[]: crc = fe8b9336; size =    405580; name = cd\HIEND\FUNPACK\FUNPCK1C.FLC
+    file[]: crc = 6324f536; size =    267046; name = cd\HIEND\FUNPACK\FUNPCK1D.FLC
+    file[]: crc = db52311e; size =    409512; name = cd\HIEND\FUNPACK\FUNPCK1E.FLC
+    file[]: crc = e09e9136; size =    467930; name = cd\HIEND\FUNPACK\FUNPCK2C.FLC
+    file[]: crc = 01d87394; size =    153524; name = cd\HIEND\FUNPACK\PARTY1.VOC
+    file[]: crc = 1729da92; size =    144417; name = cd\HIEND\FUNPACK\PARTY2.VOC
+    file[]: crc = ba9c95d8; size =    169056; name = cd\HIEND\FUNPACK\PARTY3.VOC
+    file[]: crc = 7dd11c7d; size =    249564; name = cd\HIEND\FUNPACK\PARTY4.VOC
+    file[]: crc = be0a52d4; size =    188451; name = cd\HIEND\FUNPACK\PARTY5.VOC
+    file[]: crc = f3e2055f; size =     83393; name = cd\HIEND\FUNPACK\PARTY6.VOC
+    file[]: crc = 4ee68f18; size =   1307680; name = cd\HIEND\LOST\LOSTE1B.FLC
+    file[]: crc = 733b2365; size =    972710; name = cd\HIEND\LOST\LOSTE1D.FLC
+    file[]: crc = bdd38620; size =   2207740; name = cd\HIEND\LOST\LOSTE1E.FLC
+    file[]: crc = ed05b3f1; size =    494332; name = cd\HIEND\LOST\LOSTE1F.FLC
+    file[]: crc = f4665d1e; size =    183797; name = cd\HIEND\LOST\SEARCH1.VOC
+    file[]: crc = d7fefd28; size =    289659; name = cd\HIEND\LOST\SEARCH3.VOC
+    file[]: crc = 159b3bc1; size =    282807; name = cd\HIEND\LOST\SEARCH4.VOC
+    file[]: crc = 3e8719db; size =    176425; name = cd\HIEND\LOST\SEARCH5.VOC
+    file[]: crc = 3853d57f; size =    136326; name = cd\HIEND\MOVIE\HOLLY2.VOC
+    file[]: crc = 337f5061; size =    417929; name = cd\HIEND\MOVIE\HOLLY4.VOC
+    file[]: crc = c63883bc; size =    170135; name = cd\HIEND\MOVIE\HOLLY5.VOC
+    file[]: crc = 8d8a20e1; size =    163551; name = cd\HIEND\MOVIE\HOLLY6.VOC
+    file[]: crc = 4d8c3f56; size =    211893; name = cd\HIEND\MOVIE\HOLLY7.VOC
+    file[]: crc = 960449ad; size =    157118; name = cd\HIEND\MOVIE\MOVIE2.VOC
+    file[]: crc = 09e8c6d1; size =     72824; name = cd\HIEND\MOVIE\MOVIE3.VOC
+    file[]: crc = 8155c82e; size =   1175612; name = cd\HIEND\MOVIE\MOVIEB.FLC
+    file[]: crc = 444ab7d6; size =    937766; name = cd\HIEND\MOVIE\MOVIEC.FLC
+    file[]: crc = 6a913ddc; size =    933978; name = cd\HIEND\MOVIE\MOVIEC1.FLC
+    file[]: crc = 1ca8c645; size =   1240280; name = cd\HIEND\MOVIE\MOVIED.FLC
+    file[]: crc = a259efcb; size =    374038; name = cd\HIEND\MOVIE\MOVIEE.FLC
+    file[]: crc = f200e2b3; size =    468508; name = cd\HIEND\MOVIE\MOVIEF.FLC
+    file[]: crc = 069a1507; size =   1122290; name = cd\HIEND\MOVIE\MOVIEG.FLC
+    file[]: crc = b436fb38; size =    315840; name = cd\HIEND\PLAYROOM\PLAY2.VOC
+    file[]: crc = 0e2c044f; size =    199623; name = cd\HIEND\PLAYROOM\PLAY3.VOC
+    file[]: crc = 36c4a5bf; size =    289510; name = cd\HIEND\PLAYROOM\PLAY4.VOC
+    file[]: crc = a0a0af80; size =    230137; name = cd\HIEND\PLAYROOM\PLAY5.VOC
+    file[]: crc = b3f3b1e9; size =    421820; name = cd\HIEND\PLAYROOM\PLAYRM1B.FLC
+    file[]: crc = fe9574de; size =    333392; name = cd\HIEND\PLAYROOM\PLAYRM1C.FLC
+    file[]: crc = fa5dfdac; size =    126266; name = cd\HIEND\PLAYROOM\PLAYRM1D.FLC
+    file[]: crc = 7900d195; size =    830934; name = cd\HIEND\PLAYROOM\PLAYRM1E.FLC
+    file[]: crc = c3a71a64; size =    445024; name = cd\HIEND\SUPER\PSYCHOD1.FLC
+    file[]: crc = 456147b7; size =    719666; name = cd\HIEND\SUPER\THINK1.FLC
+    file[]: crc = 3239db23; size =    210058; name = cd\HIEND\SUPER\THINK1.VOC
+    file[]: crc = 2b068227; size =    714204; name = cd\HIEND\SUPER\THINK2.FLC
+    file[]: crc = 9206496c; size =    330472; name = cd\HIEND\SUPER\THINK2.VOC
+    file[]: crc = 87390dbd; size =    696268; name = cd\HIEND\SUPER\THINK3.FLC
+    file[]: crc = afa417c7; size =    233886; name = cd\HIEND\SUPER\THINK3.VOC
+    file[]: crc = 7b3d44db; size =   1146552; name = cd\HIEND\SUPER\THINK4.FLC
+    file[]: crc = 05925c6b; size =    313552; name = cd\HIEND\SUPER\THINK4.VOC
+    file[]: crc = e971760a; size =    440500; name = cd\HIEND\SUPER\THINK5.FLC
+    file[]: crc = 9e8c82d6; size =    160705; name = cd\HIEND\SUPER\THINK5.VOC
+    file[]: crc = 19c0d9fc; size =    214336; name = cd\HIEND\TIMMY1\ITAMAR1A.FLC
+    file[]: crc = 5ea4d2e7; size =    886858; name = cd\HIEND\TIMMY1\ITAMAR1B.FLC
+    file[]: crc = 3b390d2d; size =    988692; name = cd\HIEND\TIMMY1\ITAMAR1C.FLC
+    file[]: crc = 8e2f93d1; size =    453526; name = cd\HIEND\TIMMY1\ITAMAR1D.FLC
+    file[]: crc = 96963b30; size =    138896; name = cd\HIEND\TIMMY1\TIMMY1.VOC
+    file[]: crc = fe8b817b; size =    382048; name = cd\HIEND\TIMMY1\TIMMY2.VOC
+    file[]: crc = a332e657; size =    339066; name = cd\HIEND\TIMMY1\TIMMY3.VOC
+    file[]: crc = 46fbe136; size =    333663; name = cd\HIEND\TIMMY1\TIMMY4.VOC
+    file[]: crc = 9a67de8b; size =     91169; name = cd\HIEND\TIMMY1\TIMMY5.VOC
+    file[]: crc = cecc1b9b; size =    318046; name = cd\HIEND\TIMMY2\DREAM2.VOC
+    file[]: crc = 05aeff85; size =    345807; name = cd\HIEND\TIMMY2\DREAM3.VOC
+    file[]: crc = 3a0fe5bf; size =    325850; name = cd\HIEND\TIMMY2\DREAM4.VOC
+    file[]: crc = 68fc60f2; size =    187359; name = cd\HIEND\TIMMY2\DREAM5.VOC
+    file[]: crc = 583491de; size =    749210; name = cd\HIEND\TIMMY2\ITAMAR2A.FLC
+    file[]: crc = f350223c; size =    785900; name = cd\HIEND\TIMMY2\ITAMAR2B.FLC
+    file[]: crc = 5716aa70; size =    973460; name = cd\HIEND\TIMMY2\ITAMAR2C.FLC
+    file[]: crc = 1eaefe56; size =    128560; name = cd\HIEND\TIMMY2\ITAMAR2D.FLC
+    file[]: crc = fae53a02; size =   1482782; name = cd\LIMUD\LSID.DIR
+    file[]: crc = 634d5890; size =    456800; name = cd\MANUAL\MAGICAL_.PDF
+    file[]: crc = 59f7fb6c; size =       712; name = cd\MENU\DUMMY.VOC
+    file[]: crc = a0d96997; size =      7188; name = cd\MENU\EXIT.FLC
+    file[]: crc = 44fa25c6; size =     18128; name = cd\MENU\FUNPACK.FLC
+    file[]: crc = 7ff989ff; size =     12253; name = cd\MENU\ICONS.PCX
+    file[]: crc = 4da70f24; size =      8132; name = cd\MENU\INTERACT.FLC
+    file[]: crc = 98892c77; size =    703470; name = cd\MENU\LOGO.FLC
+    file[]: crc = 3067123b; size =    195137; name = cd\MENU\LOGO.VOC
+    file[]: crc = 0ac942e7; size =     17856; name = cd\MENU\LOST.FLC
+    file[]: crc = 839cbc2e; size =   1531448; name = cd\MENU\MAIN1.VOC
+    file[]: crc = 9cb67d6a; size =     18284; name = cd\MENU\MATH1.FLC
+    file[]: crc = 8ddd97e8; size =     16660; name = cd\MENU\MATH2.FLC
+    file[]: crc = ec120deb; size =     18604; name = cd\MENU\MOVIE.FLC
+    file[]: crc = 32a51f2d; size =   2924525; name = cd\MENU\MUSIC.VOC
+    file[]: crc = 860e189b; size =    288627; name = cd\MENU\OPEN.PCX
+    file[]: crc = 4f6c5c49; size =   9011648; name = cd\MENU\OPEN.VOC
+    file[]: crc = 779abdf0; size =      7098; name = cd\MENU\PASSIVE.FLC
+    file[]: crc = 2b8b992d; size =     18178; name = cd\MENU\PLAYROOM.FLC
+    file[]: crc = 6c7c86bd; size =      6600; name = cd\MENU\PREVIOUS.FLC
+    file[]: crc = a80a024f; size =    173932; name = cd\MENU\REKA.PCX
+    file[]: crc = ecae1ac9; size =     16178; name = cd\MENU\SUPERM.FLC
+    file[]: crc = f9114c18; size =      7936; name = cd\MENU\SURPRISE.FLC
+    file[]: crc = cf0c2ee9; size =     17898; name = cd\MENU\TIMMY1.FLC
+    file[]: crc = de99688e; size =     17586; name = cd\MENU\TIMMY2.FLC
+    file[]: crc = 3e7c9807; size =     17800; name = cd\MENU\TIMMY4.FLC
+    file[]: crc = 5b142334; size =     13744; name = cd\MENU\TITLE.FLC
+    file[]: crc = cdb6d0eb; size =    498978; name = cd\TIRGUL\EXESID.AIF
+    file[]: crc = 3e85588a; size =   2435732; name = cd\TIRGUL\SHARED.CST
+    file[]: crc = b168cec7; size =   8053478; name = cd\TIRGUL\SHARED.DIR
+    file[]: crc = dbcaf150; size =   1044758; name = cd\TIRGUL\TIRGUL.DIR
+    file[]: crc = 996fac06; size =     87552; name = cd\XTRAS\FILEIO.X32
+    file[]: crc = 464cc953; size =    119296; name = cd\XTRAS\MIX32.X32
+    file[]: crc = d2bc23fe; size =    133278; name = cd\XTRAS\MIX_SERV.
+    file[]: crc = cf144c29; size =    131282; name = cd\XTRAS\SOUND_IM.
+    file[]: crc = 467738b5; size =    109568; name = cd\XTRAS\SOUND_IM.X32
+    file[]: crc = 6c1174fa; size =     93184; name = cd\XTRAS\SWADCMPR.X32
+    file[]: crc = a541f6bf; size =     73728; name = cd\XTRAS\SWASTRM.X32
+
+    CDLABEL = $(NULL)
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROENG ENG
+SaveDir=C:\COMPEDIA\MOVIE
+CycleLng=no
+CardPitch=998
+Forcemaximized=yes
+StartDir=D:
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=MovieE.txp
+DatFile=MovieE.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=MovieE.a same.b MovieE.c MovieE.d MovieE.e MovieE.f MovieE.g
+LodFile=MovieE.Lod
+WindowTitle=The Quest for the Unfinished Movie
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=The Quest for the Unfinished Movie
+[END]
+
+[INTROENG]
+16ColorMessage=16color.eng
+TxpFile=introe.txp
+DatFile=IntroE.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=IntroE.a IntroE.b IntroE.c
+LodFile=IntroE.Lod
+WindowTitle=The Quest for the Unfinished Movie
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=The Quest for the Unfinished Movie
+[END]
+
+[PATH]
+HDPath=C:\COMPEDIA\MOVIE
+CDPath=D:
+
+
+
+
+
+
+]]]
+
+
+
+
+end
+
+end

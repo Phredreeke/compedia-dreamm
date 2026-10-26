@@ -1,0 +1,106 @@
+desc[compedia-lost]:
+
+name = In Search of the Lost Words
+icon = compedia-lost.png
+machine = pc
+// rootpath = D:\ 
+rootpath = C:\Compedia\Lost
+launch = "$(rootpath)\lost.exe" /CFG:C:\Compedia\Lost\lost.ini 
+osenv = windows 98
+winres = 640x480x8
+wincrop = true
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "LOSTWORDS")
+        if (!!file_exists("$$(rootpath)\\LOST.INI")) { file_save("$$(rootpath)\\LOST.INI", "$$(LOST_CONTENTS)") }
+    ]]]
+end
+
+
+game[pc-en-010826]:
+    name = English 2001-08-26
+    anchorfile = lost.bmp
+//    file[]: crc = 27a6f0b8; size =        45; name = AUTORUN.INF
+//    file[]: crc = e72436aa; size =    463357; name = data1.cab
+//    file[]: crc = b9ebae86; size =     34574; name = data1.hdr
+//    file[]: crc = 00ab0742; size =    193588; name = data2.cab
+    file[]: crc = 3a0ab8d7; size =    339565; name = ikernel.ex_
+    file[]: crc = 89dc2eda; size =     59802; name = LAUNCH1.BMP
+//    file[]: crc = 7cb1d0f8; size =    229632; name = LAUNCHER.EXE
+    file[]: crc = 9230963d; size =       435; name = layout.bin
+    file[]: crc = 2d38e7df; size =      2012; name = lost.bmp
+    file[]: crc = 5de8d0ed; size =    395776; name = lost.exe
+    file[]: crc = 5e42779e; size =       767; name = LOST.ico
+    file[]: crc = daa89be7; size =  16211125; name = NREADE.A
+    file[]: crc = 1a079f55; size =  57486841; name = NREADE.B
+    file[]: crc = 85ef9109; size =   4329384; name = NREADE.C
+    file[]: crc = f5f313a2; size =  46072574; name = NREADE.D
+    file[]: crc = dde684e4; size =  19664848; name = NREADE.E
+    file[]: crc = 2e9af627; size =     23912; name = NREADE.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADE.OFS
+    file[]: crc = 943511c0; size =     18278; name = NREADE.PIC
+    file[]: crc = 2de3b26b; size =     11232; name = NREADE.TRS
+    file[]: crc = 0cf4de03; size =     22059; name = NREADE.TXP
+//    file[]: crc = 89dc2eda; size =     59802; name = setup.BMP
+//    file[]: crc = 246f329a; size =     54272; name = Setup.exe
+//    file[]: crc = ab346e98; size =       118; name = Setup.ini
+//    file[]: crc = f7189e71; size =    138295; name = setup.inx
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=ENG
+SaveDir=C:\Compedia\Lost
+CardPitch=998
+StartDir=D:
+
+[ENG]
+16ColorMessage=16Color.Eng
+TextFile=nreadE.txt
+TxpFile=nreadE.txp
+DatFile=nreadE.dat
+PicFile=nreadE.pic
+TrsFile=nreadE.trs
+WrdFile=nreadE.wrd
+FontFile=efonts
+MaxFont=2
+;              l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=12         16      16     26        32     211   205    189      0      0
+Font1=17         22      22     18        97     212   205     0       0      99
+Font2=12         16      16     26        58     211   205     0       0     149
+DataFiles=nreadE.a nreadE.b nreadE.c nreadE.d nreadE.e
+LodFile=nreadE.Lod
+PlayPreLogo=NO
+OfsFile=nreadE.ofs
+WindowTitle=In Search of the Lost Words
+SaveName=NEW GAME
+SaveFileName=NreadE.Gam
+UseHiresFonts=
+TransLang=
+HelpsLang=
+Useintdemo=no
+[END]
+[PATH]
+HDPath=C:\Compedia\Lost
+CDPath=D:
+
+
+
+
+]]]
+
+
+
+
+end
+
+
+
+end
