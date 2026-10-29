@@ -1,0 +1,99 @@
+desc[compedia-qcastle]:
+
+name = Quantum Castle
+icon = compedia-qcastle.png
+machine = pc
+rootpath = D:\
+launch = "$(HDDPATH)\WNEWADD.EXE" /CFG:$(HDDPATH)\WNEWADD.ini
+osenv = windows 98
+winres = 640x480x8
+TIMMY4_CONTENTS =
+TIM4INT_CONTENTS =
+HDDPATH =
+wincrop = true
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+
+
+script[init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(HDDPATH)\\WNEWADD.ini")) { file_save("$$(HDDPATH)\\WNEWADD.ini", "$$(WNEWADD_CONTENTS)") }
+    ]]]
+end
+
+
+
+game[pc-en-011213]:
+    name = English 2001-12-13
+    anchorfile = ADD.A
+    HDDPATH = C:\Learning\Quantum
+    CDLABEL=QUANTUM
+    file[]: crc = 2f0e22a3; size =    327168; name = WNEWADD.EXE
+//    file[]: crc = dffc3719; size =       627; name = WNEWADD.INI
+    file[]: crc = faf75b9b; size =  16970018; name = cd\ADD.A
+    file[]: crc = 673b41f4; size =    695121; name = cd\ADD.B
+    file[]: crc = 6e30e16c; size =      5295; name = cd\ADD.LOD
+    file[]: crc = b65ac4b8; size =      2104; name = cd\ADD.TXP
+//    file[]: crc = 32cecde7; size =        50; name = cd\AUTORUN.INF
+    file[]: crc = 1be6764a; size =    527528; name = cd\backgrnd.bmp
+//    file[]: crc = fea8b231; size =    463336; name = cd\data1.cab
+//    file[]: crc = 6232b888; size =     34575; name = cd\data1.hdr
+//    file[]: crc = b5870396; size =    170105; name = cd\data2.cab
+    file[]: crc = 3a0ab8d7; size =    339565; name = cd\ikernel.ex_
+//    file[]: crc = 18f98694; size =   2561786; name = cd\LAUNCHER.EXE
+    file[]: crc = ab4b2cbc; size =       435; name = cd\layout.bin
+    file[]: crc = 956ca604; size =       766; name = cd\QUANTUM.ICO
+//    file[]: crc = 246f329a; size =     54272; name = cd\Setup.exe
+//    file[]: crc = 1ec09874; size =       108; name = cd\Setup.ini
+//    file[]: crc = a4e09d22; size =    138285; name = cd\setup.inx
+//    file[]: crc = 40f40406; size =    176902; name = cd\SPLSH1_OF.BMP
+//    file[]: crc = 52bb1382; size =    176902; name = cd\SPLSH1_On.BMP
+//    file[]: crc = f2ce8615; size =    176902; name = cd\SPLSH2_OF.BMP
+//    file[]: crc = f26d184b; size =    176902; name = cd\SPLSH2_On.BMP
+
+
+
+    WNEWADD_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=ENG   
+MyPalette=Yes
+SaveDir=C:\Learning\Quantum
+Musiclevel=3
+Soundlevel=10
+StartDir=D:
+
+[ENG]
+16ColorMessage=16color.ENG
+TextFile=add.txt
+TxpFile=add.txp
+DatFile=add.dat
+FontFile=fonts
+;  l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+MaxFonts=2
+UseHiresFonts=YES
+DataFiles=add.a add.b
+LodFile=add.lod
+Define=CD
+SaveName=Quantum Castle
+WindowTitle=Quantum Castle
+[END]
+
+[PATH]
+HDPath=C:\Learning\Quantum
+CDPath=D:
+
+]]]
+
+end
+
+
+
+end

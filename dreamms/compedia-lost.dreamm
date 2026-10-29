@@ -130,7 +130,7 @@ game[pc-sv-961113]:
 //    file[]: crc = 345cd097; size =      1966; name = _VA.386
 //    file[]: crc = ea95cc1b; size =        43; name = AUTORUN.INF
     file[]: crc = ecd7209b; size =  57530966; name = COMMON.B
-    file[]: crc = 6ca3a74b; size =    615226; name = DATA.C
+//    file[]: crc = 6ca3a74b; size =    615226; name = DATA.C
 //    file[]: crc = 7c2981a4; size =   2129194; name = DEMO1S.A
 //    file[]: crc = 34ea74c8; size =   5654840; name = DEMO1S.B
 //    file[]: crc = 7bdbe8f8; size =  15179708; name = DEMO1S.C
@@ -152,7 +152,7 @@ game[pc-sv-961113]:
     file[]: crc = 41f70726; size =  17938696; name = HELPSVOC.E
     file[]: crc = 32d5ebd3; size =     19456; name = LAUNCH.EXE
     file[]: crc = fc5d6165; size =       894; name = LAUNCH.INI
-    file[]: crc = b1e260e7; size =    388608; name = LOST.EXE
+//    file[]: crc = b1e260e7; size =    388608; name = LOST.EXE
 //    file[]: crc = 6b04ca2d; size =       967; name = LOST.INI
 //    file[]: crc = 8bac66e9; size =     74528; name = MSCOMSTF.DLL
 //    file[]: crc = 14a444b6; size =     36352; name = MSCUISTE.DLL
@@ -166,9 +166,9 @@ game[pc-sv-961113]:
     file[]: crc = ae22ba98; size =  16173266; name = NREADSW.A
     file[]: crc = d9e9b37a; size =   2325838; name = NREADSW.F
     file[]: crc = 86d654b8; size =     23862; name = NREADSW.LOD
-    file[]: crc = c4008dad; size =        96; name = NREADSW.OFS
-    file[]: crc = 46ad6e46; size =     11248; name = NREADSW.PIC
-    file[]: crc = 47ea1544; size =     11248; name = NREADSW.TRS
+//    file[]: crc = c4008dad; size =        96; name = NREADSW.OFS
+//    file[]: crc = 46ad6e46; size =     11248; name = NREADSW.PIC
+//    file[]: crc = 47ea1544; size =     11248; name = NREADSW.TRS
     file[]: crc = 764db71e; size =     28404; name = NREADSW.TXP
     file[]: crc = 9b06c69f; size =     30094; name = NREADSW.TXT
     file[]: crc = 7cca0cc9; size =     13493; name = NREADSW.WRD
