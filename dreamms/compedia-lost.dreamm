@@ -3,24 +3,26 @@ desc[compedia-lost]:
 name = In Search of the Lost Words
 icon = compedia-lost.png
 machine = pc
-// rootpath = D:\ 
-rootpath = C:\Compedia\Lost
-launch = "$(rootpath)\lost.exe" /CFG:C:\Compedia\Lost\lost.ini 
+rootpath = D:\ 
+// rootpath = C:\Compedia\Lost
+launch = "$(HDDPATH)\lost.exe" /CFG:$(HDDPATH)\lost.ini 
 osenv = windows 98
 winres = 640x480x8
 wincrop = true
+HDDPATH =
+CDLABEL=
 
 //
 // filesystem
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
 mount[]: vpath = D:\; srcpath = $(ifsinstallpath)
-mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
 
 script[cd-init]:
     code = [[[$(CRLF)
-        drive_set_label("D", "LOSTWORDS")
-        if (!!file_exists("$$(rootpath)\\LOST.INI")) { file_save("$$(rootpath)\\LOST.INI", "$$(LOST_CONTENTS)") }
+        drive_set_label("D", "$$(CDLABEL)LOSTWORDS")
+        if (!!file_exists("$$(HDDPATH)\\LOST.INI")) { file_save("$$(HDDPATH)\\LOST.INI", "$$(LOST_CONTENTS)") }
     ]]]
 end
 
@@ -28,6 +30,8 @@ end
 game[pc-en-010826]:
     name = English 2001-08-26
     anchorfile = lost.bmp
+    HDDPATH = C:\Compedia\Lost
+    CDLABEL=LOSTWORDS
 //    file[]: crc = 27a6f0b8; size =        45; name = AUTORUN.INF
 //    file[]: crc = e72436aa; size =    463357; name = data1.cab
 //    file[]: crc = b9ebae86; size =     34574; name = data1.hdr
@@ -101,6 +105,128 @@ CDPath=D:
 
 end
 
+game[pc-sv-961113]:
+    name = Swedish 1996-11-13
+    anchorfile = lost.exe
+    HDDPATH =C:\BONNIER\JAKTEN
+    file[]: crc = 6ca3a74b; size =    615226; name = DATA.C
+//    file[]: crc = 84cb33a8; size =    333312; name = DEMO1S.EXE
+//    file[]: crc = 8cc9e5bd; size =       642; name = DEMO1S.INI
+//    file[]: crc = b98f3e3a; size =    417024; name = DEMO2S.EXE
+//    file[]: crc = 7abdb7c1; size =       480; name = DEMO2S.INI
+    file[]: crc = b1e260e7; size =    388608; name = LOST.EXE
+//    file[]: crc = 5d8b2888; size =       967; name = LOST.INI
+    file[]: crc = c4008dad; size =        96; name = NREADSW.OFS
+    file[]: crc = 46ad6e46; size =     11248; name = NREADSW.PIC
+    file[]: crc = 47ea1544; size =     11248; name = NREADSW.TRS
+    file[]: crc = cceb5bc3; size =       245; name = 16COLOR.SWD
+//    file[]: crc = 420c7155; size =     92208; name = _ING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = _ING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = _INGDE.DLL
+//    file[]: crc = 1be07fa4; size =      6736; name = _INGDIB.DRV
+//    file[]: crc = a2b26dc7; size =      5024; name = _INGPAL.WND
+//    file[]: crc = ebc07351; size =      9813; name = _MSSETUP.EXE
+//    file[]: crc = b5786357; size =     89504; name = _MSTEST.EXE
+//    file[]: crc = 345cd097; size =      1966; name = _VA.386
+//    file[]: crc = ea95cc1b; size =        43; name = AUTORUN.INF
+    file[]: crc = ecd7209b; size =  57530966; name = COMMON.B
+    file[]: crc = 6ca3a74b; size =    615226; name = DATA.C
+//    file[]: crc = 7c2981a4; size =   2129194; name = DEMO1S.A
+//    file[]: crc = 34ea74c8; size =   5654840; name = DEMO1S.B
+//    file[]: crc = 7bdbe8f8; size =  15179708; name = DEMO1S.C
+//    file[]: crc = 0b7b7132; size =   2824102; name = DEMO1S.D
+//    file[]: crc = 50685aef; size =   4313408; name = DEMO1S.E
+//    file[]: crc = 84cb33a8; size =    333312; name = DEMO1S.EXE
+//    file[]: crc = 8cc9e5bd; size =       642; name = DEMO1S.INI
+//    file[]: crc = 31c0be9d; size =      4189; name = DEMO1S.LOD
+//    file[]: crc = 22fa3eee; size =        24; name = DEMO1S.TXP
+//    file[]: crc = a3f994e3; size =   4906910; name = DEMO2S.A
+//    file[]: crc = 617158ee; size =   5646421; name = DEMO2S.B
+//    file[]: crc = 312cd6d8; size =   2205661; name = DEMO2S.C
+//    file[]: crc = 5d4b1698; size =  20367736; name = DEMO2S.D
+//    file[]: crc = 25ae84f0; size =   1485593; name = DEMO2S.E
+//    file[]: crc = b98f3e3a; size =    417024; name = DEMO2S.EXE
+//    file[]: crc = 7abdb7c1; size =       480; name = DEMO2S.INI
+//    file[]: crc = 1de88697; size =      4707; name = DEMO2S.LOD
+//    file[]: crc = 7f63e11d; size =         4; name = DEMO2S.TXP
+    file[]: crc = 41f70726; size =  17938696; name = HELPSVOC.E
+    file[]: crc = 32d5ebd3; size =     19456; name = LAUNCH.EXE
+    file[]: crc = fc5d6165; size =       894; name = LAUNCH.INI
+    file[]: crc = b1e260e7; size =    388608; name = LOST.EXE
+//    file[]: crc = 6b04ca2d; size =       967; name = LOST.INI
+//    file[]: crc = 8bac66e9; size =     74528; name = MSCOMSTF.DLL
+//    file[]: crc = 14a444b6; size =     36352; name = MSCUISTE.DLL
+//    file[]: crc = cab9446f; size =     38400; name = MSCUISTF.DLL
+//    file[]: crc = bf8f1809; size =     22097; name = MSDETECT.INC
+//    file[]: crc = 2bd46f8f; size =     24544; name = MSDETSTF.DLL
+//    file[]: crc = 5a9638c2; size =     65440; name = MSINSSTF.DLL
+//    file[]: crc = c9111a2e; size =     14736; name = MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = MSUILSTF.DLL
+    file[]: crc = f5f313a2; size =  46072574; name = MUSIC.D
+    file[]: crc = ae22ba98; size =  16173266; name = NREADSW.A
+    file[]: crc = d9e9b37a; size =   2325838; name = NREADSW.F
+    file[]: crc = 86d654b8; size =     23862; name = NREADSW.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADSW.OFS
+    file[]: crc = 46ad6e46; size =     11248; name = NREADSW.PIC
+    file[]: crc = 47ea1544; size =     11248; name = NREADSW.TRS
+    file[]: crc = 764db71e; size =     28404; name = NREADSW.TXP
+    file[]: crc = 9b06c69f; size =     30094; name = NREADSW.TXT
+    file[]: crc = 7cca0cc9; size =     13493; name = NREADSW.WRD
+//    file[]: crc = 7a7b8d78; size =     24624; name = SETUP.EXE
+//    file[]: crc = e600baf0; size =      1760; name = SETUP.INF
+//    file[]: crc = 0fc6cc1c; size =       692; name = SETUP.LST
+//    file[]: crc = 5937ae8c; size =     10465; name = SETUP.MST
+//    file[]: crc = 893aa522; size =     56623; name = SETUPAPI.INC
+//    file[]: crc = 0dd56659; size =     31932; name = SETUPHLP.DLL
+    file[]: crc = 4775b1b6; size =      1305; name = SPECS.INC
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages= SWE       
+SaveDir=C:\BONNIER\JAKTEN
+StartMaximized=YES
+[END]
+
+[SWE]
+16ColorMessage=16Color.Eng
+TxpFile=nreadSw.txp
+PicFile=nreadSw.pic
+TrsFile=nreadSw.trs
+;              l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+MaxFont=2
+;      l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=    15      18      18      21      32     211   205    189      0      0
+Font1=    15      18      18      21      54     211   205     0       0     108
+Font2=    15      18      18      21      54     211   205     0       0     108
+DataFiles=nreadSw.a common.b data.c music.d helpsvoc.e nreadSw.f
+LodFile=nreadSw.Lod
+Define=BONNIER
+OfsFile=nreadSw.ofs
+WindowTitle=Jakten på de försvunna orden
+SaveName=NYTT 
+SaveFileName=NreadSw.Gam
+UseHiresFonts=
+TransLang=SWE
+HelpsLang=
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Jakten på de försunna order
+[END]
+
+[PATH]
+HDPath=C:\BONNIER\JAKTEN
+CDPath=D:
+
+
+
+
+
+]]]
+
+
+
+
+end
 
 
 end
