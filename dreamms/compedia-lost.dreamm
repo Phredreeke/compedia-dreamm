@@ -21,7 +21,7 @@ mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
 
 script[cd-init]:
     code = [[[$(CRLF)
-        drive_set_label("D", "$$(CDLABEL)LOSTWORDS")
+        drive_set_label("D", "$$(CDLABEL)")
         if (!!file_exists("$$(HDDPATH)\\LOST.INI")) { file_save("$$(HDDPATH)\\LOST.INI", "$$(LOST_CONTENTS)") }
     ]]]
 end

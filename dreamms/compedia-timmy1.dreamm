@@ -1,0 +1,108 @@
+desc[compedia-timmy1]:
+
+name = Timmy and the Magic Pictures
+icon = compedia-timmy1.png
+machine = pc
+// rootpath = D:\ 
+rootpath = C:\FLAGTWR\TIMMY1
+launch = "C:\Flagtwr\Timmy1\Timmy1.exe" EMME /CFG:C:\FLAGTWR\TIMMY1\TIMMY1.ini
+osenv = windows 98
+winres = 640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(INIPATH)")) { file_save("$$(INIPATH)", "$$(INI_CONTENTS)") }
+    ]]]
+end
+
+
+game[pc-en-961006]:
+    name = English 1996-10-06
+    anchorfile = TIMMY1.EXE
+    INIPATH=C:\FLAGTWR\TIMMY1\TIMMY1.ini
+    CDLABEL=COMPEDIA
+    file[]: crc = e5814350; size =       259; name = 16COLOR.ENG
+//    file[]: crc = 420c7155; size =     92208; name = _ING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = _ING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = _INGDE.DLL
+//    file[]: crc = 1be07fa4; size =      6736; name = _INGDIB.DRV
+//    file[]: crc = a2b26dc7; size =      5024; name = _INGPAL.WND
+//    file[]: crc = ebc07351; size =      9813; name = _MSSETUP.EXE
+//    file[]: crc = b5786357; size =     89504; name = _MSTEST.EXE
+//    file[]: crc = 345cd097; size =      1966; name = _VA.386
+    file[]: crc = 52505ac5; size =       384; name = ITEHF.200
+//    file[]: crc = 32d5ebd3; size =     19456; name = LAUNCH.EXE
+//    file[]: crc = 69cf275b; size =       932; name = LAUNCH.INI
+//    file[]: crc = 18f98694; size =   2561786; name = LAUNCHER.EXE
+    file[]: crc = 9c6ca28b; size =   4637459; name = LOGO.E
+//    file[]: crc = 8bac66e9; size =     74528; name = MSCOMSTF.DLL
+//    file[]: crc = 9367bd52; size =     37888; name = MSCUISTE.DLL
+//    file[]: crc = ea8fb482; size =     37888; name = MSCUISTF.DLL
+//    file[]: crc = bf8f1809; size =     22097; name = MSDETECT.INC
+//    file[]: crc = 2bd46f8f; size =     24544; name = MSDETSTF.DLL
+//    file[]: crc = 5a9638c2; size =     65440; name = MSINSSTF.DLL
+//    file[]: crc = bd3d3075; size =     14928; name = MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = MSUILSTF.DLL
+    file[]: crc = 4aa69c96; size =  61408499; name = MUSIC.C
+    file[]: crc = 8f8dc1f8; size =  39004853; name = SAME.B
+    file[]: crc = 79e2d228; size =      1426; name = SPECS.INC
+    file[]: crc = 43175c48; size =  15479090; name = TIMMY1.A
+    file[]: crc = b4819745; size =   2840469; name = TIMMY1.D
+    file[]: crc = da561eca; size =    333312; name = TIMMY1.EXE
+    file[]: crc = 634e8360; size =       621; name = TIMMY1.INI
+    file[]: crc = f252c780; size =     20163; name = TIMMY1.LOD
+    file[]: crc = 22fa3eee; size =        24; name = TIMMY1.TXP
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=ENG
+StartMaximized=Yes
+SaveDir=C:\FLAGTWR\TIMMY1
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=Timmy1.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+define=nopcx hremme 
+DataFiles=Timmy1.a  Same.b  Music.c Timmy1.d  Logo.e
+LodFile=Timmy1.Lod
+WindowTitle=Timmy And The Magic Pictures 
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Timmy Climbing the Walls
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+
+
+
+
+
+
+
+
+]]]
+
+
+
+end
+
+
+
+end
