@@ -37,7 +37,7 @@ end
 INCOMPATIBLE = true
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = Preliminary support
+    text = THIS GAME IS UNSUPPORTED
 end
 
 game[pc-en-060802]:
