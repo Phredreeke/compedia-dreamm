@@ -1,0 +1,1117 @@
+desc[compedia-julia]:
+
+name = Julia: Back to the Sweet 60's
+icon = compedia-julia.png
+machine = pc
+rootpath = D:\
+HDDPATH = C:\JULIA1
+launch = "C:\JULIA1\Julia1.exe" /CFG:C:\JULIA1\Julia1.INI
+osenv = windows 98
+winres = 640x480x32
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\cd
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\cd\eng
+mount[]: vpath = Y:\Julia1; srcpath = $(ifsinstallpath)\cd
+mount[]: vpath = g:\Swiss\Julia\xfre\zoom; srcpath = $(ifsinstallpath)\cd\eng
+mount[]: vpath = g:\Swiss\Julia\xfre; srcpath = $(ifsinstallpath)\cd\eng
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "Julia1")
+        if (!!file_exists("C:\\JULIA1\\Julia1.INI")) { file_save("C:\\JULIA1\\Julia1.INI", "$$(JULIA1_CONTENTS)") }
+        if (is_windows()) {
+            winregistry_import_raw("$$(REGISTRY)");
+        }
+    ]]]
+end
+
+//
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = Preliminary support
+end
+
+game[pc-en-060802]:
+    name = English 2006-08-02
+    anchorfile = julia1.bmp
+//    anchordepth = 1
+    file[]: crc = acdb198f; size =   8981440; name = cd\ar505enu.exe
+    file[]: crc = 95f128b8; size =        44; name = cd\AUTORUN.INF
+    file[]: crc = bfd9cf8b; size =   9701694; name = cd\cafe.cxt
+    file[]: crc = 802d7b95; size =      2573; name = cd\cafe_1.inf
+    file[]: crc = 1a9a252a; size =      1962; name = cd\cafe_2.inf
+    file[]: crc = 8cb27b9a; size =      2127; name = cd\channels.inf
+    file[]: crc = 3ec69e92; size =   4891237; name = cd\cloth.cxt
+    file[]: crc = 268e146e; size =       803; name = cd\cloth_1.inf
+    file[]: crc = cf1bdf0b; size =       892; name = cd\cloth_2.inf
+    file[]: crc = 9a9a7b6a; size =    308759; name = cd\Curosrs.cxt
+    file[]: crc = a665b51f; size =    477243; name = cd\data1.cab
+    file[]: crc = df4695bd; size =     10364; name = cd\data1.hdr
+    file[]: crc = b5748f90; size =   2208065; name = cd\data2.cab
+    file[]: crc = 3bed518e; size =   4374542; name = cd\disk.cxt
+    file[]: crc = d1e04346; size =      1551; name = cd\disk_1.inf
+    file[]: crc = 711cf6ef; size =      2513; name = cd\disk_2.inf
+    file[]: crc = 764c626a; size =   1579612; name = cd\dorms.cxt
+    file[]: crc = 53169d71; size =       337; name = cd\dorms1.inf
+    file[]: crc = 3e358888; size =       282; name = cd\dorms2.inf
+    file[]: crc = f3ed3117; size =   5084303; name = cd\end.cxt
+    file[]: crc = a30f574f; size =       976; name = cd\end1.inf
+    file[]: crc = d3bd5f20; size =      1092; name = cd\end2.inf
+    file[]: crc = e5b9f321; size =  14534577; name = cd\final.cxt
+    file[]: crc = 901bead8; size =    330580; name = cd\game.dxr
+    file[]: crc = 14c1656d; size =    319447; name = cd\global.cxt
+    file[]: crc = af06f41a; size =      1602; name = cd\global.inf
+    file[]: crc = 60f4d3fc; size =    346602; name = cd\ikernel.ex_
+    file[]: crc = dcd6923a; size =      5683; name = cd\items.inf
+    file[]: crc = e00f40db; size =      2102; name = cd\julia1.bmp
+    file[]: crc = cf990b1b; size =      2238; name = cd\julia1.ico
+    file[]: crc = bab603af; size =   4821900; name = cd\lab.cxt
+    file[]: crc = a8fcf201; size =       742; name = cd\lab1.inf
+    file[]: crc = 398cb127; size =       345; name = cd\lab3.inf
+    file[]: crc = b1d00dd8; size =    176228; name = cd\launch1.bmp
+    file[]: crc = 439b4794; size =    219136; name = cd\launcher.exe
+    file[]: crc = 1ce2faf6; size =       417; name = cd\layout.bin
+    file[]: crc = 19b907c1; size =   1591756; name = cd\manual.pdf
+    file[]: crc = 54acbc0f; size =      7380; name = cd\menu.cxt
+    file[]: crc = d751a900; size =    150120; name = cd\panel.cxt
+    file[]: crc = bea7e52d; size =   9409760; name = cd\paper.cxt
+    file[]: crc = 555394e6; size =      1959; name = cd\paper_1.inf
+    file[]: crc = 5ea7692d; size =      1952; name = cd\paper_2.inf
+    file[]: crc = 0126c606; size =   6783572; name = cd\photo.cxt
+    file[]: crc = 30f48101; size =      2801; name = cd\photo_1.inf
+    file[]: crc = ff40590b; size =      2996; name = cd\photo_2.inf
+    file[]: crc = 428700a2; size =       630; name = cd\runfile.bmp
+    file[]: crc = 4a3c4018; size =     30720; name = cd\runfile.exe
+    file[]: crc = eda3d7dc; size =   2422217; name = cd\Same.cxt
+    file[]: crc = 15a22d1a; size =     54272; name = cd\Setup.exe
+    file[]: crc = d5a12de1; size =       119; name = cd\Setup.ini
+    file[]: crc = f63c80f3; size =    168898; name = cd\setup.inx
+    file[]: crc = e7dff840; size =  18986836; name = cd\street.cxt
+    file[]: crc = 4ec3746d; size =       221; name = cd\street10.inf
+    file[]: crc = 1c7a2b1f; size =       642; name = cd\street11.inf
+    file[]: crc = ef051aac; size =       382; name = cd\street12.inf
+    file[]: crc = 5bc68c2b; size =       192; name = cd\street14.inf
+    file[]: crc = 440b1e73; size =       324; name = cd\street15.inf
+    file[]: crc = 9ecc4881; size =       215; name = cd\street16.inf
+    file[]: crc = ddc2c7ad; size =       291; name = cd\street17.inf
+    file[]: crc = af5debb2; size =       406; name = cd\street4.inf
+    file[]: crc = 029f6883; size =       541; name = cd\street6.inf
+    file[]: crc = a888460b; size =       309; name = cd\street7.inf
+    file[]: crc = 41a783a0; size =       263; name = cd\street8.inf
+    file[]: crc = 5e0e7fe4; size =       245; name = cd\street9.inf
+    file[]: crc = 1fa4cc2e; size =     29406; name = cd\utils.cxt
+    file[]: crc = 24279f59; size =    639088; name = cd\asit\lab.dxr
+    file[]: crc = b8958fae; size =      1102; name = cd\asit\ph_eng.cxt
+    file[]: crc = c94cf4b0; size =  10595908; name = cd\asit\ph_same.cxt
+    file[]: crc = ad92008b; size =     40654; name = cd\asit\photo.dxr
+    file[]: crc = 02a32f35; size =    421022; name = cd\asit\trivia.dxr
+    file[]: crc = a98f74e0; size =   1680858; name = cd\asit\trv_same.cxt
+    file[]: crc = 0815acbe; size =    515718; name = cd\asit\wa_same.cxt
+    file[]: crc = caf0c53d; size =     34236; name = cd\asit\watch.dxr
+    file[]: crc = cf20272c; size =      7357; name = cd\eng\cafea_1.inf
+    file[]: crc = c683c150; size =      7293; name = cd\eng\cafea_2.inf
+    file[]: crc = 47244a44; size =     10097; name = cd\eng\cafed_1.inf
+    file[]: crc = fe088ea5; size =      5233; name = cd\eng\cafed_2.inf
+    file[]: crc = 5b0ca6d2; size =      7715; name = cd\eng\cloths_1.inf
+    file[]: crc = 86ddb915; size =      9800; name = cd\eng\cloths_2.inf
+    file[]: crc = 755a3e8f; size =     45922; name = cd\eng\db1bg.bmp
+    file[]: crc = 3b02ce0b; size =     30716; name = cd\eng\db2bg.bmp
+    file[]: crc = da8434d4; size =      6313; name = cd\eng\diskr_1.inf
+    file[]: crc = 3010d55f; size =      6269; name = cd\eng\diskr_2.inf
+    file[]: crc = dd27013f; size =     61278; name = cd\eng\dlgbox1.bmp
+    file[]: crc = d6105aea; size =     40392; name = cd\eng\dlgbox2.bmp
+    file[]: crc = 45121b00; size =     16661; name = cd\eng\gametext.inf
+    file[]: crc = fe64d0c8; size =     12384; name = cd\eng\jbye.aif
+    file[]: crc = 2ed022ef; size =      9211; name = cd\eng\lab2_1.inf
+    file[]: crc = edc4922f; size =      7217; name = cd\eng\lab2_2.inf
+    file[]: crc = 7c168342; size =    308278; name = cd\eng\map2.bmp
+    file[]: crc = d79a556c; size =       518; name = cd\eng\panel.inf
+    file[]: crc = a10c0511; size =      8924; name = cd\eng\papern_1.inf
+    file[]: crc = 184ccb0f; size =      6718; name = cd\eng\papern_2.inf
+    file[]: crc = 71453ef0; size =      3942; name = cd\eng\photos_1.inf
+    file[]: crc = b25c7e80; size =      4047; name = cd\eng\photos_2.inf
+    file[]: crc = 413506b5; size =      2636; name = cd\eng\street1.inf
+    file[]: crc = a28399ea; size =      2800; name = cd\eng\street13.inf
+    file[]: crc = 7003e5cd; size =      2057; name = cd\eng\street2.inf
+    file[]: crc = 29f0aa02; size =    921656; name = cd\eng\street2t.bmp
+    file[]: crc = 6cbf7156; size =      2465; name = cd\eng\street3.inf
+    file[]: crc = c804c987; size =    921656; name = cd\eng\street3t.bmp
+    file[]: crc = 2d5d2de8; size =    921656; name = cd\eng\street4t.bmp
+    file[]: crc = 789413ec; size =      3325; name = cd\eng\street5.inf
+    file[]: crc = 9cf590cd; size =    308280; name = cd\eng\street5bt.bmp
+    file[]: crc = 7ed38739; size =    921656; name = cd\eng\street5t.bmp
+    file[]: crc = 28de9a58; size =    921656; name = cd\eng\street6t.bmp
+    file[]: crc = 132a6bd2; size =    921656; name = cd\eng\waitload.bmp
+    file[]: crc = 87515002; size =     86108; name = cd\eng\asit\lab\laa-s14.aif
+    file[]: crc = 8aee3d4d; size =    168540; name = cd\eng\asit\lab\laa1-02a.aif
+    file[]: crc = 22865778; size =     89948; name = cd\eng\asit\lab\laa1-s12.aif
+    file[]: crc = ea1bd9a0; size =     91740; name = cd\eng\asit\lab\laa1-s13.aif
+    file[]: crc = 5263ff99; size =     54010; name = cd\eng\asit\lab\laa1-s2.aif
+    file[]: crc = df755d0e; size =    109148; name = cd\eng\asit\lab\laa1-s3.aif
+    file[]: crc = eebad7b9; size =    169252; name = cd\eng\asit\lab\laa1-s4.aif
+    file[]: crc = 33af79b6; size =     72568; name = cd\eng\asit\lab\laa1-s7.aif
+    file[]: crc = 83069650; size =    307010; name = cd\eng\asit\lab\laa1-s8.aif
+    file[]: crc = 9fc1a313; size =    143036; name = cd\eng\asit\lab\laa1-s9.aif
+    file[]: crc = f281ca86; size =       283; name = cd\eng\asit\lab\lab.hlp
+    file[]: crc = 01fe702d; size =     71818; name = cd\eng\asit\lab\mel13.aif
+    file[]: crc = 66a2d399; size =    167108; name = cd\eng\asit\lab\mel14.aif
+    file[]: crc = 0ece252c; size =    169068; name = cd\eng\asit\lab\mel15.aif
+    file[]: crc = 6d7fafd5; size =    159010; name = cd\eng\asit\photo\mel16.aif
+    file[]: crc = b46e3535; size =    109510; name = cd\eng\asit\photo\mel17.aif
+    file[]: crc = 1688ab72; size =       100; name = cd\eng\asit\photo\photo.hlp
+    file[]: crc = 6beac4b3; size =     88064; name = cd\eng\asit\photo\sub2-s1.aif
+    file[]: crc = e1589729; size =      1773; name = cd\eng\asit\trivia\correction.txt
+    file[]: crc = e463ec51; size =     93048; name = cd\eng\asit\trivia\mel34.aif
+    file[]: crc = f439d982; size =      5078; name = cd\eng\asit\trivia\question.txt
+    file[]: crc = 585d4ada; size =    231614; name = cd\eng\asit\trivia\shyan01.aif
+    file[]: crc = c395bd31; size =     67480; name = cd\eng\asit\trivia\shyan02.aif
+    file[]: crc = f9e36b6f; size =     97560; name = cd\eng\asit\trivia\shyan03.aif
+    file[]: crc = fcd85a25; size =     61906; name = cd\eng\asit\trivia\shyan04.aif
+    file[]: crc = 44c6163b; size =    105914; name = cd\eng\asit\trivia\shyan05.aif
+    file[]: crc = b77cee1c; size =    126842; name = cd\eng\asit\trivia\shyan06.aif
+    file[]: crc = e807be8a; size =    101582; name = cd\eng\asit\trivia\shyan07.aif
+    file[]: crc = 1385bf48; size =     80582; name = cd\eng\asit\trivia\shyan08.aif
+    file[]: crc = e3d6ef88; size =    116970; name = cd\eng\asit\trivia\shyan09.aif
+    file[]: crc = 364994ab; size =     50830; name = cd\eng\asit\trivia\shyan10.aif
+    file[]: crc = 20b8cb91; size =    116208; name = cd\eng\asit\trivia\shyan11.aif
+    file[]: crc = dff6ff3c; size =     92866; name = cd\eng\asit\trivia\shyan13.aif
+    file[]: crc = e6ab34df; size =     66438; name = cd\eng\asit\trivia\shyan14.aif
+    file[]: crc = c42aba27; size =     71520; name = cd\eng\asit\trivia\shyan15.aif
+    file[]: crc = 881fda53; size =     46656; name = cd\eng\asit\trivia\shyan16.aif
+    file[]: crc = d3dd2d0a; size =    113964; name = cd\eng\asit\trivia\shyan17.aif
+    file[]: crc = 25537e78; size =     79750; name = cd\eng\asit\trivia\shyan18.aif
+    file[]: crc = e8cd2e5c; size =     79538; name = cd\eng\asit\trivia\shyan19.aif
+    file[]: crc = a63f6605; size =     75762; name = cd\eng\asit\trivia\shyan20.aif
+    file[]: crc = 5aad5458; size =     38306; name = cd\eng\asit\trivia\shyan21.aif
+    file[]: crc = d35899c4; size =    130284; name = cd\eng\asit\trivia\shyan22.aif
+    file[]: crc = 8f057363; size =    107616; name = cd\eng\asit\trivia\shyan23.aif
+    file[]: crc = aaca45f4; size =    163788; name = cd\eng\asit\trivia\shyan24.aif
+    file[]: crc = dc9867f3; size =    104352; name = cd\eng\asit\trivia\shyan25.aif
+    file[]: crc = 245953aa; size =     57540; name = cd\eng\asit\trivia\shyan26.aif
+    file[]: crc = 05c7c254; size =     64468; name = cd\eng\asit\trivia\shyan27.aif
+    file[]: crc = fcf08d1f; size =    108932; name = cd\eng\asit\trivia\shyan28.aif
+    file[]: crc = 7da7cac6; size =     79744; name = cd\eng\asit\trivia\shyan29.aif
+    file[]: crc = 45bf97fa; size =     80980; name = cd\eng\asit\trivia\shyan30.aif
+    file[]: crc = 694f2514; size =     68962; name = cd\eng\asit\trivia\shyan31.aif
+    file[]: crc = 5290e947; size =     71366; name = cd\eng\asit\trivia\shyan32.aif
+    file[]: crc = 241f44ae; size =    115818; name = cd\eng\asit\trivia\shyan33.aif
+    file[]: crc = 1cdc2fab; size =     72792; name = cd\eng\asit\trivia\shyan34.aif
+    file[]: crc = d392aa09; size =     75556; name = cd\eng\asit\trivia\shyan35.aif
+    file[]: crc = 97af7ebb; size =    121376; name = cd\eng\asit\trivia\shyan37.aif
+    file[]: crc = d0a80e10; size =    104698; name = cd\eng\asit\trivia\shyan38.aif
+    file[]: crc = b3fb1010; size =     81678; name = cd\eng\asit\trivia\shyan39.aif
+    file[]: crc = 83aa1629; size =    126842; name = cd\eng\asit\trivia\shyan40.aif
+    file[]: crc = f6b054a9; size =    116638; name = cd\eng\asit\trivia\shyan41.aif
+    file[]: crc = 835c4bf5; size =    103398; name = cd\eng\asit\trivia\shyan42.aif
+    file[]: crc = 75881081; size =    110616; name = cd\eng\asit\trivia\shyan43.aif
+    file[]: crc = 47e67c64; size =    107876; name = cd\eng\asit\trivia\shyan44.aif
+    file[]: crc = 2a607f4f; size =     99554; name = cd\eng\asit\trivia\shyan45.aif
+    file[]: crc = 2aed9076; size =     95330; name = cd\eng\asit\trivia\shyan46.aif
+    file[]: crc = cc2368b9; size =    130210; name = cd\eng\asit\trivia\shyan48.aif
+    file[]: crc = 8199a359; size =    156306; name = cd\eng\asit\trivia\shyan49.aif
+    file[]: crc = c95e240a; size =     73658; name = cd\eng\asit\trivia\shyan50.aif
+    file[]: crc = 779fdee5; size =     77230; name = cd\eng\asit\trivia\shyan51.aif
+    file[]: crc = 1e66bab8; size =    154404; name = cd\eng\asit\trivia\shyan52.aif
+    file[]: crc = d0d60cec; size =    129494; name = cd\eng\asit\trivia\shyan53.aif
+    file[]: crc = 47fb6f41; size =    117386; name = cd\eng\asit\trivia\shyan54.aif
+    file[]: crc = bab15fea; size =     71448; name = cd\eng\asit\trivia\shyan55.aif
+    file[]: crc = e9fc7c32; size =     81274; name = cd\eng\asit\trivia\shyan56.aif
+    file[]: crc = 6e8c52bd; size =     90580; name = cd\eng\asit\trivia\shyan57.aif
+    file[]: crc = e92d4c55; size =    103466; name = cd\eng\asit\trivia\shyan58.aif
+    file[]: crc = 766533ab; size =     85674; name = cd\eng\asit\trivia\shyan59.aif
+    file[]: crc = 236d8fb9; size =    101000; name = cd\eng\asit\trivia\shyan60.aif
+    file[]: crc = 01cdb086; size =     55526; name = cd\eng\asit\trivia\shyan61.aif
+    file[]: crc = 7e93f1be; size =     93544; name = cd\eng\asit\trivia\shyan62.aif
+    file[]: crc = 392944f8; size =     88952; name = cd\eng\asit\trivia\shyan63.aif
+    file[]: crc = 4ab55eaf; size =     70434; name = cd\eng\asit\trivia\shyan64.aif
+    file[]: crc = af351bbc; size =     87144; name = cd\eng\asit\trivia\shyan65.aif
+    file[]: crc = 07193e6b; size =    103934; name = cd\eng\asit\trivia\shyan66.aif
+    file[]: crc = 710476ef; size =    128404; name = cd\eng\asit\trivia\shyan67.aif
+    file[]: crc = f24aeafe; size =    105582; name = cd\eng\asit\trivia\shyan68.aif
+    file[]: crc = dc232cbe; size =    110144; name = cd\eng\asit\trivia\shyan69.aif
+    file[]: crc = ede2822d; size =    132354; name = cd\eng\asit\trivia\shyan70.aif
+    file[]: crc = 9ff7a642; size =     73614; name = cd\eng\asit\trivia\shyan71.aif
+    file[]: crc = 25cc8b5d; size =     83376; name = cd\eng\asit\trivia\shyan72.aif
+    file[]: crc = f5efbd1c; size =     73316; name = cd\eng\asit\trivia\shyan73.aif
+    file[]: crc = 9d48b3e9; size =     66176; name = cd\eng\asit\trivia\shyan74.aif
+    file[]: crc = 5a3e7b79; size =    126842; name = cd\eng\asit\trivia\shyan75.aif
+    file[]: crc = beda2906; size =     82708; name = cd\eng\asit\trivia\shyan76.aif
+    file[]: crc = 7610d7f5; size =     96772; name = cd\eng\asit\trivia\shyan77.aif
+    file[]: crc = 8447b65e; size =     86782; name = cd\eng\asit\trivia\shyan78.aif
+    file[]: crc = c7d28d49; size =     86378; name = cd\eng\asit\trivia\shyan79.aif
+    file[]: crc = 0c6a5839; size =     31340; name = cd\eng\asit\trivia\shyan80.aif
+    file[]: crc = b508fcec; size =     26302; name = cd\eng\asit\trivia\shyan81.aif
+    file[]: crc = 613729f8; size =     11496; name = cd\eng\asit\trivia\shyright.aif
+    file[]: crc = fafc7f84; size =     15352; name = cd\eng\asit\trivia\shywrong.aif
+    file[]: crc = d3dc511e; size =    308278; name = cd\eng\asit\trivia\tarot.bmp
+    file[]: crc = fa2d1539; size =       452; name = cd\eng\asit\trivia\trivia.hlp
+    file[]: crc = 06d614d5; size =     53068; name = cd\eng\asit\watch\ala3b-03.aif
+    file[]: crc = b4aa03db; size =     40632; name = cd\eng\asit\watch\ala3b-s1.aif
+    file[]: crc = efddc084; size =     55180; name = cd\eng\asit\watch\doa3b-s1.aif
+    file[]: crc = f79845ce; size =    144078; name = cd\eng\asit\watch\jia3b-s2.aif
+    file[]: crc = ae120842; size =    130246; name = cd\eng\asit\watch\mel19.aif
+    file[]: crc = f79d3f79; size =    151232; name = cd\eng\asit\watch\mel20.aif
+    file[]: crc = 12856cf2; size =        92; name = cd\eng\asit\watch\watch.hlp
+    file[]: crc = bbc4e600; size =     24888; name = cd\eng\cafe\al-m.aif
+    file[]: crc = aeaac724; size =    144374; name = cd\eng\cafe\ala1-01.aif
+    file[]: crc = bedd8b31; size =     61206; name = cd\eng\cafe\ala1-02.aif
+    file[]: crc = c3bcd2ce; size =     36730; name = cd\eng\cafe\ala1-03.aif
+    file[]: crc = e9246ee0; size =    146820; name = cd\eng\cafe\ala1-10.aif
+    file[]: crc = dc8948eb; size =    159476; name = cd\eng\cafe\ala1-11a.aif
+    file[]: crc = 3e904825; size =     31342; name = cd\eng\cafe\ala1-11b.aif
+    file[]: crc = f76c44f4; size =     98128; name = cd\eng\cafe\ala1-11c.aif
+    file[]: crc = 550ab8e1; size =     80392; name = cd\eng\cafe\ala1-12a.aif
+    file[]: crc = cdbf2c0e; size =     16412; name = cd\eng\cafe\ala1-12b.aif
+    file[]: crc = 590f02dc; size =     56992; name = cd\eng\cafe\ala1-12c.aif
+    file[]: crc = 8f2ff876; size =     88114; name = cd\eng\cafe\ala1-20.aif
+    file[]: crc = 98e5245e; size =     33970; name = cd\eng\cafe\ala1-21a.aif
+    file[]: crc = 58427735; size =    121458; name = cd\eng\cafe\ala1-21b.aif
+    file[]: crc = 344e6871; size =    109390; name = cd\eng\cafe\ala1-22.aif
+    file[]: crc = 067ac72a; size =    112950; name = cd\eng\cafe\ala2-01.aif
+    file[]: crc = 28f22c65; size =     57398; name = cd\eng\cafe\ala2-01a.aif
+    file[]: crc = 4ddd4afa; size =    150150; name = cd\eng\cafe\ala2-01h.aif
+    file[]: crc = e842b5e6; size =     51366; name = cd\eng\cafe\ala2-03.aif
+    file[]: crc = 96600da1; size =     70864; name = cd\eng\cafe\ala2-04.aif
+    file[]: crc = 02a8cf84; size =    131526; name = cd\eng\cafe\ala2-10.aif
+    file[]: crc = 3e053618; size =    105804; name = cd\eng\cafe\ala2-11.aif
+    file[]: crc = 06ef11e1; size =    123984; name = cd\eng\cafe\ala2-11m.aif
+    file[]: crc = 2e332962; size =    251846; name = cd\eng\cafe\ala2-12.aif
+    file[]: crc = 3ba74c6a; size =    161358; name = cd\eng\cafe\ala2-20.aif
+    file[]: crc = de62a98b; size =    177096; name = cd\eng\cafe\ala2-30.aif
+    file[]: crc = 88bc1b99; size =    162196; name = cd\eng\cafe\ala2-31.aif
+    file[]: crc = 078d2dd4; size =    182722; name = cd\eng\cafe\ala2-32.aif
+    file[]: crc = a74be193; size =     61720; name = cd\eng\cafe\alb1-01.aif
+    file[]: crc = c4d8112b; size =    176244; name = cd\eng\cafe\alb1-02.aif
+    file[]: crc = 699b57b6; size =    119282; name = cd\eng\cafe\alb1-03.aif
+    file[]: crc = b7b6fe7a; size =    101364; name = cd\eng\cafe\alb1-10.aif
+    file[]: crc = 9589a52a; size =    207076; name = cd\eng\cafe\alb1-11.aif
+    file[]: crc = 18e58232; size =    213684; name = cd\eng\cafe\alb1-12.aif
+    file[]: crc = b4fde05f; size =     57316; name = cd\eng\cafe\alb1-20.aif
+    file[]: crc = c49af7fe; size =    186752; name = cd\eng\cafe\alb1-20h.aif
+    file[]: crc = 71e0db0b; size =    189074; name = cd\eng\cafe\alb1-21.aif
+    file[]: crc = 0b5e0cd9; size =     25204; name = cd\eng\cafe\alb1-22a.aif
+    file[]: crc = cf93fc81; size =     66012; name = cd\eng\cafe\alb1-22b.aif
+    file[]: crc = 11705023; size =     98926; name = cd\eng\cafe\alb1-30.aif
+    file[]: crc = e7a2e723; size =     19564; name = cd\eng\cafe\alb1-31a.aif
+    file[]: crc = 1fec31f3; size =     44104; name = cd\eng\cafe\alb1-31b.aif
+    file[]: crc = 9fd7077d; size =    134144; name = cd\eng\cafe\alb1-31c.aif
+    file[]: crc = 0e246eec; size =    116374; name = cd\eng\cafe\alb1-32.aif
+    file[]: crc = 6c9b8459; size =    145454; name = cd\eng\cafe\alb1-32h.aif
+    file[]: crc = 69ef1d44; size =    128166; name = cd\eng\cafe\alb2-01.aif
+    file[]: crc = 4c96962c; size =     38448; name = cd\eng\cafe\alb2-01a.aif
+    file[]: crc = 34780aa7; size =    150776; name = cd\eng\cafe\alb2-01h.aif
+    file[]: crc = 01ba9631; size =     37734; name = cd\eng\cafe\alb2-04.aif
+    file[]: crc = a09872c7; size =     94254; name = cd\eng\cafe\alb2-05.aif
+    file[]: crc = 30b08e3a; size =    229904; name = cd\eng\cafe\alb2-10.aif
+    file[]: crc = c3041bca; size =     66764; name = cd\eng\cafe\alb2-11a.aif
+    file[]: crc = 7d39c7d4; size =     81016; name = cd\eng\cafe\alb2-11b.aif
+    file[]: crc = 7d06807b; size =    154544; name = cd\eng\cafe\alb2-12.aif
+    file[]: crc = 6dff8b6e; size =    147006; name = cd\eng\cafe\alb2-20.aif
+    file[]: crc = c8f71b43; size =    139472; name = cd\eng\cafe\alb2-21.aif
+    file[]: crc = 2a1f4238; size =    218598; name = cd\eng\cafe\alb2-22.aif
+    file[]: crc = 48990ead; size =     55910; name = cd\eng\cafe\doa1-01a.aif
+    file[]: crc = b78a4272; size =    107178; name = cd\eng\cafe\doa1-01b.aif
+    file[]: crc = 58c42ec0; size =     97386; name = cd\eng\cafe\doa1-03.aif
+    file[]: crc = 02826afb; size =     47840; name = cd\eng\cafe\doa1-04.aif
+    file[]: crc = aea40db3; size =    103070; name = cd\eng\cafe\doa1-10a.aif
+    file[]: crc = f69fceb0; size =    117006; name = cd\eng\cafe\doa1-10b.aif
+    file[]: crc = c881ab4a; size =    187480; name = cd\eng\cafe\doa1-20.aif
+    file[]: crc = 10b0d36f; size =    231580; name = cd\eng\cafe\doa1-21.aif
+    file[]: crc = 45b337b0; size =     66204; name = cd\eng\cafe\doa1-22.aif
+    file[]: crc = 17d21dbe; size =     88254; name = cd\eng\cafe\doa1-22m.aif
+    file[]: crc = 7cc52473; size =     98418; name = cd\eng\cafe\doa2-01.aif
+    file[]: crc = 839c678e; size =     82742; name = cd\eng\cafe\doa2-02.aif
+    file[]: crc = 7fda1c9b; size =     27664; name = cd\eng\cafe\doa2-03.aif
+    file[]: crc = b471c365; size =     93768; name = cd\eng\cafe\doa2-04.aif
+    file[]: crc = b4d4b04f; size =    202218; name = cd\eng\cafe\doa2-05.aif
+    file[]: crc = da662e91; size =     56980; name = cd\eng\cafe\doa2-05a.aif
+    file[]: crc = 0389a639; size =     17750; name = cd\eng\cafe\doa2-06.aif
+    file[]: crc = d1de077f; size =     29578; name = cd\eng\cafe\doa2-07.aif
+    file[]: crc = c36c82bd; size =    132354; name = cd\eng\cafe\doa2-10.aif
+    file[]: crc = c98a9f4b; size =    198504; name = cd\eng\cafe\doa2-20.aif
+    file[]: crc = a6c927b4; size =    209530; name = cd\eng\cafe\doa2-21.aif
+    file[]: crc = d387bf2b; size =    226068; name = cd\eng\cafe\doa2-22.aif
+    file[]: crc = 5e657b6c; size =     30426; name = cd\eng\cafe\doa2-30.aif
+    file[]: crc = 14a665cd; size =     24492; name = cd\eng\cafe\doa2-40.aif
+    file[]: crc = 361f670a; size =    137868; name = cd\eng\cafe\doa2-40h.aif
+    file[]: crc = ae27d0c3; size =    126842; name = cd\eng\cafe\doa2-50.aif
+    file[]: crc = 7819fe61; size =    121330; name = cd\eng\cafe\doa2-s3.aif
+    file[]: crc = 955850dc; size =     71718; name = cd\eng\cafe\dob1-01.aif
+    file[]: crc = bea1962b; size =     27618; name = cd\eng\cafe\dob1-02.aif
+    file[]: crc = b7a86de2; size =     77230; name = cd\eng\cafe\dob1-03.aif
+    file[]: crc = 63980037; size =     55678; name = cd\eng\cafe\dob1-10a.aif
+    file[]: crc = 2889a043; size =     76056; name = cd\eng\cafe\dob1-10b.aif
+    file[]: crc = 1a98bcd2; size =    160216; name = cd\eng\cafe\dob1-11a.aif
+    file[]: crc = 16b8c6ac; size =     63954; name = cd\eng\cafe\dob1-11b.aif
+    file[]: crc = cd1b5267; size =    226068; name = cd\eng\cafe\dob1-12.aif
+    file[]: crc = c883109b; size =    126582; name = cd\eng\cafe\dob1-20a.aif
+    file[]: crc = 3a870e81; size =    107276; name = cd\eng\cafe\dob1-20b.aif
+    file[]: crc = ba6508b9; size =     71718; name = cd\eng\cafe\dob2-01.aif
+    file[]: crc = c9f8fd7c; size =    242604; name = cd\eng\cafe\dob2-02.aif
+    file[]: crc = 8ac1f425; size =     22104; name = cd\eng\cafe\dob2-03.aif
+    file[]: crc = 70c11694; size =    126842; name = cd\eng\cafe\dob2-04.aif
+    file[]: crc = ee6ee657; size =    132354; name = cd\eng\cafe\dob2-10.aif
+    file[]: crc = 3df24e69; size =     14368; name = cd\eng\cafe\dob2-11a.aif
+    file[]: crc = e8f0b588; size =    256436; name = cd\eng\cafe\dob2-11b.aif
+    file[]: crc = bcbc7613; size =    165430; name = cd\eng\cafe\dob2-12.aif
+    file[]: crc = 6a9c4e16; size =    132354; name = cd\eng\cafe\dob2-12m.aif
+    file[]: crc = 004b6a9f; size =    192992; name = cd\eng\cafe\dob2-20.aif
+    file[]: crc = d294d3a6; size =     39808; name = cd\eng\cafe\dol-01.aif
+    file[]: crc = 51d3e03e; size =     52740; name = cd\eng\cafe\dol-02.aif
+    file[]: crc = 057eac19; size =     93768; name = cd\eng\cafe\dol-03.aif
+    file[]: crc = ccfb787c; size =    237092; name = cd\eng\cafe\dol-04.aif
+    file[]: crc = 1b4d326d; size =     44154; name = cd\eng\cafe\dol-05.aif
+    file[]: crc = a0430e1b; size =    104792; name = cd\eng\cafe\dol-06.aif
+    file[]: crc = 332b4045; size =     49668; name = cd\eng\cafe\dol-08.aif
+    file[]: crc = 912a56cf; size =    110304; name = cd\eng\cafe\dol-08a.aif
+    file[]: crc = ea1cd82f; size =    126842; name = cd\eng\cafe\dol-09.aif
+    file[]: crc = 15516b29; size =     55180; name = cd\eng\cafe\dol-10.aif
+    file[]: crc = 8fc45ee9; size =    148892; name = cd\eng\cafe\dol-11.aif
+    file[]: crc = 26273f9a; size =     60692; name = cd\eng\cafe\dolb-01.aif
+    file[]: crc = 38be65fa; size =     77190; name = cd\eng\cafe\jala1-10.aif
+    file[]: crc = 2fde57bf; size =     54486; name = cd\eng\cafe\jala1-11.aif
+    file[]: crc = a583101b; size =     28598; name = cd\eng\cafe\jala1-12.aif
+    file[]: crc = 6e0e8572; size =     39200; name = cd\eng\cafe\jala1-20.aif
+    file[]: crc = eece8fa5; size =     33790; name = cd\eng\cafe\jala1-21.aif
+    file[]: crc = 561b00f0; size =     44424; name = cd\eng\cafe\jala1-22.aif
+    file[]: crc = 2b7900f9; size =     18376; name = cd\eng\cafe\jala1-by.aif
+    file[]: crc = 46cf155f; size =     29972; name = cd\eng\cafe\jala2-10.aif
+    file[]: crc = 988d3bab; size =     63036; name = cd\eng\cafe\jala2-11.aif
+    file[]: crc = c634475f; size =     76250; name = cd\eng\cafe\jala2-12.aif
+    file[]: crc = 2f8dc767; size =     42482; name = cd\eng\cafe\jala2-20.aif
+    file[]: crc = ddf8d1d9; size =     45946; name = cd\eng\cafe\jala2-30.aif
+    file[]: crc = 710e7b6d; size =     81598; name = cd\eng\cafe\jala2-31.aif
+    file[]: crc = 9244b589; size =     76542; name = cd\eng\cafe\jala2-32.aif
+    file[]: crc = c9c60a93; size =     47786; name = cd\eng\cafe\jala2-by.aif
+    file[]: crc = 507fdaf0; size =     34922; name = cd\eng\cafe\jalb1-10.aif
+    file[]: crc = 283398aa; size =     43920; name = cd\eng\cafe\jalb1-11.aif
+    file[]: crc = f1fd6fcf; size =     37786; name = cd\eng\cafe\jalb1-12.aif
+    file[]: crc = afa95484; size =     68102; name = cd\eng\cafe\jalb1-20.aif
+    file[]: crc = 1c9e28e8; size =     47772; name = cd\eng\cafe\jalb1-21.aif
+    file[]: crc = 9b9d39ef; size =    113384; name = cd\eng\cafe\jalb1-22.aif
+    file[]: crc = ac616889; size =     43796; name = cd\eng\cafe\jalb1-30.aif
+    file[]: crc = 47a7c0e7; size =     99034; name = cd\eng\cafe\jalb1-31.aif
+    file[]: crc = 3874e9b8; size =    133266; name = cd\eng\cafe\jalb1-32.aif
+    file[]: crc = 0288544a; size =     28922; name = cd\eng\cafe\jalb1-by.aif
+    file[]: crc = 030bf714; size =     18032; name = cd\eng\cafe\jalb2-10.aif
+    file[]: crc = 880af12c; size =     37182; name = cd\eng\cafe\jalb2-11.aif
+    file[]: crc = ef57fc06; size =     46560; name = cd\eng\cafe\jalb2-12.aif
+    file[]: crc = 65033c2f; size =     46870; name = cd\eng\cafe\jalb2-20.aif
+    file[]: crc = b092758b; size =     40254; name = cd\eng\cafe\jalb2-21.aif
+    file[]: crc = 3c4477d3; size =     64170; name = cd\eng\cafe\jalb2-22.aif
+    file[]: crc = 2b219b4f; size =     51778; name = cd\eng\cafe\jdoa1-10.aif
+    file[]: crc = 2d60dd2c; size =     36370; name = cd\eng\cafe\jdoa1-20.aif
+    file[]: crc = 381520af; size =     24692; name = cd\eng\cafe\jdoa1-21.aif
+    file[]: crc = 90bc1438; size =     69630; name = cd\eng\cafe\jdoa1-22.aif
+    file[]: crc = ad92279e; size =     35752; name = cd\eng\cafe\jdoa2-10.aif
+    file[]: crc = 674b52af; size =     35666; name = cd\eng\cafe\jdoa2-20.aif
+    file[]: crc = 640f71c5; size =     32738; name = cd\eng\cafe\jdoa2-21.aif
+    file[]: crc = a526cfcf; size =     63958; name = cd\eng\cafe\jdoa2-22.aif
+    file[]: crc = 81d4a1fa; size =     32276; name = cd\eng\cafe\jdoa2-30.aif
+    file[]: crc = 710f20f8; size =     55608; name = cd\eng\cafe\jdoa2-40.aif
+    file[]: crc = f5832aa2; size =     22932; name = cd\eng\cafe\jdoa2-50.aif
+    file[]: crc = 9629e1aa; size =     49266; name = cd\eng\cafe\jdob1-10.aif
+    file[]: crc = 1dabf204; size =     25784; name = cd\eng\cafe\jdob1-11.aif
+    file[]: crc = 5ee3fd1a; size =     65078; name = cd\eng\cafe\jdob1-12.aif
+    file[]: crc = 3deb81dc; size =     48706; name = cd\eng\cafe\jdob1-20.aif
+    file[]: crc = 3a0ec2d4; size =     62522; name = cd\eng\cafe\jdob2-10.aif
+    file[]: crc = 5d3f71ed; size =     46176; name = cd\eng\cafe\jdob2-11.aif
+    file[]: crc = 5f34dc6e; size =     49582; name = cd\eng\cafe\jdob2-12.aif
+    file[]: crc = 273c29bd; size =     50672; name = cd\eng\cafe\jdob2-20.aif
+    file[]: crc = 4b498a58; size =     51454; name = cd\eng\cloth\jsha1-10.aif
+    file[]: crc = 05684652; size =     92530; name = cd\eng\cloth\jsha1-20.aif
+    file[]: crc = fe046696; size =     47038; name = cd\eng\cloth\jsha1-30.aif
+    file[]: crc = 6f6a16de; size =     15442; name = cd\eng\cloth\jsha1-31.aif
+    file[]: crc = 06b5f9f9; size =     25458; name = cd\eng\cloth\jsha1-32.aif
+    file[]: crc = e6d14b08; size =     55580; name = cd\eng\cloth\jsha2-10.aif
+    file[]: crc = de636f03; size =     86214; name = cd\eng\cloth\jsha2-11.aif
+    file[]: crc = f4ad22f0; size =     35874; name = cd\eng\cloth\jsha2-12.aif
+    file[]: crc = 5a5cdfd9; size =     44586; name = cd\eng\cloth\jsha2-20.aif
+    file[]: crc = 5632c9df; size =     66456; name = cd\eng\cloth\jsha2-30.aif
+    file[]: crc = 0fa699e8; size =     34262; name = cd\eng\cloth\jshb1-10.aif
+    file[]: crc = 5acf9900; size =     50986; name = cd\eng\cloth\jshb1-11.aif
+    file[]: crc = 210ba6b6; size =     57448; name = cd\eng\cloth\jshb1-12.aif
+    file[]: crc = aa46b80a; size =     72500; name = cd\eng\cloth\jshb1-20.aif
+    file[]: crc = 04a2ed3b; size =     58010; name = cd\eng\cloth\jshb1-30.aif
+    file[]: crc = 3091330e; size =    101478; name = cd\eng\cloth\jshb1-31.aif
+    file[]: crc = 2bfb2015; size =     63124; name = cd\eng\cloth\jshb1-32.aif
+    file[]: crc = a7a0fc06; size =     41484; name = cd\eng\cloth\jshb2-10.aif
+    file[]: crc = 4faf5b4f; size =     46842; name = cd\eng\cloth\jshb2-11.aif
+    file[]: crc = 0b431d13; size =     25056; name = cd\eng\cloth\jshb2-12.aif
+    file[]: crc = dae1b61a; size =    111098; name = cd\eng\cloth\jshb2-20.aif
+    file[]: crc = 5505659e; size =     39246; name = cd\eng\cloth\jshb2-21.aif
+    file[]: crc = cc5da640; size =     58026; name = cd\eng\cloth\jshb2-22.aif
+    file[]: crc = d15e0453; size =     88236; name = cd\eng\cloth\jshb2-30.aif
+    file[]: crc = bf88cb69; size =     29548; name = cd\eng\cloth\jshb2-40.aif
+    file[]: crc = 31ec14e5; size =    101538; name = cd\eng\cloth\sha1-01.aif
+    file[]: crc = 216b72f0; size =     26244; name = cd\eng\cloth\sha1-02.aif
+    file[]: crc = 9c01eb1a; size =     98266; name = cd\eng\cloth\sha1-03.aif
+    file[]: crc = 75ae581a; size =    126430; name = cd\eng\cloth\sha1-10.aif
+    file[]: crc = 21fe206e; size =    131002; name = cd\eng\cloth\sha1-20.aif
+    file[]: crc = 64a8f763; size =    101540; name = cd\eng\cloth\sha1-30.aif
+    file[]: crc = 0e5bf0d1; size =    163738; name = cd\eng\cloth\sha1-31.aif
+    file[]: crc = 88c87ec8; size =     10366; name = cd\eng\cloth\sha1-32a.aif
+    file[]: crc = 73f1e064; size =    104728; name = cd\eng\cloth\sha1-32b.aif
+    file[]: crc = f1281a26; size =     11086; name = cd\eng\cloth\sha130ha.aif
+    file[]: crc = b7218431; size =    134340; name = cd\eng\cloth\sha130hb.aif
+    file[]: crc = 6dede285; size =     61770; name = cd\eng\cloth\sha2-01.aif
+    file[]: crc = d25ac59c; size =     20756; name = cd\eng\cloth\sha2-02.aif
+    file[]: crc = f0e69660; size =     68070; name = cd\eng\cloth\sha2-03.aif
+    file[]: crc = 11581191; size =     70110; name = cd\eng\cloth\sha2-10.aif
+    file[]: crc = ddb7583c; size =    130158; name = cd\eng\cloth\sha2-10h.aif
+    file[]: crc = 68af3d7f; size =    178530; name = cd\eng\cloth\sha2-11.aif
+    file[]: crc = 07722b32; size =     44122; name = cd\eng\cloth\sha2-12a.aif
+    file[]: crc = dae2fcee; size =     61138; name = cd\eng\cloth\sha2-12b.aif
+    file[]: crc = 3ba8e530; size =     58700; name = cd\eng\cloth\sha2-12c.aif
+    file[]: crc = 0f78735d; size =     97642; name = cd\eng\cloth\sha2-20.aif
+    file[]: crc = 6b80924e; size =    170094; name = cd\eng\cloth\sha2-30.aif
+    file[]: crc = 548de4b6; size =     62156; name = cd\eng\cloth\sha2-30m.aif
+    file[]: crc = b63069e8; size =    107992; name = cd\eng\cloth\sha2-h.aif
+    file[]: crc = 8cda46a1; size =    137708; name = cd\eng\cloth\shb1-01.aif
+    file[]: crc = 83181631; size =    112956; name = cd\eng\cloth\shb1-02.aif
+    file[]: crc = d666c3ec; size =     41756; name = cd\eng\cloth\shb1-03.aif
+    file[]: crc = 41737e31; size =     92236; name = cd\eng\cloth\shb1-04.aif
+    file[]: crc = 048780f6; size =     93850; name = cd\eng\cloth\shb1-10.aif
+    file[]: crc = 8dcd4f2d; size =    139010; name = cd\eng\cloth\shb1-10h.aif
+    file[]: crc = 6fd3279f; size =    135536; name = cd\eng\cloth\shb1-11.aif
+    file[]: crc = 1539a9f5; size =     19586; name = cd\eng\cloth\shb1-12a.aif
+    file[]: crc = e5fb98d3; size =    127122; name = cd\eng\cloth\shb1-12b.aif
+    file[]: crc = 741c4f29; size =    106914; name = cd\eng\cloth\shb1-20.aif
+    file[]: crc = 9a4d7aab; size =    135586; name = cd\eng\cloth\shb1-20m.aif
+    file[]: crc = 161e96e8; size =    115108; name = cd\eng\cloth\shb1-30a.aif
+    file[]: crc = 5a1d035e; size =     76276; name = cd\eng\cloth\shb1-30b.aif
+    file[]: crc = 95f5d59c; size =    182498; name = cd\eng\cloth\shb1-31.aif
+    file[]: crc = e265f526; size =    205956; name = cd\eng\cloth\shb1-32.aif
+    file[]: crc = d0293d34; size =    125984; name = cd\eng\cloth\shb2-01.aif
+    file[]: crc = 32eb9a28; size =     66062; name = cd\eng\cloth\shb2-02.aif
+    file[]: crc = a9fc226f; size =     38320; name = cd\eng\cloth\shb2-03.aif
+    file[]: crc = f308a092; size =     94082; name = cd\eng\cloth\shb2-10.aif
+    file[]: crc = a7b73910; size =    117588; name = cd\eng\cloth\shb2-11.aif
+    file[]: crc = b1863226; size =    136058; name = cd\eng\cloth\shb2-12.aif
+    file[]: crc = b368241b; size =     54968; name = cd\eng\cloth\shb2-20.aif
+    file[]: crc = 4378a55a; size =    181954; name = cd\eng\cloth\shb2-20h.aif
+    file[]: crc = e40c0b94; size =    271188; name = cd\eng\cloth\shb2-21.aif
+    file[]: crc = c0dd1505; size =     44672; name = cd\eng\cloth\shb2-22.aif
+    file[]: crc = 82b21552; size =    298646; name = cd\eng\cloth\shb2-30.aif
+    file[]: crc = 1345cd46; size =     95718; name = cd\eng\cloth\shb2-40.aif
+    file[]: crc = 01cd4c51; size =    137812; name = cd\eng\cloth\shb2-40m.aif
+    file[]: crc = 83f85b8f; size =    171170; name = cd\eng\cloth\shb210ha.aif
+    file[]: crc = 7425bff0; size =     77486; name = cd\eng\cloth\shb210hb.aif
+    file[]: crc = 31aa7e4c; size =     58610; name = cd\eng\cloth\shl-01.aif
+    file[]: crc = 446f5c97; size =     69718; name = cd\eng\cloth\shl-02.aif
+    file[]: crc = b6b773d1; size =     59354; name = cd\eng\cloth\shl-03.aif
+    file[]: crc = 520bf737; size =     54172; name = cd\eng\cloth\shl-04.aif
+    file[]: crc = 9c7820cf; size =     95624; name = cd\eng\cloth\shl-05.aif
+    file[]: crc = 82fdb2ca; size =     29574; name = cd\eng\cloth\shl-06.aif
+    file[]: crc = 21c3841a; size =    120098; name = cd\eng\cloth\shl-07.aif
+    file[]: crc = 13b776b8; size =    185676; name = cd\eng\cloth\shla-01.aif
+    file[]: crc = 73ee15ba; size =    163366; name = cd\eng\cloth\shlb-01.aif
+    file[]: crc = f9e95bcf; size =     25882; name = cd\eng\disk\jria1-10.aif
+    file[]: crc = 5049b2be; size =     65668; name = cd\eng\disk\jria2-10.aif
+    file[]: crc = 0aa92c80; size =     21674; name = cd\eng\disk\jria2-11.aif
+    file[]: crc = 217c906e; size =     33728; name = cd\eng\disk\jria2-12.aif
+    file[]: crc = dee92ce2; size =    114366; name = cd\eng\disk\jria2-20.aif
+    file[]: crc = 3a65b9f7; size =     26638; name = cd\eng\disk\jria2-21.aif
+    file[]: crc = e372ca09; size =     55882; name = cd\eng\disk\jria2-22.aif
+    file[]: crc = 32c7bd23; size =     38422; name = cd\eng\disk\jrib1-10.aif
+    file[]: crc = cf660187; size =     45800; name = cd\eng\disk\jrib1-11.aif
+    file[]: crc = 845dc3aa; size =     96464; name = cd\eng\disk\jrib1-12.aif
+    file[]: crc = 8c667f53; size =     47204; name = cd\eng\disk\jrib1-20.aif
+    file[]: crc = 40a7f681; size =     99394; name = cd\eng\disk\jrib2-10.aif
+    file[]: crc = 18fbe3d4; size =     31878; name = cd\eng\disk\jrib2-20.aif
+    file[]: crc = d1ac89a0; size =     36618; name = cd\eng\disk\jrib2-30.aif
+    file[]: crc = 3dafc564; size =    175322; name = cd\eng\disk\ria1-02.aif
+    file[]: crc = 4f50dc1a; size =    110994; name = cd\eng\disk\ria1-03.aif
+    file[]: crc = 695d9f87; size =    158656; name = cd\eng\disk\ria1-10.aif
+    file[]: crc = 51fdbaea; size =    191410; name = cd\eng\disk\ria2-01.aif
+    file[]: crc = 3473a3c8; size =     62570; name = cd\eng\disk\ria2-02.aif
+    file[]: crc = c0c555e2; size =    151878; name = cd\eng\disk\ria2-03.aif
+    file[]: crc = c81e39bb; size =    123888; name = cd\eng\disk\ria2-05.aif
+    file[]: crc = f472a7cf; size =    168012; name = cd\eng\disk\ria2-10.aif
+    file[]: crc = 74724fe0; size =    205018; name = cd\eng\disk\ria2-10h.aif
+    file[]: crc = 0114e611; size =     82478; name = cd\eng\disk\ria2-11a.aif
+    file[]: crc = 9e96149b; size =    283538; name = cd\eng\disk\ria2-11b.aif
+    file[]: crc = 42b0fc75; size =    187256; name = cd\eng\disk\ria2-12.aif
+    file[]: crc = 98f1ed13; size =    137876; name = cd\eng\disk\ria2-20.aif
+    file[]: crc = 79750948; size =    223366; name = cd\eng\disk\ria2-21.aif
+    file[]: crc = 5e133701; size =    172060; name = cd\eng\disk\ria2-22.aif
+    file[]: crc = 614d45af; size =    167768; name = cd\eng\disk\ria2-22m.aif
+    file[]: crc = 2b29c8ba; size =     48810; name = cd\eng\disk\ria2-h.aif
+    file[]: crc = 00ad1b4a; size =    150826; name = cd\eng\disk\rib1-01.aif
+    file[]: crc = 8f3fd5a6; size =    179140; name = cd\eng\disk\rib1-02.aif
+    file[]: crc = 9ed181bf; size =     36242; name = cd\eng\disk\rib1-03.aif
+    file[]: crc = 9456f6f0; size =     13390; name = cd\eng\disk\rib1-04.aif
+    file[]: crc = 62fdb6d4; size =     74852; name = cd\eng\disk\rib1-10.aif
+    file[]: crc = c7f5017f; size =     54678; name = cd\eng\disk\rib1-11.aif
+    file[]: crc = f7ced696; size =    253978; name = cd\eng\disk\rib1-11h.aif
+    file[]: crc = abe32e4f; size =    100866; name = cd\eng\disk\rib1-12a.aif
+    file[]: crc = 5ecf650e; size =    242564; name = cd\eng\disk\rib1-12b.aif
+    file[]: crc = 58106608; size =    163430; name = cd\eng\disk\rib1-20.aif
+    file[]: crc = 3ed19938; size =    181900; name = cd\eng\disk\rib1-20m.aif
+    file[]: crc = e046535f; size =    103440; name = cd\eng\disk\rib2-01.aif
+    file[]: crc = fa34fecf; size =    176724; name = cd\eng\disk\rib2-02.aif
+    file[]: crc = 3affbc9a; size =    180840; name = cd\eng\disk\rib2-02h.aif
+    file[]: crc = 42176c11; size =     66138; name = cd\eng\disk\rib2-03.aif
+    file[]: crc = 97fa855e; size =    105798; name = cd\eng\disk\rib2-04a.aif
+    file[]: crc = 6e982c10; size =    175362; name = cd\eng\disk\rib2-04b.aif
+    file[]: crc = 9456f6f0; size =     13390; name = cd\eng\disk\rib2-05.aif
+    file[]: crc = 9456f6f0; size =     13390; name = cd\eng\disk\rib2-05a.aif
+    file[]: crc = f00a4a4a; size =    169192; name = cd\eng\disk\rib2-06.aif
+    file[]: crc = 2242ae61; size =    109268; name = cd\eng\disk\rib2-10.aif
+    file[]: crc = ef16cc45; size =    138312; name = cd\eng\disk\rib2-20.aif
+    file[]: crc = e7b28be3; size =    153818; name = cd\eng\disk\rib2-30.aif
+    file[]: crc = 6da6d561; size =    116690; name = cd\eng\disk\ril-01.aif
+    file[]: crc = eaa07d54; size =     38766; name = cd\eng\disk\ril-02.aif
+    file[]: crc = ca74f1d9; size =     54836; name = cd\eng\disk\ril-03.aif
+    file[]: crc = 74e036d0; size =    109624; name = cd\eng\disk\ril-04.aif
+    file[]: crc = 651b1888; size =    560250; name = cd\eng\disk\ril-05.aif
+    file[]: crc = 8798fc88; size =     43544; name = cd\eng\disk\ril-06.aif
+    file[]: crc = a9a0fbbc; size =     54406; name = cd\eng\disk\ril-07.aif
+    file[]: crc = 41281403; size =     23644; name = cd\eng\disk\ril-08.aif
+    file[]: crc = dec38860; size =     93094; name = cd\eng\disk\ril-09.aif
+    file[]: crc = f529e73d; size =    161196; name = cd\eng\disk\ril-10.aif
+    file[]: crc = 97d7ff42; size =    272304; name = cd\eng\disk\rila-01.aif
+    file[]: crc = a06f8f9b; size =     68122; name = cd\eng\end\ala3b-01.aif
+    file[]: crc = aceb19f1; size =     41942; name = cd\eng\end\ala3b-02.aif
+    file[]: crc = 9fd4f26b; size =     33078; name = cd\eng\end\ala3b-04a.aif
+    file[]: crc = a807a9b1; size =    125756; name = cd\eng\end\ala3b-04b.aif
+    file[]: crc = 218c3f5b; size =    137126; name = cd\eng\end\alb3b-02.aif
+    file[]: crc = 1fbf6dd1; size =    176454; name = cd\eng\end\doa3b-01.aif
+    file[]: crc = 590c6bc5; size =     49668; name = cd\eng\end\doa3b-02.aif
+    file[]: crc = 26371237; size =    148892; name = cd\eng\end\doa3b-04.aif
+    file[]: crc = 5cb365c5; size =     87820; name = cd\eng\end\jia3b-01.aif
+    file[]: crc = 287151c7; size =     99408; name = cd\eng\end\jia3b-02.aif
+    file[]: crc = 95653ba8; size =    119538; name = cd\eng\end\jib3-01.aif
+    file[]: crc = 11cdbba1; size =     68036; name = cd\eng\end\jib3a-02.aif
+    file[]: crc = ba37ff1e; size =     72156; name = cd\eng\end\jib3a-03.aif
+    file[]: crc = fe1665b3; size =     91728; name = cd\eng\end\jib3a-04.aif
+    file[]: crc = 37454b1a; size =     57598; name = cd\eng\end\jib3b-02.aif
+    file[]: crc = 7d35c0a9; size =    216118; name = cd\eng\end\mend.aif
+    file[]: crc = 5a680ceb; size =    198458; name = cd\eng\end\mend2.aif
+    file[]: crc = 68526d88; size =    308278; name = cd\eng\end\paris2c.bmp
+    file[]: crc = fa450adc; size =    102402; name = cd\eng\end\rib3a-01.aif
+    file[]: crc = bc605a51; size =     64336; name = cd\eng\end\rib3a-02.aif
+    file[]: crc = 9d9abc23; size =    185368; name = cd\eng\end\rib3b-01.aif
+    file[]: crc = 8bc39798; size =    308278; name = cd\eng\future\fu10txt.bmp
+    file[]: crc = 101b778f; size =    308278; name = cd\eng\future\fu1txt.bmp
+    file[]: crc = a231e9cc; size =    308278; name = cd\eng\future\fu2txt.bmp
+    file[]: crc = 0bc7a9ba; size =    308278; name = cd\eng\future\fu3txt.bmp
+    file[]: crc = b4af5ee7; size =    308278; name = cd\eng\future\fu4txt.bmp
+    file[]: crc = 984aa4a5; size =    308278; name = cd\eng\future\fu5txt.bmp
+    file[]: crc = eb588bd3; size =    308278; name = cd\eng\future\fu6txt.bmp
+    file[]: crc = e6215cab; size =    308278; name = cd\eng\future\fu7txt.bmp
+    file[]: crc = 8fcabd29; size =    308278; name = cd\eng\future\fu8txt.bmp
+    file[]: crc = 43ce09ce; size =    308278; name = cd\eng\future\fu9txt.bmp
+    file[]: crc = 4e9e893a; size =    308278; name = cd\eng\future\futitle.bmp
+    file[]: crc = a852c8ef; size =     39164; name = cd\eng\intro\jul1a.aif
+    file[]: crc = 12287db2; size =     25168; name = cd\eng\intro\jul1b.aif
+    file[]: crc = a2e92ca7; size =     78650; name = cd\eng\intro\jul1c.aif
+    file[]: crc = b5dbfbcc; size =     56020; name = cd\eng\intro\jul1d.aif
+    file[]: crc = 95c287c9; size =    214092; name = cd\eng\intro\jul1e.aif
+    file[]: crc = 59b72768; size =     50968; name = cd\eng\intro\jul2.aif
+    file[]: crc = b8b80c15; size =     62142; name = cd\eng\intro\jul3.aif
+    file[]: crc = 7057138f; size =    199006; name = cd\eng\intro\mel1.aif
+    file[]: crc = 3bb23ca2; size =     35854; name = cd\eng\lab\jlaa1-10.aif
+    file[]: crc = a58eed5a; size =     22140; name = cd\eng\lab\jlaa1-11.aif
+    file[]: crc = 1cdf3262; size =      8936; name = cd\eng\lab\jlaa1-12.aif
+    file[]: crc = 09a33a7c; size =     90974; name = cd\eng\lab\jlaa1-20.aif
+    file[]: crc = 2901aca0; size =    145232; name = cd\eng\lab\jlaa1-30.aif
+    file[]: crc = d1290c5e; size =     14310; name = cd\eng\lab\jlaa1-31.aif
+    file[]: crc = 0d84091a; size =     46350; name = cd\eng\lab\jlaa1-32.aif
+    file[]: crc = 386d5d6a; size =     80114; name = cd\eng\lab\jlaa2-10.aif
+    file[]: crc = 96eed1d5; size =     45544; name = cd\eng\lab\jlaa2-20.aif
+    file[]: crc = a991771b; size =     43724; name = cd\eng\lab\jlaa2-21.aif
+    file[]: crc = a814e120; size =     41904; name = cd\eng\lab\jlaa2-22.aif
+    file[]: crc = 7fd22daf; size =     94670; name = cd\eng\lab\jlaa2-30.aif
+    file[]: crc = 7b5d9c7f; size =     34476; name = cd\eng\lab\jlaa2-31.aif
+    file[]: crc = 0d335bfc; size =     31452; name = cd\eng\lab\jlaa2-32.aif
+    file[]: crc = f17fe841; size =     16800; name = cd\eng\lab\jlaa2-by.aif
+    file[]: crc = dac6e19b; size =     86948; name = cd\eng\lab\jlab1-10.aif
+    file[]: crc = c57261c4; size =     23226; name = cd\eng\lab\jlab1-11.aif
+    file[]: crc = cb7fcf93; size =     52414; name = cd\eng\lab\jlab1-12.aif
+    file[]: crc = 0e41d8e4; size =     77456; name = cd\eng\lab\jlab1-20.aif
+    file[]: crc = 3bb23ca2; size =     35854; name = cd\eng\lab\jlab1-30.aif
+    file[]: crc = a92a7d56; size =     92620; name = cd\eng\lab\jlab2-10.aif
+    file[]: crc = c52e003a; size =     25300; name = cd\eng\lab\jlab2-11.aif
+    file[]: crc = 4e8afe8f; size =     39886; name = cd\eng\lab\jlab2-12.aif
+    file[]: crc = 5ff0aef6; size =     49424; name = cd\eng\lab\jlab2-20.aif
+    file[]: crc = 51640604; size =    109238; name = cd\eng\lab\jlab2-30.aif
+    file[]: crc = 76d768c2; size =    150194; name = cd\eng\lab\laa1-01.aif
+    file[]: crc = a1543ba0; size =     14918; name = cd\eng\lab\laa1-03.aif
+    file[]: crc = d4ecf4f5; size =     70832; name = cd\eng\lab\laa1-04.aif
+    file[]: crc = ef64d570; size =     53844; name = cd\eng\lab\laa1-05.aif
+    file[]: crc = 2cd12363; size =    158892; name = cd\eng\lab\laa1-10.aif
+    file[]: crc = 16cff426; size =     91558; name = cd\eng\lab\laa1-11.aif
+    file[]: crc = 92659783; size =     58756; name = cd\eng\lab\laa1-12.aif
+    file[]: crc = ee082483; size =    163212; name = cd\eng\lab\laa1-20.aif
+    file[]: crc = f4a12382; size =     71958; name = cd\eng\lab\laa1-20m.aif
+    file[]: crc = f169be24; size =    190634; name = cd\eng\lab\laa1-30.aif
+    file[]: crc = 18b3a802; size =    165954; name = cd\eng\lab\laa1-31.aif
+    file[]: crc = 47bd07b1; size =    124622; name = cd\eng\lab\laa1-32.aif
+    file[]: crc = 105120d7; size =     72832; name = cd\eng\lab\laa2-01.aif
+    file[]: crc = 8bbbe93b; size =     45122; name = cd\eng\lab\laa2-02.aif
+    file[]: crc = c9c323d5; size =     56244; name = cd\eng\lab\laa2-03.aif
+    file[]: crc = 145ae245; size =    128684; name = cd\eng\lab\laa2-10.aif
+    file[]: crc = eea6ba1a; size =     88064; name = cd\eng\lab\laa2-20.aif
+    file[]: crc = d39d0d28; size =    162532; name = cd\eng\lab\laa2-21.aif
+    file[]: crc = bc113182; size =     50830; name = cd\eng\lab\laa2-22.aif
+    file[]: crc = 776bf679; size =     68530; name = cd\eng\lab\laa2-30.aif
+    file[]: crc = 2d5277fa; size =    109618; name = cd\eng\lab\laa2-30h.aif
+    file[]: crc = 9812415b; size =    107532; name = cd\eng\lab\laa2-30hh.aif
+    file[]: crc = b7f25ec8; size =    148420; name = cd\eng\lab\laa2-31.aif
+    file[]: crc = ef74e3b7; size =     79944; name = cd\eng\lab\laa2-32.aif
+    file[]: crc = b9261887; size =    123312; name = cd\eng\lab\laa2-h.aif
+    file[]: crc = 717140ea; size =     71382; name = cd\eng\lab\lab1-01.aif
+    file[]: crc = 67893d00; size =     28210; name = cd\eng\lab\lab1-02.aif
+    file[]: crc = 7f67c3cc; size =     29332; name = cd\eng\lab\lab1-04.aif
+    file[]: crc = dcebe351; size =     56782; name = cd\eng\lab\lab1-05.aif
+    file[]: crc = e31c5510; size =     69506; name = cd\eng\lab\lab1-10.aif
+    file[]: crc = 3e981507; size =    191516; name = cd\eng\lab\lab1-10h.aif
+    file[]: crc = 66cb5881; size =    176498; name = cd\eng\lab\lab1-11.aif
+    file[]: crc = 06f27543; size =    175724; name = cd\eng\lab\lab1-12.aif
+    file[]: crc = cd52509b; size =    181214; name = cd\eng\lab\lab1-20.aif
+    file[]: crc = e65941c9; size =    190364; name = cd\eng\lab\lab1-30.aif
+    file[]: crc = 4b4e8759; size =     51570; name = cd\eng\lab\lab120ha.aif
+    file[]: crc = 56c0bdef; size =     85654; name = cd\eng\lab\lab120hb.aif
+    file[]: crc = c613099d; size =     57252; name = cd\eng\lab\lab2-01.aif
+    file[]: crc = fff1bcec; size =     26704; name = cd\eng\lab\lab2-02.aif
+    file[]: crc = 2b75cc81; size =    105082; name = cd\eng\lab\lab2-03.aif
+    file[]: crc = 5cd99fc5; size =    153098; name = cd\eng\lab\lab2-10.aif
+    file[]: crc = acbdd776; size =    160828; name = cd\eng\lab\lab2-11.aif
+    file[]: crc = 4b829d7f; size =    105634; name = cd\eng\lab\lab2-12a.aif
+    file[]: crc = 4b51a815; size =    122164; name = cd\eng\lab\lab2-12b.aif
+    file[]: crc = dcbdf898; size =    230392; name = cd\eng\lab\lab2-20.aif
+    file[]: crc = e7f28a70; size =    220862; name = cd\eng\lab\lab2-20m.aif
+    file[]: crc = 46d53f4b; size =    191298; name = cd\eng\lab\lab2-30.aif
+    file[]: crc = 1dfeb584; size =     43150; name = cd\eng\lab\lal-01.aif
+    file[]: crc = 767a736e; size =     41524; name = cd\eng\lab\lal-02.aif
+    file[]: crc = 1bae2e3c; size =     48726; name = cd\eng\lab\lal-04.aif
+    file[]: crc = 87747303; size =    123604; name = cd\eng\lab\lal-05.aif
+    file[]: crc = 7c2bcad9; size =    170402; name = cd\eng\lab\lal-06.aif
+    file[]: crc = bb68b2cb; size =     22518; name = cd\eng\lab\lal-07.aif
+    file[]: crc = b9615802; size =    146068; name = cd\eng\lab\lal-08.aif
+    file[]: crc = cfb9a0d4; size =     97396; name = cd\eng\lab\lal-09.aif
+    file[]: crc = 93034e2e; size =    207630; name = cd\eng\mel\mel10.aif
+    file[]: crc = fe07c13d; size =    101230; name = cd\eng\mel\mel11.aif
+    file[]: crc = ddac6627; size =     66194; name = cd\eng\mel\mel12.aif
+    file[]: crc = 69961560; size =    133756; name = cd\eng\mel\mel2.aif
+    file[]: crc = d858e0e1; size =    110346; name = cd\eng\mel\mel21.aif
+    file[]: crc = 4fe14243; size =    115488; name = cd\eng\mel\mel22.aif
+    file[]: crc = 3a35d70a; size =     85970; name = cd\eng\mel\Mel23.aif
+    file[]: crc = 19ff1d93; size =    154134; name = cd\eng\mel\mel3.aif
+    file[]: crc = 92634dad; size =     91766; name = cd\eng\mel\mel36.aif
+    file[]: crc = b052fe0e; size =    169856; name = cd\eng\mel\mel4.aif
+    file[]: crc = 931ce13c; size =     65314; name = cd\eng\mel\mel5.aif
+    file[]: crc = 7e004346; size =    147876; name = cd\eng\mel\mel6.aif
+    file[]: crc = 3f45a8be; size =    208634; name = cd\eng\mel\mel6a.aif
+    file[]: crc = 33a157f4; size =     83848; name = cd\eng\mel\mel7.aif
+    file[]: crc = cf85d84c; size =    157354; name = cd\eng\mel\mel8.aif
+    file[]: crc = 8bb4d06f; size =    111598; name = cd\eng\mel\mel9.aif
+    file[]: crc = 5da033c6; size =     46408; name = cd\eng\mel\melquit.aif
+    file[]: crc = 99b314c4; size =    308278; name = cd\eng\menu\cred.bmp
+    file[]: crc = 6710f044; size =    921656; name = cd\eng\menu\credit1.bmp
+    file[]: crc = 5cf07e4c; size =    921656; name = cd\eng\menu\credit10.bmp
+    file[]: crc = 131c9a26; size =    921656; name = cd\eng\menu\credit11.bmp
+    file[]: crc = f605e41a; size =    921656; name = cd\eng\menu\credit12.bmp
+    file[]: crc = bd193bc6; size =    921656; name = cd\eng\menu\credit13.bmp
+    file[]: crc = 0854ba5f; size =    921656; name = cd\eng\menu\credit14.bmp
+    file[]: crc = 378336be; size =    921656; name = cd\eng\menu\credit2.bmp
+    file[]: crc = a348baf7; size =    921656; name = cd\eng\menu\credit3.bmp
+    file[]: crc = 26aad6e3; size =    921656; name = cd\eng\menu\credit4.bmp
+    file[]: crc = 6062ef45; size =    921654; name = cd\eng\menu\credit5.bmp
+    file[]: crc = 7126b9d6; size =    921656; name = cd\eng\menu\credit6.bmp
+    file[]: crc = 9352b032; size =    921656; name = cd\eng\menu\credit7.bmp
+    file[]: crc = 79cd6d30; size =    921656; name = cd\eng\menu\credit8.bmp
+    file[]: crc = 12fb6775; size =    921656; name = cd\eng\menu\credit9.bmp
+    file[]: crc = c90f0066; size =    308278; name = cd\eng\menu\credover.bmp
+    file[]: crc = 2e2e83d3; size =    308278; name = cd\eng\menu\load.bmp
+    file[]: crc = 161f75b3; size =    308278; name = cd\eng\menu\loadover.bmp
+    file[]: crc = 2291f63e; size =    308278; name = cd\eng\menu\new.bmp
+    file[]: crc = 2ab42de5; size =    308278; name = cd\eng\menu\newover.bmp
+    file[]: crc = 9596078a; size =    308278; name = cd\eng\menu\quit.bmp
+    file[]: crc = 1dfc9a2a; size =    308278; name = cd\eng\menu\quitover.bmp
+    file[]: crc = f7985fc7; size =    308278; name = cd\eng\menu\TITLE.BMP
+    file[]: crc = 6f85ea74; size =     80428; name = cd\eng\paper\jnia1-10.aif
+    file[]: crc = 4bc0b982; size =    158028; name = cd\eng\paper\jnia1-11.aif
+    file[]: crc = 0b29db35; size =     33312; name = cd\eng\paper\jnia1-12.aif
+    file[]: crc = 2b44af5c; size =     45522; name = cd\eng\paper\jnia1-20.aif
+    file[]: crc = ba39bece; size =     18242; name = cd\eng\paper\jnia1-21.aif
+    file[]: crc = a38c353f; size =    128880; name = cd\eng\paper\jnia1-22.aif
+    file[]: crc = 19dd5dd6; size =     76972; name = cd\eng\paper\jnia2-10.aif
+    file[]: crc = 3adf91d2; size =     33116; name = cd\eng\paper\jnia2-20.aif
+    file[]: crc = 9f2f1d7b; size =     43352; name = cd\eng\paper\jnia2-21.aif
+    file[]: crc = 00d84e0f; size =     65096; name = cd\eng\paper\jnia2-30.aif
+    file[]: crc = c858e0c2; size =     31078; name = cd\eng\paper\jnia2-31.aif
+    file[]: crc = 483f2cf6; size =     88272; name = cd\eng\paper\jnia2-32.aif
+    file[]: crc = 23e4e765; size =     55144; name = cd\eng\paper\jnib1-10.aif
+    file[]: crc = e80c3fdc; size =     20354; name = cd\eng\paper\jnib1-11.aif
+    file[]: crc = b23037bf; size =     62192; name = cd\eng\paper\jnib1-12.aif
+    file[]: crc = 710293a6; size =     40412; name = cd\eng\paper\jnib1-20.aif
+    file[]: crc = c4d1d060; size =     25848; name = cd\eng\paper\jnib1-21.aif
+    file[]: crc = a69829e1; size =     40412; name = cd\eng\paper\jnib1-22.aif
+    file[]: crc = ce1a3aad; size =     78322; name = cd\eng\paper\jnib1-30.aif
+    file[]: crc = 41759568; size =     16766; name = cd\eng\paper\jnib1-31.aif
+    file[]: crc = b74a831b; size =     85920; name = cd\eng\paper\jnib1-32.aif
+    file[]: crc = 22c20cf4; size =     37208; name = cd\eng\paper\jnib2-10.aif
+    file[]: crc = 67b0a9d5; size =     23620; name = cd\eng\paper\jnib2-20.aif
+    file[]: crc = cc3c7bb2; size =     51138; name = cd\eng\paper\jnib2-21.aif
+    file[]: crc = 1dcf503b; size =     32608; name = cd\eng\paper\jnib2-22.aif
+    file[]: crc = 62541517; size =     44626; name = cd\eng\paper\jnib2-30.aif
+    file[]: crc = 26efa2fe; size =    236886; name = cd\eng\paper\nia1-01.aif
+    file[]: crc = 4b1a3408; size =     14652; name = cd\eng\paper\nia1-03.aif
+    file[]: crc = 0f4f45c0; size =     36748; name = cd\eng\paper\nia1-04.aif
+    file[]: crc = cebe944f; size =     13462; name = cd\eng\paper\nia1-10a.aif
+    file[]: crc = ebdfd6e1; size =    222804; name = cd\eng\paper\nia1-10b.aif
+    file[]: crc = a812ed11; size =     81394; name = cd\eng\paper\nia1-11.aif
+    file[]: crc = 29a59c64; size =    172528; name = cd\eng\paper\nia1-12.aif
+    file[]: crc = d8e4dca1; size =     31896; name = cd\eng\paper\nia1-20a.aif
+    file[]: crc = 4f3cba18; size =     40716; name = cd\eng\paper\nia1-20b.aif
+    file[]: crc = 974e6b3b; size =     46668; name = cd\eng\paper\nia1-21.aif
+    file[]: crc = fad8fbe2; size =    208924; name = cd\eng\paper\nia1-22.aif
+    file[]: crc = 5fe24c75; size =     20238; name = cd\eng\paper\nia2-01.aif
+    file[]: crc = 8f6cc65a; size =     14308; name = cd\eng\paper\nia2-02.aif
+    file[]: crc = f03805d5; size =    111114; name = cd\eng\paper\nia2-03.aif
+    file[]: crc = fedc1bff; size =     92596; name = cd\eng\paper\nia2-10.aif
+    file[]: crc = 0fa8001d; size =    184766; name = cd\eng\paper\nia2-10m.aif
+    file[]: crc = 0bcd9324; size =     55208; name = cd\eng\paper\nia2-20.aif
+    file[]: crc = f40d8376; size =    110558; name = cd\eng\paper\nia2-20h.aif
+    file[]: crc = a5b558a3; size =     42508; name = cd\eng\paper\nia2-21a.aif
+    file[]: crc = abbc316d; size =    173902; name = cd\eng\paper\nia2-21b.aif
+    file[]: crc = 66ebfa23; size =     75774; name = cd\eng\paper\nia2-30.aif
+    file[]: crc = 5645ec94; size =    110862; name = cd\eng\paper\nia2-30h.aif
+    file[]: crc = db42a7ab; size =    188218; name = cd\eng\paper\nia2-31.aif
+    file[]: crc = 64194dbd; size =    181412; name = cd\eng\paper\nia2-32.aif
+    file[]: crc = 97eb7a22; size =     98874; name = cd\eng\paper\nia2-h.aif
+    file[]: crc = 6d03ccbb; size =     81342; name = cd\eng\paper\nib1-01.aif
+    file[]: crc = e312cc95; size =     93414; name = cd\eng\paper\nib1-02.aif
+    file[]: crc = 2ceba910; size =     12900; name = cd\eng\paper\nib1-03.aif
+    file[]: crc = 745e54fa; size =     86306; name = cd\eng\paper\nib1-04.aif
+    file[]: crc = 8429044e; size =    100816; name = cd\eng\paper\nib1-10.aif
+    file[]: crc = 5c5bd290; size =    143158; name = cd\eng\paper\nib1-11.aif
+    file[]: crc = 08981ac1; size =    185378; name = cd\eng\paper\nib1-12.aif
+    file[]: crc = 18440423; size =    326000; name = cd\eng\paper\nib1-20.aif
+    file[]: crc = 2f12a75c; size =    268898; name = cd\eng\paper\nib1-21.aif
+    file[]: crc = 8b75acf1; size =    158818; name = cd\eng\paper\nib1-22.aif
+    file[]: crc = 29df0aa2; size =     80654; name = cd\eng\paper\nib1-30.aif
+    file[]: crc = d27a373a; size =    110472; name = cd\eng\paper\nib1-31.aif
+    file[]: crc = 6e112547; size =     96400; name = cd\eng\paper\nib1-32.aif
+    file[]: crc = 3c50f917; size =     74236; name = cd\eng\paper\nib2-01.aif
+    file[]: crc = ab0c38f8; size =     48800; name = cd\eng\paper\nib2-02.aif
+    file[]: crc = 4cfa2ed4; size =     17338; name = cd\eng\paper\nib2-03.aif
+    file[]: crc = 7f68ed66; size =     22814; name = cd\eng\paper\nib2-10.aif
+    file[]: crc = 24165ce9; size =     71706; name = cd\eng\paper\nib2-10h.aif
+    file[]: crc = 7071d37b; size =    200680; name = cd\eng\paper\nib2-20.aif
+    file[]: crc = 591f33c4; size =     15418; name = cd\eng\paper\nib2-21.aif
+    file[]: crc = 9992332c; size =     45184; name = cd\eng\paper\nib2-22.aif
+    file[]: crc = c2cf27c5; size =    173848; name = cd\eng\paper\nib2-30.aif
+    file[]: crc = 6a0d2e4f; size =    154644; name = cd\eng\paper\nib2-30m.aif
+    file[]: crc = c8526222; size =     48598; name = cd\eng\paper\nil-01.aif
+    file[]: crc = 43de5b0c; size =     29286; name = cd\eng\paper\nil-02.aif
+    file[]: crc = be3f8742; size =     18846; name = cd\eng\paper\nil-03.aif
+    file[]: crc = cefd0824; size =    134668; name = cd\eng\paper\nil-04.aif
+    file[]: crc = 34ff8dd8; size =     60998; name = cd\eng\paper\nil-05.aif
+    file[]: crc = 4368b58d; size =    164346; name = cd\eng\paper\nil-06.aif
+    file[]: crc = 8b955b05; size =     82584; name = cd\eng\paper\nil-07.aif
+    file[]: crc = 60c65a02; size =    148182; name = cd\eng\paper\nila-01.aif
+    file[]: crc = dea9e347; size =     89598; name = cd\eng\paper\nilb-01.aif
+    file[]: crc = a648136d; size =     30372; name = cd\eng\photo\jsua2-20.aif
+    file[]: crc = 7e48d3d2; size =     78816; name = cd\eng\photo\jsua2-21.aif
+    file[]: crc = d6e51d71; size =     24558; name = cd\eng\photo\jsua2-22.aif
+    file[]: crc = 866de210; size =     66932; name = cd\eng\photo\jsua2-30.aif
+    file[]: crc = 0e3572a7; size =     69464; name = cd\eng\photo\jsua2-40.aif
+    file[]: crc = 5f95a904; size =     53722; name = cd\eng\photo\jsub2-10.aif
+    file[]: crc = ce10d6b7; size =     30024; name = cd\eng\photo\jsub2-20.aif
+    file[]: crc = 4f1bfacc; size =     56894; name = cd\eng\photo\jsub2-21.aif
+    file[]: crc = 03409845; size =     73848; name = cd\eng\photo\jsub2-22.aif
+    file[]: crc = 4276dad9; size =     44028; name = cd\eng\photo\jsub2-30.aif
+    file[]: crc = c2edfc6e; size =     87394; name = cd\eng\photo\jsub2-40.aif
+    file[]: crc = 7b4f327a; size =     36538; name = cd\eng\photo\sua1-01.aif
+    file[]: crc = 47d88720; size =    154166; name = cd\eng\photo\sua1-02.aif
+    file[]: crc = 587466c5; size =     88746; name = cd\eng\photo\sua1-03.aif
+    file[]: crc = 172750dc; size =     79916; name = cd\eng\photo\sua2-01.aif
+    file[]: crc = 63bf3a7a; size =     70898; name = cd\eng\photo\sua2-02.aif
+    file[]: crc = 3c6759ab; size =     65364; name = cd\eng\photo\sua2-03.aif
+    file[]: crc = d39cae85; size =    133702; name = cd\eng\photo\sua2-10.aif
+    file[]: crc = 43e94200; size =     18874; name = cd\eng\photo\sua2-20a.aif
+    file[]: crc = b29460a5; size =    153092; name = cd\eng\photo\sua2-20b.aif
+    file[]: crc = 712b02df; size =    272236; name = cd\eng\photo\sua2-21.aif
+    file[]: crc = 97561b08; size =    198894; name = cd\eng\photo\sua2-22.aif
+    file[]: crc = eb0d16e8; size =    260602; name = cd\eng\photo\sua2-30a.aif
+    file[]: crc = f429beca; size =     25082; name = cd\eng\photo\sua2-30b.aif
+    file[]: crc = 2317a472; size =     74834; name = cd\eng\photo\sua2-30c.aif
+    file[]: crc = 79ed7228; size =    140704; name = cd\eng\photo\sua2-30m.aif
+    file[]: crc = 37922f6c; size =    232666; name = cd\eng\photo\sua2-40.aif
+    file[]: crc = bdd0b2c4; size =    155896; name = cd\eng\photo\sua2-h.aif
+    file[]: crc = 148ea3a4; size =    167772; name = cd\eng\photo\sub1-01.aif
+    file[]: crc = 0effb7d4; size =    120192; name = cd\eng\photo\sub1-03.aif
+    file[]: crc = e9aada83; size =    127926; name = cd\eng\photo\sub2-01.aif
+    file[]: crc = 828a6fed; size =     53226; name = cd\eng\photo\sub2-02.aif
+    file[]: crc = 8f321790; size =     53226; name = cd\eng\photo\sub2-03.aif
+    file[]: crc = 022d04f5; size =     48742; name = cd\eng\photo\sub2-04.aif
+    file[]: crc = d374768f; size =    185868; name = cd\eng\photo\sub2-10.aif
+    file[]: crc = a59dbc8b; size =     93368; name = cd\eng\photo\sub2-20a.aif
+    file[]: crc = f2bafa3c; size =    158166; name = cd\eng\photo\sub2-20b.aif
+    file[]: crc = bf35098e; size =    151592; name = cd\eng\photo\sub2-21.aif
+    file[]: crc = cd1914db; size =    157004; name = cd\eng\photo\sub2-22.aif
+    file[]: crc = 16c2dab2; size =    137178; name = cd\eng\photo\sub2-30a.aif
+    file[]: crc = dbf275b5; size =     38570; name = cd\eng\photo\sub2-30b.aif
+    file[]: crc = 7d0234d4; size =    300752; name = cd\eng\photo\sub2-40.aif
+    file[]: crc = 155923bc; size =    139708; name = cd\eng\photo\sub2-40m.aif
+    file[]: crc = 1743a1fd; size =     55696; name = cd\eng\photo\sub2-s2.aif
+    file[]: crc = a1a1e83c; size =    101708; name = cd\eng\photo\sub2-s3.aif
+    file[]: crc = 5c3cf20e; size =     94074; name = cd\eng\photo\sul-01.aif
+    file[]: crc = fcf098e8; size =     51410; name = cd\eng\photo\sul-02.aif
+    file[]: crc = 30c4952b; size =     45878; name = cd\eng\photo\sul-03.aif
+    file[]: crc = f328fe0e; size =     35608; name = cd\eng\photo\sul-04.aif
+    file[]: crc = e8abccfb; size =     99038; name = cd\eng\photo\sul-05.aif
+    file[]: crc = 3e185c1c; size =     74006; name = cd\eng\photo\sul-06.aif
+    file[]: crc = 1c48236e; size =    194608; name = cd\eng\photo\sul-07.aif
+    file[]: crc = 0b3573ad; size =    199104; name = cd\eng\photo\sula-01.aif
+    file[]: crc = b197a5d2; size =    246636; name = cd\eng\photo\sulb-01.aif
+    file[]: crc = e743eb8c; size =    146770; name = cd\eng\street1\dyab-01.aif
+    file[]: crc = e9532b99; size =    186556; name = cd\eng\street1\dyab-02.aif
+    file[]: crc = f84e2580; size =     64708; name = cd\eng\street1\dyab-03.aif
+    file[]: crc = 3aabd748; size =     81658; name = cd\eng\street1\dyab1-01.aif
+    file[]: crc = 6cd3f431; size =    111882; name = cd\eng\street1\dyab1-02.aif
+    file[]: crc = 2afa35ba; size =    123970; name = cd\eng\street1\dyab1-03.aif
+    file[]: crc = 1c342f1c; size =    149662; name = cd\eng\street1\dyab1-04.aif
+    file[]: crc = 61931a22; size =     71080; name = cd\eng\street1\dyab1-05.aif
+    file[]: crc = 315b29c4; size =    198990; name = cd\eng\street1\dyab2-01.aif
+    file[]: crc = 993eb787; size =     57608; name = cd\eng\street1\dyab2-01a.aif
+    file[]: crc = 9bd1a902; size =     25582; name = cd\eng\street1\dyab2-03.aif
+    file[]: crc = f4710490; size =    163890; name = cd\eng\street1\dyab3-01.aif
+    file[]: crc = 85cb22c4; size =     57932; name = cd\eng\street1\jdyab-01.aif
+    file[]: crc = 5fa9289a; size =     46942; name = cd\eng\street1\jdyab-02.aif
+    file[]: crc = a1a3f64e; size =     44012; name = cd\eng\street1\jdyab-03.aif
+    file[]: crc = 63845aa2; size =     51396; name = cd\eng\street1\jdyab1-03.aif
+    file[]: crc = ce10d6b7; size =     30024; name = cd\eng\street1\jdyab1-04.aif
+    file[]: crc = 68975a41; size =     14690; name = cd\eng\street1\jdyab1-05.aif
+    file[]: crc = a57ae259; size =     18040; name = cd\eng\street1\jdyab2-03.aif
+    file[]: crc = 619a0f3f; size =    307716; name = cd\eng\street1\ph_come.bmp
+    file[]: crc = 3bb4a7bb; size =    308278; name = cd\eng\street1\ph_open.bmp
+    file[]: crc = fcaddc8a; size =    237286; name = cd\eng\street13\shyan01.aif
+    file[]: crc = 15cb4a75; size =     43030; name = cd\eng\street13\shyan80.aif
+    file[]: crc = c1635c37; size =     36004; name = cd\eng\street13\shyan81.aif
+    file[]: crc = 9dd6dc65; size =     44728; name = cd\eng\street3\dya2-01.aif
+    file[]: crc = 5d19d8ac; size =    110674; name = cd\eng\street3\dya2-02.aif
+    file[]: crc = f4710490; size =    163890; name = cd\eng\street3\dyab3-01.aif
+    file[]: crc = d7ac9ded; size =     63248; name = cd\eng\street3\dyab3-03.aif
+    file[]: crc = 9ff12368; size =    195486; name = cd\eng\street3\dyab3-04.aif
+    file[]: crc = f8b9f867; size =     64472; name = cd\eng\street3\jdyab3-03.aif
+    file[]: crc = 265c745e; size =    200340; name = cd\eng\street5\dya2-10.aif
+    file[]: crc = 8b7aa3e1; size =     71554; name = cd\eng\street5\dya2-10a.aif
+    file[]: crc = 9171b019; size =    148092; name = cd\eng\street5\dya2-11.aif
+    file[]: crc = 72dd4599; size =    194534; name = cd\eng\street5\dya2-12.aif
+    file[]: crc = ac401ba3; size =    236186; name = cd\eng\street5\dyab-04.aif
+    file[]: crc = 01ab6275; size =    170240; name = cd\eng\street5\dyab-05.aif
+    file[]: crc = aa55c814; size =    151094; name = cd\eng\street5\dyab-06.aif
+    file[]: crc = af68075f; size =     54806; name = cd\eng\street5\jdya2-11.aif
+    file[]: crc = f808af23; size =     43278; name = cd\eng\street5\jdyab-04.aif
+    file[]: crc = 9f951ceb; size =     46944; name = cd\eng\street5\jdyab-05.aif
+    file[]: crc = e9a5ef16; size =     44376; name = cd\eng\street5\jdyab-06.aif
+    file[]: crc = 3759d222; size =     41940; name = cd\eng\street5\jmeab-02.aif
+    file[]: crc = 7c25f614; size =     69464; name = cd\eng\street5\jmeab-10.aif
+    file[]: crc = d3dbbef3; size =     30386; name = cd\eng\street5\jmeab-20.aif
+    file[]: crc = 05bf0718; size =    148182; name = cd\eng\street5\jmeab-21.aif
+    file[]: crc = f2b67895; size =    346968; name = cd\eng\street5\meab-01.aif
+    file[]: crc = 39730443; size =    182070; name = cd\eng\street5\meab-02.aif
+    file[]: crc = 14241947; size =    272058; name = cd\eng\street5\meab-03.aif
+    file[]: crc = 40762d77; size =    140324; name = cd\eng\street5\meab-10.aif
+    file[]: crc = 6f4267b1; size =    278746; name = cd\eng\street5\meab-20.aif
+    file[]: crc = 31ba2f53; size =    163528; name = cd\eng\street5\meab-21.aif
+    file[]: crc = 79b7ea0b; size =    116760; name = cd\eng\street5\meab-22a.aif
+    file[]: crc = 75de9ab7; size =    109470; name = cd\eng\street5\meab-22b.aif
+    file[]: crc = b827d511; size =    308278; name = cd\eng\zoom\an_s.bmp
+    file[]: crc = 65d9c693; size =    308278; name = cd\eng\zoom\an_z.bmp
+    file[]: crc = 9b8c8ae3; size =    308278; name = cd\eng\zoom\arc_s.bmp
+    file[]: crc = dafec00a; size =    308280; name = cd\eng\zoom\arc_z.bmp
+    file[]: crc = d8f64e63; size =    308278; name = cd\eng\zoom\arczoom.bmp
+    file[]: crc = 8053757f; size =    308278; name = cd\eng\zoom\bo_s.bmp
+    file[]: crc = f3b28f12; size =    308280; name = cd\eng\zoom\bo_z.bmp
+    file[]: crc = a1cc5d57; size =    308278; name = cd\eng\zoom\clue1_s.bmp
+    file[]: crc = 41373a58; size =    308278; name = cd\eng\zoom\clue1_z.bmp
+    file[]: crc = b2f31ad0; size =    308278; name = cd\eng\zoom\clue2_s.bmp
+    file[]: crc = 00288d85; size =    308278; name = cd\eng\zoom\clue2_z.bmp
+    file[]: crc = 9152556d; size =    308278; name = cd\eng\zoom\clue3_s.bmp
+    file[]: crc = a8ebde71; size =    308278; name = cd\eng\zoom\clue3_z.bmp
+    file[]: crc = e8620097; size =    308278; name = cd\eng\zoom\ds2_s.bmp
+    file[]: crc = d94ccfad; size =    308278; name = cd\eng\zoom\ds2_z.bmp
+    file[]: crc = b0a61507; size =    308278; name = cd\eng\zoom\ds3_s.bmp
+    file[]: crc = e14a3835; size =    308278; name = cd\eng\zoom\ds3_z.bmp
+    file[]: crc = b5020e60; size =    308278; name = cd\eng\zoom\ds4_s.bmp
+    file[]: crc = 30fd1fa6; size =    308278; name = cd\eng\zoom\ds4_z.bmp
+    file[]: crc = 30697435; size =    308278; name = cd\eng\zoom\fn_s.bmp
+    file[]: crc = 9107f62b; size =    308278; name = cd\eng\zoom\fn_z.bmp
+    file[]: crc = 15211a44; size =    308278; name = cd\eng\zoom\fnzoom.bmp
+    file[]: crc = 0c7f103e; size =    308278; name = cd\eng\zoom\in_s.bmp
+    file[]: crc = 13ddcec2; size =    308278; name = cd\eng\zoom\in_z.bmp
+    file[]: crc = 932a0d0a; size =    308278; name = cd\eng\zoom\jbitem1.bmp
+    file[]: crc = a88b6525; size =    308278; name = cd\eng\zoom\jbitem1a.bmp
+    file[]: crc = 9d7725e1; size =    308278; name = cd\eng\zoom\jbitem3.bmp
+    file[]: crc = ddcb17f2; size =    308278; name = cd\eng\zoom\jbitem4.bmp
+    file[]: crc = b2f9a0f2; size =    308278; name = cd\eng\zoom\jbitem5.bmp
+    file[]: crc = 5b54ee5e; size =    308280; name = cd\eng\zoom\jbitem5a.bmp
+    file[]: crc = 7677415e; size =    308280; name = cd\eng\zoom\jbitem6a.bmp
+    file[]: crc = f8e6d3f6; size =    308278; name = cd\eng\zoom\jbitem7.bmp
+    file[]: crc = 56ae9078; size =    308278; name = cd\eng\zoom\jbitem8a.bmp
+    file[]: crc = 5eeee573; size =    308278; name = cd\eng\zoom\la10_s.bmp
+    file[]: crc = fc28f8c6; size =    308280; name = cd\eng\zoom\la10_z.bmp
+    file[]: crc = 8991d457; size =    308278; name = cd\eng\zoom\la11_s.bmp
+    file[]: crc = 952d0332; size =    308278; name = cd\eng\zoom\la11_z.bmp
+    file[]: crc = a7f84adb; size =    308278; name = cd\eng\zoom\la11a_s.bmp
+    file[]: crc = a4e543e6; size =    308278; name = cd\eng\zoom\la11a_z.bmp
+    file[]: crc = cf11c464; size =    308278; name = cd\eng\zoom\la1_s.bmp
+    file[]: crc = 5f7ee109; size =    308278; name = cd\eng\zoom\la1_z.bmp
+    file[]: crc = 45185a12; size =    308278; name = cd\eng\zoom\la2_s.bmp
+    file[]: crc = ac6f777e; size =    308278; name = cd\eng\zoom\la2_z.bmp
+    file[]: crc = 348bb092; size =    308278; name = cd\eng\zoom\la3_s.bmp
+    file[]: crc = 04177527; size =    308278; name = cd\eng\zoom\la3_z.bmp
+    file[]: crc = bec1c25d; size =    308278; name = cd\eng\zoom\la4_s.bmp
+    file[]: crc = 157c1950; size =    308278; name = cd\eng\zoom\la4_z.bmp
+    file[]: crc = 9ca2cc30; size =    308278; name = cd\eng\zoom\la6.bmp
+    file[]: crc = 6b7c3979; size =    308278; name = cd\eng\zoom\la6_s.bmp
+    file[]: crc = a1f5a35a; size =    308278; name = cd\eng\zoom\la6_z.bmp
+    file[]: crc = 262e456e; size =    308278; name = cd\eng\zoom\la9_s.bmp
+    file[]: crc = ed5cdf5b; size =    308278; name = cd\eng\zoom\la9_z.bmp
+    file[]: crc = 94814bf3; size =    308278; name = cd\eng\zoom\le_s.bmp
+    file[]: crc = 5bcdb143; size =    308278; name = cd\eng\zoom\le_z.bmp
+    file[]: crc = bb4af9df; size =    308278; name = cd\eng\zoom\love_s.bmp
+    file[]: crc = d346ab00; size =    308278; name = cd\eng\zoom\love_z.bmp
+    file[]: crc = 6fe55889; size =    308278; name = cd\eng\zoom\mlg_s.bmp
+    file[]: crc = 6f9f3557; size =    308280; name = cd\eng\zoom\mlg_z.bmp
+    file[]: crc = 51db79b8; size =    308278; name = cd\eng\zoom\names.bmp
+    file[]: crc = 32176df2; size =    308278; name = cd\eng\zoom\np10_s.bmp
+    file[]: crc = cebe6631; size =    308278; name = cd\eng\zoom\np10_z.bmp
+    file[]: crc = b03763d6; size =    308278; name = cd\eng\zoom\np13_s.bmp
+    file[]: crc = d72eed69; size =    308278; name = cd\eng\zoom\np13_z.bmp
+    file[]: crc = ad4e7a71; size =    308278; name = cd\eng\zoom\np14_s.bmp
+    file[]: crc = 6b123978; size =    308280; name = cd\eng\zoom\np14_z.bmp
+    file[]: crc = 03ab0691; size =    308278; name = cd\eng\zoom\np15_s.bmp
+    file[]: crc = 53c9d8ab; size =    308278; name = cd\eng\zoom\np15_z.bmp
+    file[]: crc = 14f635df; size =    308278; name = cd\eng\zoom\np1_s.bmp
+    file[]: crc = 3a0fb845; size =    308280; name = cd\eng\zoom\np1_z.bmp
+    file[]: crc = 1a53c309; size =    308278; name = cd\eng\zoom\np5_s.bmp
+    file[]: crc = 4f6d551a; size =    308278; name = cd\eng\zoom\np5_z.bmp
+    file[]: crc = 6abae2d7; size =    308278; name = cd\eng\zoom\np6_s.bmp
+    file[]: crc = ba101499; size =    308280; name = cd\eng\zoom\np6_z.bmp
+    file[]: crc = 1a7b3d79; size =    308278; name = cd\eng\zoom\np8_s.bmp
+    file[]: crc = a35bdbae; size =    308280; name = cd\eng\zoom\np8_z.bmp
+    file[]: crc = 757b16d1; size =    308278; name = cd\eng\zoom\np_s.bmp
+    file[]: crc = a09e601f; size =    308280; name = cd\eng\zoom\np_z.bmp
+    file[]: crc = 6fa31c7f; size =    308278; name = cd\eng\zoom\ps10_s.bmp
+    file[]: crc = 24dd7b3b; size =    308278; name = cd\eng\zoom\ps10_z.bmp
+    file[]: crc = 0c71d3bb; size =    308278; name = cd\eng\zoom\ps3_s.bmp
+    file[]: crc = 86486bb4; size =    308278; name = cd\eng\zoom\ps3_z.bmp
+    file[]: crc = c1a9ca70; size =    308278; name = cd\eng\zoom\ps3asit.bmp
+    file[]: crc = e9537bce; size =    308278; name = cd\eng\zoom\ps4_s.bmp
+    file[]: crc = e350f87c; size =    308278; name = cd\eng\zoom\ps4_z.bmp
+    file[]: crc = e9068bf6; size =    308278; name = cd\eng\zoom\re_s.bmp
+    file[]: crc = ef5dcd9f; size =    308278; name = cd\eng\zoom\re_z.bmp
+    file[]: crc = b5446d20; size =    308278; name = cd\eng\zoom\rezoom.bmp
+    file[]: crc = 6970218e; size =    308278; name = cd\eng\zoom\rs1_s.bmp
+    file[]: crc = 2d5efd81; size =    308278; name = cd\eng\zoom\rs1_z.bmp
+    file[]: crc = a331840d; size =    308278; name = cd\eng\zoom\sp_s.bmp
+    file[]: crc = f7549753; size =    308280; name = cd\eng\zoom\sp_z.bmp
+    file[]: crc = 89685214; size =    308278; name = cd\eng\zoom\st1_s.bmp
+    file[]: crc = 035ee130; size =    308278; name = cd\eng\zoom\st1_z.bmp
+    file[]: crc = b4994a72; size =    308278; name = cd\eng\zoom\station.bmp
+    file[]: crc = cf89cb28; size =    308278; name = cd\eng\zoom\tc3_s.bmp
+    file[]: crc = 133fe3c9; size =    308278; name = cd\eng\zoom\tc3_z.bmp
+    file[]: crc = c512d6a6; size =    308278; name = cd\eng\zoom\tc3zoom.bmp
+    file[]: crc = 59a7ac72; size =    308278; name = cd\eng\zoom\tc4_s.bmp
+    file[]: crc = 6a495165; size =    308278; name = cd\eng\zoom\tc4_z.bmp
+    file[]: crc = 0baf62e7; size =    308278; name = cd\eng\zoom\ve_s.bmp
+    file[]: crc = b1a0adc5; size =    308280; name = cd\eng\zoom\ve_z.bmp
+    file[]: crc = 33268524; size =  14296452; name = cd\intro\anim.cxt
+    file[]: crc = 118409ca; size =     31750; name = cd\intro\intro.dxr
+    file[]: crc = ac226c75; size =    209222; name = cd\logo\logo.avi
+    file[]: crc = a9d470b1; size =    188870; name = cd\logo\logo.dxr
+    file[]: crc = d368e5a0; size =    308278; name = cd\same\linkbmp.bmp
+    file[]: crc = e8fbe753; size =   3806754; name = cd\same\music\cafe.aif
+    file[]: crc = 30413706; size =   4101310; name = cd\same\music\cloth.aif
+    file[]: crc = 5563c7e0; size =   7874902; name = cd\same\music\disk.aif
+    file[]: crc = 24ea8df1; size =    566806; name = cd\same\music\intro_m.aif
+    file[]: crc = cd077ae8; size =   5791532; name = cd\same\music\lab.aif
+    file[]: crc = f558c625; size =   4819542; name = cd\same\music\paper.aif
+    file[]: crc = e82d3929; size =   1422526; name = cd\same\music\photo.aif
+    file[]: crc = 273575f8; size =   1406294; name = cd\same\music\song.aif
+    file[]: crc = ff48a4e6; size =   3308018; name = cd\same\music\street2.aif
+    file[]: crc = 29816fa6; size =   3380642; name = julia1.exe
+
+
+    JULIA1_CONTENTS = [[[$(CRLF)
+[PATH]
+CDPATH=D:
+HDPATH=C:\JULIA1\
+#1
+CD$\logo
+CD$\LNG$
+CD$\LNG$\zoom
+CD$\LNG$\intro
+CD$\LNG$\menu
+CD$\LNG$\mel
+CD$\LNG$\street1
+CD$\LNG$\street3
+CD$\LNG$\street5
+CD$\LNG$\street13
+CD$\LNG$\lab
+CD$\LNG$\cafe
+CD$\LNG$\disk
+CD$\LNG$\cloth
+CD$\LNG$\paper
+CD$\LNG$\photo
+CD$\LNG$\asit\lab
+CD$\LNG$\asit\watch
+CD$\LNG$\asit\photo
+CD$\LNG$\asit\trivia
+CD$\LNG$\end
+CD$\LNG$\future
+CD$\same
+CD$\same\music
+[END]
+ 
+[GLOBALS]
+STOPINTRO=no
+Language=eng
+NrmTempo=30
+AnmTempo=15
+Credits=14
+internet=www.timeloops.com
+musicvol=4
+soundvol=10
+StartFile=cd$\logo\logo
+res=[640,480,1]
+SaveDir=C:\JULIA1\
+StartDir=D:
+[END]
+ 
+[ENG]
+db=["system",12]
+tooltip=["system",12]
+help=["times new roman",18,"","left"]
+tech=["system",12]
+np=["system",12,"","left"]
+CDerror=Please insert the correct CD-ROM in to the drive.
+[END]
+ 
+[ENDFILE]
+
+
+]]]
+
+
+
+end
+
+
+
+end
