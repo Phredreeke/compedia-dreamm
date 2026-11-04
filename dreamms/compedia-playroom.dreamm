@@ -1,0 +1,170 @@
+desc[compedia-playroom]:
+
+name = Gordi's Enchanted Playroom
+icon = compedia-playroom.png
+machine = pc
+rootpath = ""
+launch = ""
+osenv = windows 98
+winres = 640x480x8
+WTHINK_CONTENTS =
+HDDPATH =
+wincrop = true
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+
+//
+// Language options
+//
+LANGSELECT = false
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[en]: name = English; LANGCONFIG =eng; priority = 1; condition = file_exists("$$(rootpath)\\WTHINKE.A")
+//    option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\WTHINKH.A")
+    option[sp]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\WTHINKS.A")
+end
+
+
+script[init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(HDDPATH)\\WTHINK.ini")) { file_save("$$(HDDPATH)\\WTHINK.ini", "$$(WTHINK_CONTENTS)") }
+    ]]]
+end
+
+
+game[pc-sp-991216]:
+    name = Spanish 1999-12-16
+    anchorfile = Fondol.bmp
+    launch = C:\DINAKIDS\PLAYROOM\WTHINK.EXE EMME /CFG:C:\DINAKIDS\PLAYROOM\WTHINK.ini /lng:$(LANGCONFIG)
+    rootpath = D:\SPANISH
+    LANGSELECT = true
+    CDLABEL=PLAYROOM
+    HDDPATH = C:\DINAKIDS\PLAYROOM
+    file[]: crc = 841336b8; size =     60082; name = FONDOL.BMP
+    file[]: crc = 111644ad; size =    383744; name = WTHINK.EXE
+    file[]: crc = 86aaeedf; size =       767; name = WTHINK.ICO
+//    file[]: crc = 75486805; size =      1431; name = wthink.ini
+//    file[]: crc = cb0b0fa9; size =      2875; name = wthink.log
+//    file[]: crc = 99a6a1d2; size =   8902866; name = CD\APLAYO.BRN
+//    file[]: crc = 1c36a714; size =   2019978; name = CD\ATODRV.PDG
+//    file[]: crc = 91a61f45; size =        44; name = CD\AUTORUN.INF
+//    file[]: crc = 01065c89; size =     25654; name = CD\BOTONES.BMP
+//    file[]: crc = a3163bf4; size =    217088; name = CD\CUARTO.BRN
+    file[]: crc = f0145bb1; size =         3; name = CD\DISK1.ID
+//    file[]: crc = 926ed5b8; size =     40960; name = CD\DMMLCHR.EXE
+//    file[]: crc = c6d2d7e0; size =     73728; name = CD\DMMUNINS.EXE
+//    file[]: crc = 7ce8de3e; size =    157318; name = CD\FONDO_I.BMP
+//    file[]: crc = 841336b8; size =     60082; name = CD\FONDOL.BMP
+//    file[]: crc = 477e1b37; size =      4934; name = CD\INSTALAR.CFG
+//    file[]: crc = c1fb1da7; size =     43520; name = CD\INSTALAR.OPT
+    file[]: crc = 6d534325; size =     73803; name = CD\KPPLAY.DLL
+    file[]: crc = a22e9a7e; size =      4525; name = CD\LANG.DAT
+//    file[]: crc = 0806535d; size =    995383; name = CD\MFC42.DLL
+//    file[]: crc = 8bac66e9; size =     74528; name = CD\MSCOMSTF.DLL
+//    file[]: crc = 7bb50716; size =     15888; name = CD\MSCUISTF.DLL
+//    file[]: crc = 2bd46f8f; size =     24544; name = CD\MSDETSTF.DLL
+//    file[]: crc = 5a9638c2; size =     65440; name = CD\MSINSSTF.DLL
+//    file[]: crc = bd3d3075; size =     14928; name = CD\MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = CD\MSUILSTF.DLL
+//    file[]: crc = 0571d0e6; size =     77878; name = CD\MSVCIRT.DLL
+//    file[]: crc = 2b14e071; size =    254005; name = CD\MSVCRT.DLL
+//    file[]: crc = b41a7b16; size =     22524; name = CD\PTN41.DLL
+//    file[]: crc = f3c7c59e; size =     38912; name = CD\SETUP.EXE
+//    file[]: crc = 0dd56659; size =     31932; name = CD\SETUPHLP.DLL
+    file[]: crc = 96776220; size =        96; name = CD\SUPERM.NFO
+    file[]: crc = 28a85a32; size =   1666128; name = CD\UTPTHINK.FRT
+    file[]: crc = 420b3439; size =   3616347; name = CD\WCUARTOH.FX
+//    file[]: crc = 6522e82e; size =      2012; name = CD\WINDEMO.BMP
+//    file[]: crc = 420c7155; size =     92208; name = CD\WING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = CD\WING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = CD\WINGDE.DLL
+//    file[]: crc = 03cf7a8b; size =     39429; name = CD\WIPRLOC.3D
+//    file[]: crc = 3dcf774d; size =   1309245; name = CD\WORCVT.3D
+//    file[]: crc = f883c746; size =   7163576; name = CD\WORCVT.PDG
+//    file[]: crc = 87d48c6a; size =      2012; name = CD\WTHINK.BMP
+//    file[]: crc = 86aaeedf; size =       767; name = CD\WTHINK.ICO
+    file[]: crc = b57b7504; size =        61; name = CD\WTHINK.NFO
+    file[]: crc = fd565dc3; size =   1546830; name = CD\WTNK.FRT
+//    file[]: crc = 97c94eb9; size =   2660952; name = CD\SCROOM\ROFOPE.CM_
+    file[]: crc = 972b19d9; size =    377729; name = CD\SPANISH\COPIA DE WTHINKS.C
+    file[]: crc = 74204113; size =    130644; name = CD\SPANISH\DATA.Z
+    file[]: crc = 28356e2e; size =     10890; name = CD\SPANISH\MAZE.DAT
+    file[]: crc = 7c973b4e; size =      4848; name = CD\SPANISH\PUZL.DAT
+    file[]: crc = a4d2aa4c; size =    149071; name = CD\SPANISH\WING.Z
+    file[]: crc = 111644ad; size =    383744; name = CD\SPANISH\WTHINK.EXE
+    file[]: crc = d70a7b95; size =  22083858; name = CD\SPANISH\WTHINKE.A
+    file[]: crc = e244fb77; size =      4192; name = CD\SPANISH\WTHINKE.C
+    file[]: crc = 5847b2dd; size =      8161; name = CD\SPANISH\WTHINKE.LOD
+    file[]: crc = 22fa3eee; size =        24; name = CD\SPANISH\WTHINKE.TXP
+    file[]: crc = aca49594; size =  21188873; name = CD\SPANISH\WTHINKS.A
+    file[]: crc = 5559cbb6; size =  38732044; name = CD\SPANISH\WTHINKS.B
+    file[]: crc = ef2aeb2f; size =    375190; name = CD\SPANISH\WTHINKS.C
+    file[]: crc = f48a4802; size =    335906; name = CD\SPANISH\WTHINKS.D
+    file[]: crc = d2148362; size =      8172; name = CD\SPANISH\WTHINKS.LOD
+    file[]: crc = 22fa3eee; size =        24; name = CD\SPANISH\WTHINKS.TXP
+
+
+
+
+
+
+
+    WTHINK_CONTENTS = [[[$(CRLF)
+[Globals]
+SaveDir=C:\DINAKIDS\PLAYROOM\
+Languages=SPAN Eng
+StartLanguage=SPANISH
+StartDir=D:\Spanish
+[ENG]
+TxpFile=WThinkE.txp
+DatFile=WThinkE.dat
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=WThinke.a WThinks.b WThinks.c WThinks.d
+LodFile=WThinke.Lod
+Define=
+OfsFile=WThinkg.ofs
+WindowTitle=Gordi en el cuarto de los juguetes
+UseHiresFonts=yes
+[END]
+[Span]
+TxpFile=WThinks.txp
+DatFile=WThinks.dat
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=WThinks.a WThinks.b WThinks.c WThinks.d
+LodFile=WThinks.Lod
+OfsFile=WThinkg.ofs
+WindowTitle=Gordi en el cuarto de los juguetes
+UseHiresFonts=yes
+[END]
+[PATH]
+HDPath=C:\DINAKIDS\PLAYROOM\
+CDPath=D:\Spanish
+
+]]]
+
+
+end
+
+end
