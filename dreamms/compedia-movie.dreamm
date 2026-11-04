@@ -783,4 +783,114 @@ CDPath=D:\Dutch
 
 end
 
+
+game[pc-es-991104]:
+    name = Spanish 1999-11-04
+    anchorfile = MOVIE.ICO
+    rootpath = C:\DINAKIDS\MOVIE
+    launch = "C:\DINAKIDS\MOVIE\Movie.exe" /CFG:C:\DINAKIDS\MOVIE\MOVIE.INI
+//    file[]: crc = d8470d31; size =     60082; name = FONDOL.BMP
+    file[]: crc = 0bccf65c; size =   6293732; name = INTROA.A
+    file[]: crc = 810bc668; size =    473344; name = MOVIE.EXE
+//    file[]: crc = fdc207c8; size =      1049; name = movie.ini
+//    file[]: crc = 99f5fd9e; size =      2762; name = MOVIE.log
+//    file[]: crc = 2245132b; size =        43; name = cd\AUTORUN.INF
+//    file[]: crc = 01065c89; size =     25654; name = cd\Botones.bmp
+    file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
+//    file[]: crc = 926ed5b8; size =     40960; name = cd\DMMLchr.exe
+//    file[]: crc = c6d2d7e0; size =     73728; name = cd\DMMUnins.exe
+//    file[]: crc = 0b9017cf; size =    157318; name = cd\fondo_a.bmp
+//    file[]: crc = d8470d31; size =     60082; name = cd\Fondol.bmp
+//    file[]: crc = c1fb1da7; size =     43520; name = cd\Instalar.opt
+    file[]: crc = a22e9a7e; size =      4525; name = cd\lang.dat
+    file[]: crc = 0806535d; size =    995383; name = cd\MFC42.DLL
+    file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE.ICO
+    file[]: crc = 6a733c34; size =        91; name = cd\movie.nfo
+//    file[]: crc = 8bac66e9; size =     74528; name = cd\MSCOMSTF.DLL
+//    file[]: crc = 7bb50716; size =     15888; name = cd\MSCUISTF.DLL
+//    file[]: crc = 2bd46f8f; size =     24544; name = cd\MSDETSTF.DLL
+//    file[]: crc = 5a9638c2; size =     65440; name = cd\MSINSSTF.DLL
+//    file[]: crc = bd3d3075; size =     14928; name = cd\MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = cd\MSUILSTF.DLL
+//    file[]: crc = 0571d0e6; size =     77878; name = cd\MSVCIRT.DLL
+//    file[]: crc = 2b14e071; size =    254005; name = cd\MSVCRT.DLL
+//    file[]: crc = 81919b0e; size =      4921; name = cd\setup.cfg
+//    file[]: crc = 1c4861f4; size =    466944; name = cd\setup.exe
+//    file[]: crc = 0dd56659; size =     31932; name = cd\SETUPHLP.DLL
+//    file[]: crc = 420c7155; size =     92208; name = cd\WING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = cd\WING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = cd\WINGDE.DLL
+    file[]: crc = 56abf000; size =   4905486; name = cd\SPANISH\DATA.Z
+    file[]: crc = 0bccf65c; size =   6293732; name = cd\SPANISH\INTROA.A
+    file[]: crc = c7448991; size =  41246882; name = cd\SPANISH\INTROA.B
+    file[]: crc = 4651e10b; size =   2960976; name = cd\SPANISH\INTROA.C
+    file[]: crc = 027a4b50; size =      2911; name = cd\SPANISH\INTROA.LOD
+    file[]: crc = 810bc668; size =    473344; name = cd\SPANISH\MOVIE.EXE
+    file[]: crc = 5361f835; size =  24784111; name = cd\SPANISH\MOVIES.A
+    file[]: crc = 5e6c98c4; size = 341718101; name = cd\SPANISH\MOVIES.C
+    file[]: crc = 2555ed6a; size =  24908569; name = cd\SPANISH\MOVIES.D
+    file[]: crc = ed365361; size =  12370312; name = cd\SPANISH\MOVIES.E
+    file[]: crc = b83b2650; size =  61651679; name = cd\SPANISH\MOVIES.F
+    file[]: crc = ca222559; size =  18786589; name = cd\SPANISH\MOVIES.G
+    file[]: crc = 084e03fd; size =     24570; name = cd\SPANISH\MOVIES.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\SPANISH\MOVIES.TXP
+    file[]: crc = 406be9e7; size =   3387904; name = cd\SPANISH\SAME.B
+    file[]: crc = a4d2aa4c; size =    149071; name = cd\SPANISH\WING.Z
+
+
+
+    CDLABEL = $(NULL)
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROSPN SPN     
+SaveDir=C:\DINAKIDS\MOVIE\
+CycleLng=no
+Forcemaximized=yes
+StartLanguage=SPANISH
+StartDir=D:\Spanish\
+[SPN]
+16ColorMessage=16color.eng
+TxpFile=Movies.txp
+DatFile=Movies.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=movies.a same.b movies.c movies.d movies.e movies.f movies.g
+LodFile=Movies.Lod
+WindowTitle=Gordi y la mágica aventura del cine
+UseHiresFonts=YES
+DiskError=Por favor inserta el CD en la unidad.
+DiskErrorTitle=Gordi y la mágica aventura del cine
+[END]
+
+[INTROSPN]
+16ColorMessage=16color.eng
+TxpFile=Movies.txp
+DatFile=Intros.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=introa.a introa.b introa.c 
+LodFile=Introa.Lod
+WindowTitle=Gordi y la mágica aventura del cine
+UseHiresFonts=YES
+DiskError=Por favor inserta el CD en la unidad.
+DiskErrorTitle=Gordi y la mágica aventura del cine
+[END]
+
+[ACTIVITIES]
+
+
+[PATH]
+HDPath=C:\DINAKIDS\MOVIE\
+CDPath=D:\Spanish\
+
+
+]]]
+
+
+
+
+end
+
 end
