@@ -1,0 +1,161 @@
+desc[compedia-timmy3]:
+
+name = Timmy Birthday Party
+icon = compedia-timmy3.png
+machine = pc
+rootpath = ""
+launch = ""
+osenv = windows 98
+winres = 640x480x8
+FUNPACK_CONTENTS =
+HDDPATH =
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+
+//
+// Language options
+//
+LANGSELECT = false
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[en]: name = English; LANGCONFIG =eng; priority = 1;
+//    option[se]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\FUNPACKH.A")
+    option[sp]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\FUNPACKS.A")
+end
+
+
+script[init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(HDDPATH)\\FUNPACK.ini")) { file_save("$$(HDDPATH)\\FUNPACK.ini", "$$(FUNPACK_CONTENTS)") }
+    ]]]
+end
+
+
+game[pc-sp-991212]:
+    name = Spanish 1999-12-22
+    anchorfile = Fondol.bmp
+    launch = C:\DINAKIDS\Timmy3\FUNPACK.EXE EMME /CFG:C:\DINAKIDS\Timmy3\funpack.ini /lng:$(LANGCONFIG)
+    rootpath = D:\SPANISH
+    LANGSELECT = true
+    CDLABEL=000425_2206
+    HDDPATH = C:\DINAKIDS\Timmy3
+    file[]: crc = 5b1e9ff9; size =     60082; name = FONDOL.BMP
+    file[]: crc = f88b549c; size =    474624; name = FUNPACK.EXE
+    file[]: crc = 96dad17f; size =       767; name = FUNPACK.ICO
+//    file[]: crc = e56df65f; size =      1742; name = funpack.ini
+//    file[]: crc = 9f7676bc; size =      2755; name = funpack.log
+//    file[]: crc = f98cdc3c; size =        45; name = cd\AUTORUN.INF
+//    file[]: crc = 01065c89; size =     25654; name = cd\Botones.bmp
+    file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
+//    file[]: crc = 926ed5b8; size =     40960; name = cd\DMMLchr.exe
+//    file[]: crc = c6d2d7e0; size =     73728; name = cd\DMMUnins.exe
+//    file[]: crc = 2ce00532; size =    157318; name = cd\fondo_h.bmp
+//    file[]: crc = 5b1e9ff9; size =     60082; name = cd\Fondol.bmp
+//    file[]: crc = 96dad17f; size =       767; name = cd\FUNPACK.ICO
+//    file[]: crc = c6f2f498; size =        64; name = cd\funpack.nfo
+//    file[]: crc = c1fb1da7; size =     43520; name = cd\Instalar.opt
+    file[]: crc = a22e9a7e; size =      4525; name = cd\lang.dat
+//    file[]: crc = 0806535d; size =    995383; name = cd\MFC42.DLL
+//    file[]: crc = 8bac66e9; size =     74528; name = cd\MSCOMSTF.DLL
+//    file[]: crc = 7bb50716; size =     15888; name = cd\MSCUISTF.DLL
+//    file[]: crc = 2bd46f8f; size =     24544; name = cd\MSDETSTF.DLL
+//    file[]: crc = 5a9638c2; size =     65440; name = cd\MSINSSTF.DLL
+//    file[]: crc = bd3d3075; size =     14928; name = cd\MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = cd\MSUILSTF.DLL
+//    file[]: crc = 0571d0e6; size =     77878; name = cd\MSVCIRT.DLL
+//    file[]: crc = 2b14e071; size =    254005; name = cd\MSVCRT.DLL
+//    file[]: crc = 2fba174e; size =      4931; name = cd\setup.cfg
+//    file[]: crc = 6e1b5b0d; size =    217088; name = cd\setup.exe
+//    file[]: crc = 0dd56659; size =     31932; name = cd\SETUPHLP.DLL
+//    file[]: crc = 420c7155; size =     92208; name = cd\WING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = cd\WING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = cd\WINGDE.DLL
+    file[]: crc = a3f49e39; size =    164294; name = cd\SPANISH\DATA.Z
+    file[]: crc = f88b549c; size =    474624; name = cd\SPANISH\FUNPACK.EXE
+    file[]: crc = 6533b730; size =  19267429; name = cd\SPANISH\FUNPACKE.A
+    file[]: crc = 5e9faa71; size =   6435187; name = cd\SPANISH\FUNPACKE.C
+    file[]: crc = 0e0d4df5; size =   2474509; name = cd\SPANISH\FUNPACKE.D
+    file[]: crc = 7f841a7d; size =     13604; name = cd\SPANISH\FUNPACKE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\SPANISH\FUNPACKE.TXP
+    file[]: crc = 34fe0bbf; size =  17044899; name = cd\SPANISH\FUNPACKS.A
+    file[]: crc = db190fde; size =  18549650; name = cd\SPANISH\FUNPACKS.B
+    file[]: crc = 7ea7d8b6; size =   7034596; name = cd\SPANISH\FUNPACKS.C
+    file[]: crc = 00000000; size =         0; name = cd\SPANISH\FUNPACKS.D
+    file[]: crc = 8e48f539; size =   3156113; name = cd\SPANISH\FUNPACKS.E
+    file[]: crc = 7cd31bcc; size =  28486950; name = cd\SPANISH\FUNPACKS.F
+    file[]: crc = 739deaa4; size =     13661; name = cd\SPANISH\FUNPACKS.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\SPANISH\FUNPACKS.TXP
+    file[]: crc = a4d2aa4c; size =    149071; name = cd\SPANISH\WING.Z
+
+
+
+
+
+
+    FUNPACK_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SPAN ENG
+StartMaximized=YES
+SaveDir=C:\DINAKIDS\Timmy3\
+CycleLng=NO
+Forcemaximized=yes
+CardPitch=998
+StartLanguage=SPANISH
+StartDir=D:\Spanish
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=funpacke.txp
+DatFile=funpacke.dat
+FontFile=fontsp
+MaxFont=0
+;      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
+;                   Length  InRow  Letter
+Font0=30     32     32     21      32      50         139       0        0       0
+FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_
+WormLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+DataFiles=FunPacke.a FunPacks.b FunPacke.c FunPacke.d FunPacks.e FunPacks.f
+LodFile=funpacke.Lod
+WindowTitle=La fiesta de cumpleaños de Guille
+UseHiresFonts=Yes
+DiskErrorTitle=La fiesta de cumpleaños de guille
+DiskError=Por favor introduce el CD en la unidad.
+[END]
+[Span]
+16ColorMessage=16color.eng
+TxpFile=FunPacks.txp
+DatFile=FunPacks.dat
+FontFile=fontsp
+MaxFont=0
+;      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
+;                   Length  InRow  Letter
+Font0=30     32     32     21      32      50         139       0        0       0
+;FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_æåÅÄÇÉëÿîÖûÜ
+FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_ÁÑÉÍÓÚ
+SpecialLetters=áÁñÑéÉíÍóÓúÚ
+WormLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEF
+DataFiles=FunPacks.a FunPacks.b FunPacks.c FunPacks.d FunPacks.e FunPacks.f
+LodFile=FunPacks.Lod
+WindowTitle=La fiesta de cumpleaños de Guille
+UseHiresFonts=Yes
+DiskError=Por favor introduce el CD en la unidad.
+DiskErrorTitle=La fiesta de cumpleaños de Guille
+[END]
+[PATH]
+HDPath=C:\DINAKIDS\Timmy3\
+CDPath=D:\Spanish
+
+]]]
+
+
+end
+
+end
