@@ -6,4 +6,5 @@
 | Quantum Castle | 🇺🇸 |  |
 | Timmy and the Magic Pictures | 🇺🇸 |  |
 | Timmy the Dream Hunter | 🇺🇸 🇳🇱 🇸🇪 |  |
+| Timmy's Birthday Party | (🇺🇸 🇪🇸) |  |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) 🇸🇪 |  |
