@@ -40,10 +40,10 @@ script[init]:
 end
 
 
-game[pc-sp-991216]:
-    name = Spanish 1999-12-16
+game[pc-es-991216]:
+    name = Spanish/English 1999-12-16
     anchorfile = Fondol.bmp
-    launch = C:\DINAKIDS\PLAYROOM\WTHINK.EXE EMME /CFG:C:\DINAKIDS\PLAYROOM\WTHINK.ini /lng:$(LANGCONFIG)
+    launch = C:\DINAKIDS\PLAYROOM\WTHINK.EXE /CFG:C:\DINAKIDS\PLAYROOM\WTHINK.ini /lng:$(LANGCONFIG)
     rootpath = D:\SPANISH
     LANGSELECT = true
     CDLABEL=PLAYROOM
@@ -161,6 +161,138 @@ UseHiresFonts=yes
 [PATH]
 HDPath=C:\DINAKIDS\PLAYROOM\
 CDPath=D:\Spanish
+
+]]]
+
+
+end
+
+
+game[pc-sv]:
+    name = Swedish
+    anchorfile = WTHINK.EXE
+    launch = C:\BONNIER\LEKRUM\WTHINK.EXE /CFG:C:\BONNIER\LEKRUM\WTHINK.ini
+    rootpath = D:\
+    LANGSELECT = false
+    CDLABEL=Det Förtrollade
+    HDDPATH = C:\BONNIER\LEKRUM
+//    file[]: crc = b98f3e3a; size =    417024; name = DEMO2S.EXE
+//    file[]: crc = 7abdb7c1; size =       480; name = DEMO2S.INI
+//    file[]: crc = f794279c; size =    388864; name = LOST.EXE
+//    file[]: crc = b7743e1a; size =       982; name = LOST.INI
+//    file[]: crc = f9ce582b; size =    458240; name = MOVIE.EXE
+//    file[]: crc = c9fdd13f; size =       758; name = MOVIE.INI
+    file[]: crc = 4678a32c; size =    397568; name = WTHINK.EXE
+//    file[]: crc = 92f0b8aa; size =       717; name = WTHINK.INI
+    file[]: crc = e5814350; size =       259; name = cd\16COLOR.ENG
+//    file[]: crc = 420c7155; size =     92208; name = cd\_ING.DLL
+//    file[]: crc = c259f8ca; size =     12800; name = cd\_ING32.DLL
+//    file[]: crc = 3b514083; size =    188960; name = cd\_INGDE.DLL
+//    file[]: crc = 1be07fa4; size =      6736; name = cd\_INGDIB.DRV
+//    file[]: crc = a2b26dc7; size =      5024; name = cd\_INGPAL.WND
+//    file[]: crc = ebc07351; size =      9813; name = cd\_MSSETUP.EXE
+//    file[]: crc = b5786357; size =     89504; name = cd\_MSTEST.EXE
+//    file[]: crc = 345cd097; size =      1966; name = cd\_VA.386
+//    file[]: crc = e1c57195; size =        45; name = cd\AUTORUN.INF
+    file[]: crc = e03a59e8; size =   7110251; name = cd\COMMON.B
+//    file[]: crc = 7932f2c4; size =    615226; name = cd\DATA.C
+//    file[]: crc = 0c45cc2d; size =       760; name = cd\DATA.DEM
+//    file[]: crc = e2423186; size =   4925531; name = cd\DEMO2S.A
+//    file[]: crc = a61e0be5; size =   5646421; name = cd\DEMO2S.B
+//    file[]: crc = 4173ec9f; size =   2205661; name = cd\DEMO2S.C
+//    file[]: crc = 5d4b1698; size =  20367736; name = cd\DEMO2S.D
+//    file[]: crc = 25ae84f0; size =   1485593; name = cd\DEMO2S.E
+//    file[]: crc = b98f3e3a; size =    417024; name = cd\DEMO2S.EXE
+//    file[]: crc = 7abdb7c1; size =       480; name = cd\DEMO2S.INI
+//    file[]: crc = ed2e41d4; size =      4707; name = cd\DEMO2S.LOD
+//    file[]: crc = 7f63e11d; size =         4; name = cd\DEMO2S.TXP
+//    file[]: crc = 700a1953; size =       745; name = cd\FUNPACK.INI
+//    file[]: crc = da7b3d05; size =  11210914; name = cd\HELPSVOC.E
+//    file[]: crc = 7a4ffaed; size =   5926825; name = cd\INTROS.A
+//    file[]: crc = 2d3be3c9; size =      2901; name = cd\INTROS.LOD
+//    file[]: crc = 09f6f1e5; size =  43853284; name = cd\INTROSAM.B
+//    file[]: crc = 32d5ebd3; size =     19456; name = cd\LAUNCH.EXE
+//    file[]: crc = 90fa1284; size =       890; name = cd\LAUNCH.INI
+//    file[]: crc = 5e707909; size =   1462766; name = cd\LOGO.C
+//    file[]: crc = f794279c; size =    388864; name = cd\LOST.EXE
+//    file[]: crc = b7743e1a; size =       982; name = cd\LOST.INI
+//    file[]: crc = 28356e2e; size =     10890; name = cd\MAZE.DAT
+//    file[]: crc = f9ce582b; size =    458240; name = cd\MOVIE.EXE
+//    file[]: crc = c9fdd13f; size =       758; name = cd\MOVIE.INI
+//    file[]: crc = 6a433d59; size =   6901886; name = cd\MOVIES.A
+//    file[]: crc = a6b8b970; size =  63786977; name = cd\MOVIES.C
+//    file[]: crc = 4b8f6968; size =   1789806; name = cd\MOVIES.D
+//    file[]: crc = 63cf3e69; size =    787813; name = cd\MOVIES.E
+//    file[]: crc = 895c6964; size =  11788956; name = cd\MOVIES.F
+//    file[]: crc = 00000000; size =         0; name = cd\MOVIES.G
+//    file[]: crc = 174895a5; size =      6479; name = cd\MOVIES.LOD
+//    file[]: crc = 67ed29b9; size =         3; name = cd\MOVIES.TXP
+//    file[]: crc = 8bac66e9; size =     74528; name = cd\MSCOMSTF.DLL
+//    file[]: crc = aca7d3ff; size =     38912; name = cd\MSCUISTE.DLL
+//    file[]: crc = 9e43770a; size =     37376; name = cd\MSCUISTF.DLL
+//    file[]: crc = bf8f1809; size =     22097; name = cd\MSDETECT.INC
+//    file[]: crc = 2bd46f8f; size =     24544; name = cd\MSDETSTF.DLL
+//    file[]: crc = df562369; size =     65280; name = cd\MSINSSTF.DLL
+//    file[]: crc = 0c1c7e95; size =     14752; name = cd\MSSHLSTF.DLL
+//    file[]: crc = d342f37d; size =      6144; name = cd\MSUILSTF.DLL
+//    file[]: crc = 361160b8; size =   3494190; name = cd\MUSIC.D
+//    file[]: crc = 4b4720dd; size =   2871485; name = cd\NREADSW.A
+//    file[]: crc = c7f1d08c; size =   2682384; name = cd\NREADSW.F
+//    file[]: crc = b889e6dd; size =      5781; name = cd\NREADSW.LOD
+//    file[]: crc = c4008dad; size =        96; name = cd\NREADSW.OFS
+//    file[]: crc = 7448bfca; size =     12654; name = cd\NREADSW.PIC
+//    file[]: crc = 3a825422; size =     12654; name = cd\NREADSW.TRS
+//    file[]: crc = 764db71e; size =     28404; name = cd\NREADSW.TXP
+    file[]: crc = 7c973b4e; size =      4848; name = cd\PUZL.DAT
+//    file[]: crc = 112dd53d; size =   1369819; name = cd\SAME.B
+//    file[]: crc = 7a7b8d78; size =     24624; name = cd\SETUP.EXE
+//    file[]: crc = 16bd009b; size =      1588; name = cd\SETUP.INF
+//    file[]: crc = 1afa9cb3; size =       689; name = cd\SETUP.LST
+//    file[]: crc = 95f637da; size =     11544; name = cd\SETUP.MST
+//    file[]: crc = 893aa522; size =     56623; name = cd\SETUPAPI.INC
+//    file[]: crc = 0dd56659; size =     31932; name = cd\SETUPHLP.DLL
+    file[]: crc = f3bf22ef; size =      1513; name = cd\SPECS.INC
+    file[]: crc = 4678a32c; size =    397568; name = cd\WTHINK.EXE
+    file[]: crc = 29a2c245; size =       653; name = cd\WTHINK.INI
+    file[]: crc = 36e77f4f; size =       812; name = cd\WTHINKG.TXP
+    file[]: crc = 8d3288e4; size =  21439082; name = cd\WTHINKS.A
+    file[]: crc = 7fade8f8; size =  39007829; name = cd\WTHINKS.B
+    file[]: crc = 9b0de474; size =   3370547; name = cd\WTHINKS.C
+    file[]: crc = 5886f7cf; size =   1870806; name = cd\WTHINKS.D
+    file[]: crc = f48a4802; size =    335906; name = cd\WTHINKS.E
+    file[]: crc = 0b9af446; size =      8177; name = cd\WTHINKS.LOD
+
+
+
+
+
+    WTHINK_CONTENTS = [[[$(CRLF)
+[Globals]
+SaveDir=C:\BONNIER\LEKRUM
+Languages=SWD
+startmaximized=yes
+
+[SWD]
+TxpFile=WThinkg.txp
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=WThinks.A WThinks.B WThinks.C WThinks.D WThinks.E
+LodFile=WThinks.Lod
+WindowTitle=Det förtrollade lekrummet
+UseHiresFonts=yes
+[END]
+
+[ACTIVITIES]
+STATUS=no
+[PATH]
+HDPATH=C:\BONNIER\LEKRUM\
+CDPATH=D:\
 
 ]]]
 
