@@ -27,7 +27,7 @@ config[langselect]:
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
 //    option[se]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\FUNPACKH.A")
-    option[sp]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\FUNPACKS.A")
+    option[es]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\FUNPACKS.A")
 end
 
 
@@ -39,7 +39,7 @@ script[init]:
 end
 
 
-game[pc-sp-991212]:
+game[pc-es-991212]:
     name = Spanish 1999-12-22
     anchorfile = Fondol.bmp
     launch = C:\DINAKIDS\Timmy3\FUNPACK.EXE EMME /CFG:C:\DINAKIDS\Timmy3\funpack.ini /lng:$(LANGCONFIG)

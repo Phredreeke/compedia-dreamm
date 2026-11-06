@@ -19,6 +19,15 @@ mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
 
+//
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This version has issues running on x64 builds (4.0x81)
+end
+
 script[cd-init]:
     code = [[[$(CRLF)
         drive_set_label("D", "$$(CDLABEL)")
@@ -111,6 +120,7 @@ game[pc-en-011214]:
     name = English 2001-12-14
     anchorfile = GORDIE.AVI
     anchordepth = 1
+    INCOMPATIBLE = true
     rootpath = C:\COMPEDIA\MOVIE
     launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI
 //    file[]: crc = c683cebe; size =    395008; name = lost.exe

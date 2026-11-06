@@ -28,7 +28,7 @@ config[langselect]:
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1; condition = file_exists("$$(rootpath)\\WTHINKE.A")
 //    option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\WTHINKH.A")
-    option[sp]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\WTHINKS.A")
+    option[es]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\WTHINKS.A")
 end
 
 

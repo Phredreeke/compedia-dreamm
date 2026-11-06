@@ -29,7 +29,7 @@ end
 INCOMPATIBLE = false
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = This versiom is not currently playable (4.0x81)
+    text = This version is not currently playable (4.0x81)
 end
 
 
