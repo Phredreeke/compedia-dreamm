@@ -24,6 +24,7 @@ config[langselect]:
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
     option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\TIMMY1H.A")
+    option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\Timmy1f.a")
 end
 
 
@@ -191,5 +192,85 @@ CDPath=D:\hebrew
 
 end
 
+
+
+game[pc-fr-050621]:
+    name = French/English 2005-06-21
+    anchorfile = TIMMY1.BMP
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\Timmy1.exe" /CFG:$(HDDPATH)\TIMMY1.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    CDLABEL=TIMMY_TABLEAUX
+
+//    file[]: crc = ed261d7b; size =     35328; name = setres.exe
+    file[]: crc = 569f1d45; size =    341760; name = TIMMY1.EXE
+    file[]: crc = 21d67927; size =      2012; name = cd\timmy1.bmp
+    file[]: crc = bbbf3e17; size =       767; name = cd\TIMMY1.ico
+    file[]: crc = 901e6986; size =  17048812; name = cd\TIMMY1E.A
+    file[]: crc = 535e7381; size =   1291045; name = cd\TIMMY1E.D
+    file[]: crc = 49ba10f5; size =     20338; name = cd\TIMMY1E.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\TIMMY1E.TXP
+    file[]: crc = 65912fe0; size =  16489839; name = cd\TIMMY1F.A
+    file[]: crc = 81bfcabe; size =  40273112; name = cd\TIMMY1F.B
+    file[]: crc = 4aa69c96; size =  61408499; name = cd\TIMMY1F.C
+    file[]: crc = 4713bcfe; size =   3034642; name = cd\TIMMY1F.D
+    file[]: crc = f72ba3b4; size =     20075; name = cd\TIMMY1F.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\TIMMY1F.TXP
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=FRE ENG
+Forcemaximized=yes
+Soundvolume=10
+Musicvolume=1
+setres=yes
+SaveDir=C:\TIMMY1
+StartDir=D:
+
+[FRE]
+TxpFile=Timmy1f.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=Timmy1f.a Timmy1f.b Timmy1f.c Timmy1f.d 
+LodFile=Timmy1f.lod
+WindowTitle=Timmy et les tableaux magiques
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Veuillez insérer le CD-ROM dans le lecteur.
+DiskErrorTitle=Timmy et les tableaux magiques
+[END]
+
+[ENG]
+TxpFile=Timmy1e.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=Timmy1e.a Timmy1f.b Timmy1f.c Timmy1e.d 
+LodFile=Timmy1e.lod
+WindowTitle=Reading Adventure
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Please insert the correct CD-ROM into drive.
+DiskErrorTitle=Reading Adventure
+[END]
+[PATH]
+HDPath=C:\TIMMY1
+CDPath=D:
+
+
+
+]]]
+
+
+
+end
 
 end

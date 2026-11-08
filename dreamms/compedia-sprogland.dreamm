@@ -1,0 +1,80 @@
+desc[compedia-sprogland]:
+
+name = Sprogland
+icon = compedia-sprogland.png
+machine = pc
+rootpath = D:\
+launch = "$(HDDPATH)\WORDS.EXE" /CFG:$(HDDPATH)\WORDS.ini
+osenv = windows 98
+winres = 640x480x8
+WORDS_CONTENTS =
+HDDPATH =
+wincrop = true
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+
+
+script[init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(HDDPATH)\\WORDS.ini")) { file_save("$$(HDDPATH)\\WORDS.ini", "$$(WORDS_CONTENTS)") }
+    ]]]
+end
+
+
+
+game[pc-dk-970610]:
+    name = Danish 1997-06-10
+    anchorfile = WORDS.A
+    HDDPATH = C:\GILISOFT\WORDSDAN
+    file[]: crc = fd99334f; size =    301056; name = WORDS.EXE
+    file[]: crc = d593b1c2; size =       253; name = cd\16COLOR.DAN
+    file[]: crc = 0184f51b; size =       807; name = cd\SPECS.INC
+    file[]: crc = 64e65bbc; size =  12378010; name = cd\WORDS.A
+    file[]: crc = fd99334f; size =    301056; name = cd\WORDS.EXE
+    file[]: crc = 3f9f04b3; size =       475; name = cd\WORDS.INI
+    file[]: crc = 27eb4adb; size =      6674; name = cd\WORDS.LOD
+    file[]: crc = 6ae1116a; size =     10006; name = cd\WORDS.TXP
+
+
+
+    WORDS_CONTENTS = [[[$(CRLF)
+[Globals]
+Languages=DEN
+MyPalette=yes
+StartMaximized=yes
+ForceMAximized=no
+SaveDir=C:\GILISOFT\WORDSDAN
+
+[DEN]
+WindowTitle=Sprogland
+TxpFile=words.txp
+FontFile=fonts
+MaxFont=2
+;            l-width l-Length r-length l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+DataFiles=words.a
+LodFile=words.Lod
+UseHiresFonts=yes
+Define=ROOM2
+DiskErrorTitle=Sprogland
+DiskError=Indsæt den korrekte CD i drevet!
+[END]
+[PATH]
+HDPATH=C:\GILISOFT\WORDSDAN\
+CDPATH=D:\
+
+
+]]]
+
+end
+
+
+
+end
