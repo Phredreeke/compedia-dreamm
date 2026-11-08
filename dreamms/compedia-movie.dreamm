@@ -26,6 +26,16 @@ script[cd-init]:
     ]]]
 end
 
+//
+// Language options
+//
+LANGSELECT = false
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[no]: name = Norwegian; LANGCONFIG =intronor; priority = 1;
+    option[se]: name = Swedish; LANGCONFIG =introswd; 
+end
 
 game[pc-sv-970108]:
     name = Swedish 1997-01-08
@@ -363,6 +373,116 @@ DiskErrorTitle=Gordi y la mágica aventura del cine
 [PATH]
 HDPath=C:\DINAKIDS\MOVIE\
 CDPath=D:\Spanish\
+
+
+]]]
+
+
+
+
+end
+
+
+
+game[pc-no-060130]:
+    name = Norwegian/Swedish 2006-01-30
+    anchorfile = MOVIE.ICO
+    rootpath = C:\COMPEDIA\MOVIE
+    LANGSELECT = true
+    launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI /lng:$(LANGCONFIG) cdok
+    file[]: crc = d302fdb2; size =    546560; name = MOVIE.EXE
+    file[]: crc = 3dc2fae6; size =   6421918; name = cd\INTRON.A
+    file[]: crc = b9274cb6; size =      2911; name = cd\INTRON.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\INTRON.TXP
+    file[]: crc = c39f2334; size =   6006462; name = cd\INTROS.A
+    file[]: crc = 9be2a3c7; size =  41911616; name = cd\INTROS.B
+    file[]: crc = b5886515; size =    829864; name = cd\INTROS.C
+    file[]: crc = 974400a2; size =      2908; name = cd\INTROS.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\INTROS.TXP
+    file[]: crc = 3aa568db; size =      2102; name = cd\Movie.bmp
+    file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE.ico
+    file[]: crc = 3e80a157; size =  28667105; name = cd\MOVIEN.A
+    file[]: crc = 5912c870; size =     24566; name = cd\MOVIEN.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\MOVIEN.TXP
+    file[]: crc = 35912c67; size =  24571501; name = cd\MOVIES.A
+    file[]: crc = 22ae5f83; size = 341718101; name = cd\MOVIES.C
+    file[]: crc = abee1d60; size =  24261555; name = cd\MOVIES.D
+    file[]: crc = 79b085de; size =  12318243; name = cd\MOVIES.E
+    file[]: crc = b83b2650; size =  61651679; name = cd\MOVIES.F
+    file[]: crc = dcac60ac; size =  18786589; name = cd\MOVIES.G
+    file[]: crc = df4e7c21; size =     24549; name = cd\MOVIES.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\MOVIES.TXP
+    file[]: crc = b397c2b6; size =   1798307; name = cd\same.B
+
+
+
+
+    CDLABEL =Movie
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROSWD SWD INTRONOR NOR
+Forcemaximized=yes
+SaveDir=C:\COMPEDIA\MOVIE
+StartDir=D:
+
+[NOR]
+TxpFile=MovieN.txp
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=Movien.a same.b MovieS.c MovieS.d MovieS.e MovieS.f MovieS.g 
+LodFile=MovieN.Lod
+WindowTitle=Filmmogul
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Filmmogul
+[END]
+
+[INTRONOR]
+TxpFile=introN.txp
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=Intron.a IntroS.b IntroS.c
+LodFile=intron.lod
+WindowTitle=Filmmogul
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Filmmogul
+[END]
+
+
+[SWD]
+TxpFile=MovieS.txp
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=MovieS.a same.b MovieS.c MovieS.d MovieS.e MovieS.f MovieS.g 
+LodFile=MovieS.Lod
+WindowTitle=Filmgurun
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Filmgurun
+[END]
+
+[INTROSWD]
+TxpFile=IntroS.txp
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=IntroS.a IntroS.b IntroS.c
+LodFile=IntroS.Lod
+WindowTitle=TOONING - A Magical Movie Adventure
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=TOONING - A Magical Movie Adventure
+[END]
+[ACTIVITIES]
+
+
+[PATH]
+HDPath=C:\COMPEDIA\MOVIE
+CDPath=D:
 
 
 ]]]
