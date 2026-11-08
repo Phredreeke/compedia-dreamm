@@ -5,7 +5,8 @@
 | Gordi and the Math Invaders | 🇺🇸 🇸🇪 |  |
 | In Search of the Lost Words | 🇺🇸 🇸🇪 |  |
 | Quantum Castle | 🇺🇸 |  |
-| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) |  |
+| Sprogland | 🇩🇰 |  |
+| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇫🇷) |  |
 | Timmy the Dream Hunter | 🇺🇸 🇳🇱 🇸🇪 |  |
 | Timmy's Birthday Party | (🇺🇸 🇪🇸) |  |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇸🇪 |  |
