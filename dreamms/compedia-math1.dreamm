@@ -4,7 +4,7 @@ name = Gordi and the Math Invaders
 icon = compedia-math1.png
 machine = pc
 rootpath = D:\
-launch = "$(HDDPATH)\Math.exe" /CFG:$(HDDPATH)\Math.ini
+launch = "$(HDDPATH)\Math.exe" /CFG:$(HDDPATH)\Math.ini cdok
 osenv = windows 98
 winres = 640x480x8
 
@@ -22,16 +22,6 @@ script[cd-init]:
         if (!!file_exists("$$(HDDPATH)\\Math.ini")) { file_save("$$(HDDPATH)\\Math.ini", "$$(INI_CONTENTS)") }
     ]]]
 end
-
-//
-// warnings
-//
-INCOMPATIBLE = false
-warning[incompatible]:
-    condition = $(INCOMPATIBLE)
-    text = This version is not currently playable (4.0x81)
-end
-
 
 game[pc-en-022201]:
     name = English 2002-01-08
@@ -116,27 +106,15 @@ end
 
 game[pc-sv-971020]:
     name = Swedish 1997-10-20
-    INCOMPATIBLE = true
     anchorfile = Math.bmp
     rootpath = D:\Swedish
     HDDPATH = C:\Progra~1\bonnier\math1
-//    file[]: crc = a9e74f8e; size =      2513; name = DEISL1.ISU
     file[]: crc = 1f690215; size =    517376; name = MATH.EXE
-//    file[]: crc = 5246ffca; size =       554; name = MATH.INI
     file[]: crc = d06ff7e9; size =  10145359; name = MATHS.B
-//    file[]: crc = 851a5030; size =    282655; name = cd\_INST16.EX_
-//    file[]: crc = db6ff40d; size =      8192; name = cd\_ISDEL.EXE
-//    file[]: crc = 4ebd3610; size =     11264; name = cd\_SETUP.DLL
-//    file[]: crc = 99ac3808; size =    142100; name = cd\_SETUP.LIB
     file[]: crc = e0c7c560; size =        46; name = cd\AUTORUN.INF
     file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
-//    file[]: crc = 89dc2eda; size =     59802; name = cd\LAUNCH1.BMP
-//    file[]: crc = 0d1c83f0; size =    230912; name = cd\LAUNCHER.EXE
     file[]: crc = 9fe549be; size =       630; name = cd\MATH.BMP
     file[]: crc = a9ba5976; size =       766; name = cd\MATH1.ICO
-//    file[]: crc = 432f6eb9; size =     44928; name = cd\SETUP.EXE
-//    file[]: crc = f6033cd5; size =       153; name = cd\SETUP.INI
-//    file[]: crc = 9069d46b; size =     57309; name = cd\SETUP.INS
     file[]: crc = 70344c5e; size =   8057006; name = cd\SWEDISH\DATA.Z
     file[]: crc = 0f035d0c; size =      2071; name = cd\SWEDISH\DELETE.INI
     file[]: crc = 28199836; size =  18786080; name = cd\SWEDISH\FINALS.AVI

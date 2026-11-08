@@ -19,15 +19,6 @@ mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
 
-//
-// warnings
-//
-INCOMPATIBLE = false
-warning[incompatible]:
-    condition = $(INCOMPATIBLE)
-    text = This version has issues running on x64 builds (4.0x81)
-end
-
 script[cd-init]:
     code = [[[$(CRLF)
         drive_set_label("D", "$$(CDLABEL)")
@@ -120,19 +111,9 @@ game[pc-en-011214]:
     name = English 2001-12-14
     anchorfile = GORDIE.AVI
     anchordepth = 1
-    INCOMPATIBLE = true
     rootpath = C:\COMPEDIA\MOVIE
     launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI
-//    file[]: crc = c683cebe; size =    395008; name = lost.exe
-//    file[]: crc = af1b45c2; size =       982; name = LOST.INI
     file[]: crc = 3e9cd6f8; size =    495104; name = MOVIE.EXE
-//    file[]: crc = 9b5014cb; size =      1041; name = MOVIE.INI
-//    file[]: crc = 00bf6230; size =    318976; name = PAINT.EXE
-//    file[]: crc = 71d5ef72; size =       921; name = Paint.ini
-//    file[]: crc = f1b28d3b; size =   1737253; name = SUPERM.EXE
-//    file[]: crc = a4144eaf; size =       414; name = SUPERM.INI
-//    file[]: crc = 81fda41e; size =    327680; name = WINDEMO.EXE
-//    file[]: crc = 49229fdc; size =       510; name = WINDEMO.INI
     file[]: crc = eb702968; size =        48; name = cd\AUTORUN.INF
     file[]: crc = 00e23fb7; size =    686758; name = cd\COMP.DIR
     file[]: crc = cfddb8fc; size =    463475; name = cd\DATA1.CAB
@@ -165,141 +146,8 @@ game[pc-en-011214]:
     file[]: crc = 01292989; size =  18786589; name = cd\MOVIEE.G
     file[]: crc = 3a7d5b47; size =     24579; name = cd\MOVIEE.LOD
     file[]: crc = 67ed29b9; size =         3; name = cd\MOVIEE.TXP
-    file[]: crc = e65b1933; size =   1531248; name = cd\MTIRGUL.DIR
-    file[]: crc = 0696976b; size =   6650164; name = cd\NREADE.A
-    file[]: crc = b935415f; size =   7087545; name = cd\NREADE.B
-    file[]: crc = 58164a85; size =    554764; name = cd\NREADE.C
-    file[]: crc = 361160b8; size =   3494190; name = cd\NREADE.D
-    file[]: crc = 1ac4d998; size =  13175009; name = cd\NREADE.E
-    file[]: crc = 00000000; size =         0; name = cd\NREADE.F
-    file[]: crc = 0d586b30; size =      5830; name = cd\NREADE.LOD
-    file[]: crc = c4008dad; size =        96; name = cd\NREADE.OFS
-    file[]: crc = 943511c0; size =     18278; name = cd\NREADE.PIC
-    file[]: crc = 2de3b26b; size =     11232; name = cd\NREADE.TRS
-    file[]: crc = 0cf4de03; size =     22059; name = cd\NREADE.TXP
-    file[]: crc = 5de6b048; size =   8305265; name = cd\PAINT.A
-    file[]: crc = 0b4a147d; size =      3329; name = cd\PAINT.LOD
-    file[]: crc = 00000000; size =         0; name = cd\PAINT.TXP
-    file[]: crc = 00e23fb7; size =    686758; name = cd\PRELOGO.DIR
     file[]: crc = 145a8570; size =   3387904; name = cd\SAME.B
-    file[]: crc = 246f329a; size =     54272; name = cd\SETUP.EXE
-    file[]: crc = 721fdc2e; size =       126; name = cd\SETUP.INI
-    file[]: crc = 92cb25d0; size =    140413; name = cd\SETUP.INX
-    file[]: crc = f3e4fc5f; size =      2102; name = cd\WINDEMO.BMP
-    file[]: crc = 26e5d2b6; size =      6738; name = cd\WINDEMO.DAT
-    file[]: crc = 78ed04d4; size =      6011; name = cd\WINDEMO.MNU
-    file[]: crc = 35207fab; size =   5682336; name = cd\ACROBAT\READER.EXE
-    file[]: crc = 5c9a07e4; size =    584062; name = cd\GAMES\CANONHEL.AIF
-    file[]: crc = 8d3f9f15; size =   1724442; name = cd\GAMES\DJDO.DIR
-    file[]: crc = 31931dbc; size =   2689292; name = cd\GAMES\ROSHM.AIF
-    file[]: crc = 011ea48f; size =    447300; name = cd\HIEND\FUNPACK\FUNPCK1A.FLC
-    file[]: crc = a7eb48cc; size =    256708; name = cd\HIEND\FUNPACK\FUNPCK1B.FLC
-    file[]: crc = fe8b9336; size =    405580; name = cd\HIEND\FUNPACK\FUNPCK1C.FLC
-    file[]: crc = 6324f536; size =    267046; name = cd\HIEND\FUNPACK\FUNPCK1D.FLC
-    file[]: crc = db52311e; size =    409512; name = cd\HIEND\FUNPACK\FUNPCK1E.FLC
-    file[]: crc = e09e9136; size =    467930; name = cd\HIEND\FUNPACK\FUNPCK2C.FLC
-    file[]: crc = 01d87394; size =    153524; name = cd\HIEND\FUNPACK\PARTY1.VOC
-    file[]: crc = 1729da92; size =    144417; name = cd\HIEND\FUNPACK\PARTY2.VOC
-    file[]: crc = ba9c95d8; size =    169056; name = cd\HIEND\FUNPACK\PARTY3.VOC
-    file[]: crc = 7dd11c7d; size =    249564; name = cd\HIEND\FUNPACK\PARTY4.VOC
-    file[]: crc = be0a52d4; size =    188451; name = cd\HIEND\FUNPACK\PARTY5.VOC
-    file[]: crc = f3e2055f; size =     83393; name = cd\HIEND\FUNPACK\PARTY6.VOC
-    file[]: crc = 4ee68f18; size =   1307680; name = cd\HIEND\LOST\LOSTE1B.FLC
-    file[]: crc = 733b2365; size =    972710; name = cd\HIEND\LOST\LOSTE1D.FLC
-    file[]: crc = bdd38620; size =   2207740; name = cd\HIEND\LOST\LOSTE1E.FLC
-    file[]: crc = ed05b3f1; size =    494332; name = cd\HIEND\LOST\LOSTE1F.FLC
-    file[]: crc = f4665d1e; size =    183797; name = cd\HIEND\LOST\SEARCH1.VOC
-    file[]: crc = d7fefd28; size =    289659; name = cd\HIEND\LOST\SEARCH3.VOC
-    file[]: crc = 159b3bc1; size =    282807; name = cd\HIEND\LOST\SEARCH4.VOC
-    file[]: crc = 3e8719db; size =    176425; name = cd\HIEND\LOST\SEARCH5.VOC
-    file[]: crc = 3853d57f; size =    136326; name = cd\HIEND\MOVIE\HOLLY2.VOC
-    file[]: crc = 337f5061; size =    417929; name = cd\HIEND\MOVIE\HOLLY4.VOC
-    file[]: crc = c63883bc; size =    170135; name = cd\HIEND\MOVIE\HOLLY5.VOC
-    file[]: crc = 8d8a20e1; size =    163551; name = cd\HIEND\MOVIE\HOLLY6.VOC
-    file[]: crc = 4d8c3f56; size =    211893; name = cd\HIEND\MOVIE\HOLLY7.VOC
-    file[]: crc = 960449ad; size =    157118; name = cd\HIEND\MOVIE\MOVIE2.VOC
-    file[]: crc = 09e8c6d1; size =     72824; name = cd\HIEND\MOVIE\MOVIE3.VOC
-    file[]: crc = 8155c82e; size =   1175612; name = cd\HIEND\MOVIE\MOVIEB.FLC
-    file[]: crc = 444ab7d6; size =    937766; name = cd\HIEND\MOVIE\MOVIEC.FLC
-    file[]: crc = 6a913ddc; size =    933978; name = cd\HIEND\MOVIE\MOVIEC1.FLC
-    file[]: crc = 1ca8c645; size =   1240280; name = cd\HIEND\MOVIE\MOVIED.FLC
-    file[]: crc = a259efcb; size =    374038; name = cd\HIEND\MOVIE\MOVIEE.FLC
-    file[]: crc = f200e2b3; size =    468508; name = cd\HIEND\MOVIE\MOVIEF.FLC
-    file[]: crc = 069a1507; size =   1122290; name = cd\HIEND\MOVIE\MOVIEG.FLC
-    file[]: crc = b436fb38; size =    315840; name = cd\HIEND\PLAYROOM\PLAY2.VOC
-    file[]: crc = 0e2c044f; size =    199623; name = cd\HIEND\PLAYROOM\PLAY3.VOC
-    file[]: crc = 36c4a5bf; size =    289510; name = cd\HIEND\PLAYROOM\PLAY4.VOC
-    file[]: crc = a0a0af80; size =    230137; name = cd\HIEND\PLAYROOM\PLAY5.VOC
-    file[]: crc = b3f3b1e9; size =    421820; name = cd\HIEND\PLAYROOM\PLAYRM1B.FLC
-    file[]: crc = fe9574de; size =    333392; name = cd\HIEND\PLAYROOM\PLAYRM1C.FLC
-    file[]: crc = fa5dfdac; size =    126266; name = cd\HIEND\PLAYROOM\PLAYRM1D.FLC
-    file[]: crc = 7900d195; size =    830934; name = cd\HIEND\PLAYROOM\PLAYRM1E.FLC
-    file[]: crc = c3a71a64; size =    445024; name = cd\HIEND\SUPER\PSYCHOD1.FLC
-    file[]: crc = 456147b7; size =    719666; name = cd\HIEND\SUPER\THINK1.FLC
-    file[]: crc = 3239db23; size =    210058; name = cd\HIEND\SUPER\THINK1.VOC
-    file[]: crc = 2b068227; size =    714204; name = cd\HIEND\SUPER\THINK2.FLC
-    file[]: crc = 9206496c; size =    330472; name = cd\HIEND\SUPER\THINK2.VOC
-    file[]: crc = 87390dbd; size =    696268; name = cd\HIEND\SUPER\THINK3.FLC
-    file[]: crc = afa417c7; size =    233886; name = cd\HIEND\SUPER\THINK3.VOC
-    file[]: crc = 7b3d44db; size =   1146552; name = cd\HIEND\SUPER\THINK4.FLC
-    file[]: crc = 05925c6b; size =    313552; name = cd\HIEND\SUPER\THINK4.VOC
-    file[]: crc = e971760a; size =    440500; name = cd\HIEND\SUPER\THINK5.FLC
-    file[]: crc = 9e8c82d6; size =    160705; name = cd\HIEND\SUPER\THINK5.VOC
-    file[]: crc = 19c0d9fc; size =    214336; name = cd\HIEND\TIMMY1\ITAMAR1A.FLC
-    file[]: crc = 5ea4d2e7; size =    886858; name = cd\HIEND\TIMMY1\ITAMAR1B.FLC
-    file[]: crc = 3b390d2d; size =    988692; name = cd\HIEND\TIMMY1\ITAMAR1C.FLC
-    file[]: crc = 8e2f93d1; size =    453526; name = cd\HIEND\TIMMY1\ITAMAR1D.FLC
-    file[]: crc = 96963b30; size =    138896; name = cd\HIEND\TIMMY1\TIMMY1.VOC
-    file[]: crc = fe8b817b; size =    382048; name = cd\HIEND\TIMMY1\TIMMY2.VOC
-    file[]: crc = a332e657; size =    339066; name = cd\HIEND\TIMMY1\TIMMY3.VOC
-    file[]: crc = 46fbe136; size =    333663; name = cd\HIEND\TIMMY1\TIMMY4.VOC
-    file[]: crc = 9a67de8b; size =     91169; name = cd\HIEND\TIMMY1\TIMMY5.VOC
-    file[]: crc = cecc1b9b; size =    318046; name = cd\HIEND\TIMMY2\DREAM2.VOC
-    file[]: crc = 05aeff85; size =    345807; name = cd\HIEND\TIMMY2\DREAM3.VOC
-    file[]: crc = 3a0fe5bf; size =    325850; name = cd\HIEND\TIMMY2\DREAM4.VOC
-    file[]: crc = 68fc60f2; size =    187359; name = cd\HIEND\TIMMY2\DREAM5.VOC
-    file[]: crc = 583491de; size =    749210; name = cd\HIEND\TIMMY2\ITAMAR2A.FLC
-    file[]: crc = f350223c; size =    785900; name = cd\HIEND\TIMMY2\ITAMAR2B.FLC
-    file[]: crc = 5716aa70; size =    973460; name = cd\HIEND\TIMMY2\ITAMAR2C.FLC
-    file[]: crc = 1eaefe56; size =    128560; name = cd\HIEND\TIMMY2\ITAMAR2D.FLC
-    file[]: crc = fae53a02; size =   1482782; name = cd\LIMUD\LSID.DIR
-    file[]: crc = 634d5890; size =    456800; name = cd\MANUAL\MAGICAL_.PDF
-    file[]: crc = 59f7fb6c; size =       712; name = cd\MENU\DUMMY.VOC
-    file[]: crc = a0d96997; size =      7188; name = cd\MENU\EXIT.FLC
-    file[]: crc = 44fa25c6; size =     18128; name = cd\MENU\FUNPACK.FLC
-    file[]: crc = 7ff989ff; size =     12253; name = cd\MENU\ICONS.PCX
-    file[]: crc = 4da70f24; size =      8132; name = cd\MENU\INTERACT.FLC
-    file[]: crc = 98892c77; size =    703470; name = cd\MENU\LOGO.FLC
-    file[]: crc = 3067123b; size =    195137; name = cd\MENU\LOGO.VOC
-    file[]: crc = 0ac942e7; size =     17856; name = cd\MENU\LOST.FLC
-    file[]: crc = 839cbc2e; size =   1531448; name = cd\MENU\MAIN1.VOC
-    file[]: crc = 9cb67d6a; size =     18284; name = cd\MENU\MATH1.FLC
-    file[]: crc = 8ddd97e8; size =     16660; name = cd\MENU\MATH2.FLC
-    file[]: crc = ec120deb; size =     18604; name = cd\MENU\MOVIE.FLC
-    file[]: crc = 32a51f2d; size =   2924525; name = cd\MENU\MUSIC.VOC
-    file[]: crc = 860e189b; size =    288627; name = cd\MENU\OPEN.PCX
-    file[]: crc = 4f6c5c49; size =   9011648; name = cd\MENU\OPEN.VOC
-    file[]: crc = 779abdf0; size =      7098; name = cd\MENU\PASSIVE.FLC
-    file[]: crc = 2b8b992d; size =     18178; name = cd\MENU\PLAYROOM.FLC
-    file[]: crc = 6c7c86bd; size =      6600; name = cd\MENU\PREVIOUS.FLC
-    file[]: crc = a80a024f; size =    173932; name = cd\MENU\REKA.PCX
-    file[]: crc = ecae1ac9; size =     16178; name = cd\MENU\SUPERM.FLC
-    file[]: crc = f9114c18; size =      7936; name = cd\MENU\SURPRISE.FLC
-    file[]: crc = cf0c2ee9; size =     17898; name = cd\MENU\TIMMY1.FLC
-    file[]: crc = de99688e; size =     17586; name = cd\MENU\TIMMY2.FLC
-    file[]: crc = 3e7c9807; size =     17800; name = cd\MENU\TIMMY4.FLC
-    file[]: crc = 5b142334; size =     13744; name = cd\MENU\TITLE.FLC
-    file[]: crc = cdb6d0eb; size =    498978; name = cd\TIRGUL\EXESID.AIF
-    file[]: crc = 3e85588a; size =   2435732; name = cd\TIRGUL\SHARED.CST
-    file[]: crc = b168cec7; size =   8053478; name = cd\TIRGUL\SHARED.DIR
-    file[]: crc = dbcaf150; size =   1044758; name = cd\TIRGUL\TIRGUL.DIR
-    file[]: crc = 996fac06; size =     87552; name = cd\XTRAS\FILEIO.X32
-    file[]: crc = 464cc953; size =    119296; name = cd\XTRAS\MIX32.X32
-    file[]: crc = d2bc23fe; size =    133278; name = cd\XTRAS\MIX_SERV.
-    file[]: crc = cf144c29; size =    131282; name = cd\XTRAS\SOUND_IM.
-    file[]: crc = 467738b5; size =    109568; name = cd\XTRAS\SOUND_IM.X32
-    file[]: crc = 6c1174fa; size =     93184; name = cd\XTRAS\SWADCMPR.X32
-    file[]: crc = a541f6bf; size =     73728; name = cd\XTRAS\SWASTRM.X32
+
 
     CDLABEL = $(NULL)
     MOVIE_CONTENTS = [[[$(CRLF)
@@ -362,206 +210,11 @@ game[pc-nl-970727]:
     anchorfile = MOVIE.BMP
     rootpath = C:\Progra~1\Kluitman\Paniek
     launch = "C:\Progra~1\Kluitman\Paniek\Movie.exe" /CFG:C:\Progra~1\Kluitman\Paniek\MOVIE.INI
-//    file[]: crc = adb4e7f2; size =      2459; name = DEISL1.ISU
     file[]: crc = 494c4f37; size =   6810356; name = INTROH.A
     file[]: crc = d3da41da; size =    461056; name = MOVIE.EXE
-//    file[]: crc = 64ba95af; size =       929; name = MOVIE.INI
-//    file[]: crc = 851a5030; size =    282655; name = cd\_INST16.EX_
-//    file[]: crc = db6ff40d; size =      8192; name = cd\_ISDEL.EXE
-//    file[]: crc = 661991e4; size =     96256; name = cd\_ISRES.DLL
-//    file[]: crc = a025c5e1; size =     11264; name = cd\_SETUP.DLL
-//    file[]: crc = e1c56d4f; size =    143783; name = cd\_SETUP.LIB
-//    file[]: crc = c6edda67; size =        49; name = cd\AUTORUN.INF
     file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
-//    file[]: crc = 3e175729; size =     58694; name = cd\LAUNCH1.BMP
-//    file[]: crc = 4fb0c395; size =    229632; name = cd\LAUNCHER.EXE
     file[]: crc = 15725be9; size =    308278; name = cd\MOVIE.BMP
     file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE1.ICO
-//    file[]: crc = 432f6eb9; size =     44928; name = cd\SETUP.EXE
-//    file[]: crc = 7846f4e1; size =       134; name = cd\SETUP.INI
-//    file[]: crc = 9069d46b; size =     57309; name = cd\SETUP.INS
-//    file[]: crc = 5061cd36; size =     90112; name = cd\DIALOGS\ARABIC\_ISRES.DLL
-//    file[]: crc = 04b4edaf; size =     10752; name = cd\DIALOGS\ARABIC\_SETUP.DLL
-//    file[]: crc = 6afee86a; size =    141839; name = cd\DIALOGS\ARABIC\_SETUP.LIB
-//    file[]: crc = cadc1c95; size =       671; name = cd\DIALOGS\ARABIC\README.TXT
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\ARABIC\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\ARABIC\SETUPL.INS
-//    file[]: crc = 8a3dcfd9; size =    251392; name = cd\DIALOGS\ARABIC\UNINST16.EXE
-//    file[]: crc = 0ab24b0c; size =     99328; name = cd\DIALOGS\BASQUE\_ISRES.DLL
-//    file[]: crc = 3dbb70de; size =     11264; name = cd\DIALOGS\BASQUE\_SETUP.DLL
-//    file[]: crc = 77de4c2e; size =    146809; name = cd\DIALOGS\BASQUE\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\BASQUE\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\BASQUE\SETUPL.INS
-//    file[]: crc = dbd297a6; size =    260096; name = cd\DIALOGS\BASQUE\UNINST16.EXE
-//    file[]: crc = cc4d5cb3; size =     96256; name = cd\DIALOGS\CATALAN\_ISRES.DLL
-//    file[]: crc = b3a90bb8; size =     11264; name = cd\DIALOGS\CATALAN\_SETUP.DLL
-//    file[]: crc = 79d914a1; size =    146439; name = cd\DIALOGS\CATALAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\CATALAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\CATALAN\SETUPL.INS
-//    file[]: crc = da723283; size =    260608; name = cd\DIALOGS\CATALAN\UNINST16.EXE
-//    file[]: crc = 57c7f4d3; size =     87552; name = cd\DIALOGS\CHI_SIMP\_ISRES.DLL
-//    file[]: crc = 53b9f356; size =     10240; name = cd\DIALOGS\CHI_SIMP\_SETUP.DLL
-//    file[]: crc = 271fa027; size =     27341; name = cd\DIALOGS\CHI_SIMP\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\CHI_SIMP\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\CHI_SIMP\SETUPL.INS
-//    file[]: crc = 002a4431; size =    246272; name = cd\DIALOGS\CHI_SIMP\UNINST16.EXE
-//    file[]: crc = b0b1a067; size =     87552; name = cd\DIALOGS\CHI_TRAD\_ISRES.DLL
-//    file[]: crc = 8368bb37; size =     10240; name = cd\DIALOGS\CHI_TRAD\_SETUP.DLL
-//    file[]: crc = 374b41e9; size =     27598; name = cd\DIALOGS\CHI_TRAD\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\CHI_TRAD\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\CHI_TRAD\SETUPL.INS
-//    file[]: crc = e0cef6a5; size =    246272; name = cd\DIALOGS\CHI_TRAD\UNINST16.EXE
-//    file[]: crc = c8b50887; size =     94208; name = cd\DIALOGS\CZECH\_ISRES.DLL
-//    file[]: crc = 54173850; size =     11264; name = cd\DIALOGS\CZECH\_SETUP.DLL
-//    file[]: crc = 0ba0c83d; size =    144302; name = cd\DIALOGS\CZECH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\CZECH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\CZECH\SETUPL.INS
-//    file[]: crc = 8d8d6dfb; size =    252416; name = cd\DIALOGS\CZECH\UNINST16.EXE
-//    file[]: crc = bc205404; size =     95744; name = cd\DIALOGS\DANISH\_ISRES.DLL
-//    file[]: crc = d52c2dd2; size =     11264; name = cd\DIALOGS\DANISH\_SETUP.DLL
-//    file[]: crc = 5ceeeba3; size =    143287; name = cd\DIALOGS\DANISH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\DANISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\DANISH\SETUPL.INS
-//    file[]: crc = 7483af32; size =    252416; name = cd\DIALOGS\DANISH\UNINST16.EXE
-//    file[]: crc = 661991e4; size =     96256; name = cd\DIALOGS\DUTCH\_ISRES.DLL
-//    file[]: crc = a025c5e1; size =     11264; name = cd\DIALOGS\DUTCH\_SETUP.DLL
-//    file[]: crc = e1c56d4f; size =    143783; name = cd\DIALOGS\DUTCH\_SETUP.LIB
-//    file[]: crc = 598d86cf; size =       387; name = cd\DIALOGS\DUTCH\SETUP.INI
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\DUTCH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\DUTCH\SETUPL.INS
-//    file[]: crc = 9474da1e; size =    252928; name = cd\DIALOGS\DUTCH\UNINST16.EXE
-//    file[]: crc = d688e8b4; size =      6128; name = cd\DIALOGS\ENGLISH\_SETUP.DLL
-//    file[]: crc = 99ac3808; size =    142100; name = cd\DIALOGS\ENGLISH\_SETUP.LIB
-//    file[]: crc = 598d86cf; size =       387; name = cd\DIALOGS\ENGLISH\SETUP.INI
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\ENGLISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\ENGLISH\SETUPL.INS
-//    file[]: crc = 28dd9c3f; size =     95232; name = cd\DIALOGS\FINNISH\_ISRES.DLL
-//    file[]: crc = e9c113e8; size =     10752; name = cd\DIALOGS\FINNISH\_SETUP.DLL
-//    file[]: crc = cc94f7cf; size =    142838; name = cd\DIALOGS\FINNISH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\FINNISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\FINNISH\SETUPL.INS
-//    file[]: crc = 48713bb9; size =    251392; name = cd\DIALOGS\FINNISH\UNINST16.EXE
-//    file[]: crc = 0b806c40; size =     78384; name = cd\DIALOGS\FRE_CAN\_ISRES.DLL
-//    file[]: crc = 938e8c03; size =      6096; name = cd\DIALOGS\FRE_CAN\_SETUP.DLL
-//    file[]: crc = cb92aa49; size =    143705; name = cd\DIALOGS\FRE_CAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\FRE_CAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\FRE_CAN\SETUPL.INS
-//    file[]: crc = 4a334d79; size =    247904; name = cd\DIALOGS\FRE_CAN\UNINST16.EXE
-//    file[]: crc = 187a2f44; size =    107520; name = cd\DIALOGS\FRENCH\_ISRES.DLL
-//    file[]: crc = cd2b308a; size =     11264; name = cd\DIALOGS\FRENCH\_SETUP.DLL
-//    file[]: crc = 69e0966f; size =    146199; name = cd\DIALOGS\FRENCH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\FRENCH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\FRENCH\SETUPL.INS
-//    file[]: crc = 5020df71; size =    252928; name = cd\DIALOGS\FRENCH\UNINST16.EXE
-//    file[]: crc = 93e68655; size =    107008; name = cd\DIALOGS\GERMAN\_ISRES.DLL
-//    file[]: crc = c0d7cfc9; size =     11264; name = cd\DIALOGS\GERMAN\_SETUP.DLL
-//    file[]: crc = a7d2f4fc; size =    146387; name = cd\DIALOGS\GERMAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\GERMAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\GERMAN\SETUPL.INS
-//    file[]: crc = 4c24c786; size =    252928; name = cd\DIALOGS\GERMAN\UNINST16.EXE
-//    file[]: crc = 4a027a3d; size =     99840; name = cd\DIALOGS\GREEK\_ISRES.DLL
-//    file[]: crc = a8af28ad; size =     11264; name = cd\DIALOGS\GREEK\_SETUP.DLL
-//    file[]: crc = 216041a6; size =    145241; name = cd\DIALOGS\GREEK\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\GREEK\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\GREEK\SETUPL.INS
-//    file[]: crc = cf99456d; size =    252928; name = cd\DIALOGS\GREEK\UNINST16.EXE
-//    file[]: crc = d04a4717; size =     93696; name = cd\DIALOGS\HEBREW\_ISRES.DLL
-//    file[]: crc = bd532819; size =     10752; name = cd\DIALOGS\HEBREW\_SETUP.DLL
-//    file[]: crc = c2e49e9e; size =    143343; name = cd\DIALOGS\HEBREW\_SETUP.LIB
-//    file[]: crc = 5c5c0059; size =       582; name = cd\DIALOGS\HEBREW\README.TXT
-//    file[]: crc = 598d86cf; size =       387; name = cd\DIALOGS\HEBREW\SETUP.INI
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\HEBREW\SETUP.INS
-//    file[]: crc = fb29641e; size =       493; name = cd\DIALOGS\HEBREW\SETUP.PKG
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\HEBREW\SETUPL.INS
-//    file[]: crc = a95fb17b; size =    247104; name = cd\DIALOGS\HEBREW\UNINST16.EXE
-//    file[]: crc = 30421c97; size =     94720; name = cd\DIALOGS\HUNGARAN\_ISRES.DLL
-//    file[]: crc = d6965294; size =     11264; name = cd\DIALOGS\HUNGARAN\_SETUP.DLL
-//    file[]: crc = 229abe3a; size =    144448; name = cd\DIALOGS\HUNGARAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\HUNGARAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\HUNGARAN\SETUPL.INS
-//    file[]: crc = c12d70a0; size =    252416; name = cd\DIALOGS\HUNGARAN\UNINST16.EXE
-//    file[]: crc = 94245904; size =     94208; name = cd\DIALOGS\INDONESN\_ISRES.DLL
-//    file[]: crc = a7599bc7; size =     10752; name = cd\DIALOGS\INDONESN\_SETUP.DLL
-//    file[]: crc = 18f74882; size =     28123; name = cd\DIALOGS\INDONESN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\INDONESN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\INDONESN\SETUPL.INS
-//    file[]: crc = fb06689f; size =    246784; name = cd\DIALOGS\INDONESN\UNINST16.EXE
-//    file[]: crc = cefb3f01; size =    107520; name = cd\DIALOGS\ITALIAN\_ISRES.DLL
-//    file[]: crc = 994789d9; size =     11264; name = cd\DIALOGS\ITALIAN\_SETUP.DLL
-//    file[]: crc = 440ccc02; size =    145856; name = cd\DIALOGS\ITALIAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\ITALIAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\ITALIAN\SETUPL.INS
-//    file[]: crc = e94dd950; size =    252928; name = cd\DIALOGS\ITALIAN\UNINST16.EXE
-//    file[]: crc = 601f50af; size =     92160; name = cd\DIALOGS\JAPANESE\_ISRES.DLL
-//    file[]: crc = 9231a810; size =     10240; name = cd\DIALOGS\JAPANESE\_SETUP.DLL
-//    file[]: crc = 47cfc65a; size =     27966; name = cd\DIALOGS\JAPANESE\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\JAPANESE\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\JAPANESE\SETUPL.INS
-//    file[]: crc = 8ebc5836; size =    247296; name = cd\DIALOGS\JAPANESE\UNINST16.EXE
-//    file[]: crc = 2bc0d528; size =     94208; name = cd\DIALOGS\KOREAN\_ISRES.DLL
-//    file[]: crc = 9626cda8; size =     10240; name = cd\DIALOGS\KOREAN\_SETUP.DLL
-//    file[]: crc = d3d398e0; size =     28482; name = cd\DIALOGS\KOREAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\KOREAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\KOREAN\SETUPL.INS
-//    file[]: crc = cdbc6d7b; size =    246784; name = cd\DIALOGS\KOREAN\UNINST16.EXE
-//    file[]: crc = 38247a97; size =     95744; name = cd\DIALOGS\NORWEGAN\_ISRES.DLL
-//    file[]: crc = 4cf20bba; size =     11264; name = cd\DIALOGS\NORWEGAN\_SETUP.DLL
-//    file[]: crc = 5c769694; size =    143285; name = cd\DIALOGS\NORWEGAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\NORWEGAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\NORWEGAN\SETUPL.INS
-//    file[]: crc = e0d2c743; size =    252416; name = cd\DIALOGS\NORWEGAN\UNINST16.EXE
-//    file[]: crc = 960fce1b; size =     96256; name = cd\DIALOGS\POLISH\_ISRES.DLL
-//    file[]: crc = e6e6ff3d; size =     11264; name = cd\DIALOGS\POLISH\_SETUP.DLL
-//    file[]: crc = b9d229c8; size =    144210; name = cd\DIALOGS\POLISH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\POLISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\POLISH\SETUPL.INS
-//    file[]: crc = efe144d6; size =    252928; name = cd\DIALOGS\POLISH\UNINST16.EXE
-//    file[]: crc = 3deb3827; size =     95744; name = cd\DIALOGS\PORTBRZL\_ISRES.DLL
-//    file[]: crc = 8e796f9b; size =     11264; name = cd\DIALOGS\PORTBRZL\_SETUP.DLL
-//    file[]: crc = 6b640caf; size =    144132; name = cd\DIALOGS\PORTBRZL\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\PORTBRZL\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\PORTBRZL\SETUPL.INS
-//    file[]: crc = 5e68e151; size =    252928; name = cd\DIALOGS\PORTBRZL\UNINST16.EXE
-//    file[]: crc = 35532edf; size =     96256; name = cd\DIALOGS\PORTIBRN\_ISRES.DLL
-//    file[]: crc = 052c6915; size =     11264; name = cd\DIALOGS\PORTIBRN\_SETUP.DLL
-//    file[]: crc = 10498919; size =    144263; name = cd\DIALOGS\PORTIBRN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\PORTIBRN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\PORTIBRN\SETUPL.INS
-//    file[]: crc = a6b6cf5b; size =    252928; name = cd\DIALOGS\PORTIBRN\UNINST16.EXE
-//    file[]: crc = ff57d209; size =     95744; name = cd\DIALOGS\RUSSIAN\_ISRES.DLL
-//    file[]: crc = 9e11498a; size =     10752; name = cd\DIALOGS\RUSSIAN\_SETUP.DLL
-//    file[]: crc = 60564e8a; size =     29494; name = cd\DIALOGS\RUSSIAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\RUSSIAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\RUSSIAN\SETUPL.INS
-//    file[]: crc = 9ebc0378; size =    247296; name = cd\DIALOGS\RUSSIAN\UNINST16.EXE
-//    file[]: crc = 19fc1ca0; size =     94720; name = cd\DIALOGS\SLOVENAN\_ISRES.DLL
-//    file[]: crc = 3604b020; size =     11264; name = cd\DIALOGS\SLOVENAN\_SETUP.DLL
-//    file[]: crc = 1a82ce6c; size =    143505; name = cd\DIALOGS\SLOVENAN\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\SLOVENAN\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\SLOVENAN\SETUPL.INS
-//    file[]: crc = e6826287; size =    252928; name = cd\DIALOGS\SLOVENAN\UNINST16.EXE
-//    file[]: crc = 4cfa8345; size =    101376; name = cd\DIALOGS\SPANISH\_ISRES.DLL
-//    file[]: crc = 9e390731; size =     11776; name = cd\DIALOGS\SPANISH\_SETUP.DLL
-//    file[]: crc = d0aedcfd; size =    144501; name = cd\DIALOGS\SPANISH\_SETUP.LIB
-//    file[]: crc = 0f86d946; size =       446; name = cd\DIALOGS\SPANISH\SETUP.INI
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\SPANISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\SPANISH\SETUPL.INS
-//    file[]: crc = b656bd06; size =    252928; name = cd\DIALOGS\SPANISH\UNINST16.EXE
-//    file[]: crc = c0faa648; size =     95744; name = cd\DIALOGS\SWEDISH\_ISRES.DLL
-//    file[]: crc = 4ebd3610; size =     11264; name = cd\DIALOGS\SWEDISH\_SETUP.DLL
-//    file[]: crc = b650fb98; size =    142799; name = cd\DIALOGS\SWEDISH\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\SWEDISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\SWEDISH\SETUPL.INS
-//    file[]: crc = db815801; size =    252416; name = cd\DIALOGS\SWEDISH\UNINST16.EXE
-//    file[]: crc = 483667df; size =     92672; name = cd\DIALOGS\THAI\_ISRES.DLL
-//    file[]: crc = 1528a699; size =     10240; name = cd\DIALOGS\THAI\_SETUP.DLL
-//    file[]: crc = 16f4b017; size =     28447; name = cd\DIALOGS\THAI\_SETUP.LIB
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\THAI\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\THAI\SETUPL.INS
-//    file[]: crc = 5cb2f412; size =    246784; name = cd\DIALOGS\THAI\UNINST16.EXE
-//    file[]: crc = ce7efd36; size =        32; name = cd\DIALOGS\TURKISH\README.TXT
-//    file[]: crc = d29b3780; size =      4170; name = cd\DIALOGS\TURKISH\SETUP.INS
-//    file[]: crc = cfe4037f; size =      7773; name = cd\DIALOGS\TURKISH\SETUPL.INS
     file[]: crc = e95fc712; size =   4627543; name = cd\DUTCH\DATA.Z
     file[]: crc = 60b16500; size =  18786589; name = cd\DUTCH\END.G
     file[]: crc = 8d89827a; size =  12370312; name = cd\DUTCH\GAMES.E
@@ -576,167 +229,7 @@ game[pc-nl-970727]:
     file[]: crc = 20cb72db; size = 341718101; name = cd\DUTCH\ROOMS.C
     file[]: crc = 202e5d10; size =   3387904; name = cd\DUTCH\SAME.B
     file[]: crc = 1fbeeed3; size =    128996; name = cd\DUTCH\WING.Z
-    file[]: crc = c9c7f12f; size =     38163; name = cd\DUTCH\DATA\BHIRAR.PCX
-    file[]: crc = bd28d618; size =      4444; name = cd\DUTCH\DATA\BIRTH.FLC
-    file[]: crc = d1240a03; size =     11016; name = cd\DUTCH\DATA\BRUCH.FLC
-    file[]: crc = b36ae883; size =      3570; name = cd\DUTCH\DATA\CHAZARA.FLC
-    file[]: crc = 3945d05e; size =      1588; name = cd\DUTCH\DATA\CHEZ.CEL
-    file[]: crc = ee9059ad; size =      4436; name = cd\DUTCH\DATA\CLIMB.FLC
-    file[]: crc = 83dbb674; size =     72262; name = cd\DUTCH\DATA\COMP.FLC
-    file[]: crc = 8ec15869; size =     11457; name = cd\DUTCH\DATA\DEMVER.PCX
-    file[]: crc = 31159678; size =     35519; name = cd\DUTCH\DATA\DEMVER1.PCX
-    file[]: crc = 8ec15869; size =     11457; name = cd\DUTCH\DATA\DEMVERR.PCX
-    file[]: crc = d75bd597; size =      4460; name = cd\DUTCH\DATA\DREAM.FLC
-    file[]: crc = 5520fb59; size =     60614; name = cd\DUTCH\DATA\FUNINTER.PCX
-    file[]: crc = 8df52141; size =      3946; name = cd\DUTCH\DATA\FUNL.FLC
-    file[]: crc = d2cd05ed; size =      2180; name = cd\DUTCH\DATA\FUNR.FLC
-    file[]: crc = 51a9535e; size =      4996; name = cd\DUTCH\DATA\GORDI.FLC
-    file[]: crc = 31ece464; size =      4530; name = cd\DUTCH\DATA\HADGAMA.FLC
-    file[]: crc = 7ff989ff; size =     12253; name = cd\DUTCH\DATA\ICONS.PCX
-    file[]: crc = f8d3b8f0; size =      4304; name = cd\DUTCH\DATA\INTER.FLC
-    file[]: crc = 2f7c5f32; size =     32636; name = cd\DUTCH\DATA\KLOGO.FLC
-    file[]: crc = 443a6819; size =     10320; name = cd\DUTCH\DATA\KLUIT.FLC
-    file[]: crc = bafd3376; size =     70660; name = cd\DUTCH\DATA\KLUITMAN.FLC
-    file[]: crc = 8276eea4; size =      5248; name = cd\DUTCH\DATA\KOM.FLC
-    file[]: crc = f7a807c6; size =      5252; name = cd\DUTCH\DATA\KOM2.FLC
-    file[]: crc = d95db1b1; size =    142975; name = cd\DUTCH\DATA\LOSINTER.PCX
-    file[]: crc = a293eac3; size =      4660; name = cd\DUTCH\DATA\LOST.FLC
-    file[]: crc = 31ba8365; size =      3992; name = cd\DUTCH\DATA\LOSTENG.FLC
-    file[]: crc = 2497c29d; size =      4638; name = cd\DUTCH\DATA\LOSTL.FLC
-    file[]: crc = 6a594211; size =      2690; name = cd\DUTCH\DATA\LOSTR.FLC
-    file[]: crc = 041eac13; size =      3586; name = cd\DUTCH\DATA\MACH.FLC
-    file[]: crc = a3f09483; size =     35469; name = cd\DUTCH\DATA\MENU.PCX
-    file[]: crc = 0a9e7bc8; size =      3772; name = cd\DUTCH\DATA\MOVIE.FLC
-    file[]: crc = 7bebe009; size =      7544; name = cd\DUTCH\DATA\MOVIEL.FLC
-    file[]: crc = 8813ea27; size =      3910; name = cd\DUTCH\DATA\MOVIER.FLC
-    file[]: crc = 7da7d85d; size =    219330; name = cd\DUTCH\DATA\MOVINTER.PCX
-    file[]: crc = e7393810; size =      3570; name = cd\DUTCH\DATA\OTOMAT.FLC
-    file[]: crc = d0612648; size =     81892; name = cd\DUTCH\DATA\PLAINTER.PCX
-    file[]: crc = 0bf0a389; size =      4750; name = cd\DUTCH\DATA\PLAYL.FLC
-    file[]: crc = 359e52ea; size =      2630; name = cd\DUTCH\DATA\PLAYR.FLC
-    file[]: crc = 14de2ab1; size =      3538; name = cd\DUTCH\DATA\PLAYROOM.FLC
-    file[]: crc = 0afa3c6a; size =      5352; name = cd\DUTCH\DATA\RETURN.FLC
-    file[]: crc = 89f847dd; size =      3648; name = cd\DUTCH\DATA\SUPER.FLC
-    file[]: crc = 74b60b31; size =    176921; name = cd\DUTCH\DATA\T1INTER.PCX
-    file[]: crc = f90a0b30; size =    142155; name = cd\DUTCH\DATA\T2INTER.PCX
-    file[]: crc = 18ed58e2; size =      5874; name = cd\DUTCH\DATA\TEXT.FLC
-    file[]: crc = be00311b; size =      4318; name = cd\DUTCH\DATA\TIMMY1L.FLC
-    file[]: crc = 83b6c202; size =      2592; name = cd\DUTCH\DATA\TIMMY1R.FLC
-    file[]: crc = d1724a96; size =      2904; name = cd\DUTCH\DATA\TIMMY2L.FLC
-    file[]: crc = 0057f51e; size =      2196; name = cd\DUTCH\DATA\TIMMY2R.FLC
-    file[]: crc = 00bc4e78; size =      3244; name = cd\DUTCH\DATA\YEZIA.FLC
-    file[]: crc = 2af98b3a; size =     22570; name = cd\DUTCH\HIEND\FUNPACK\FUNPACK.PCX
-    file[]: crc = 8335d888; size =     24998; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1.FLC
-    file[]: crc = 6bd2cc95; size =    880472; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1A.FLC
-    file[]: crc = 80205dd2; size =    444776; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1B.FLC
-    file[]: crc = fe8b9336; size =    405580; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1C.FLC
-    file[]: crc = 6324f536; size =    267046; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1D.FLC
-    file[]: crc = 2d503500; size =    464836; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK1E.FLC
-    file[]: crc = 3c2d927e; size =    468274; name = cd\DUTCH\HIEND\FUNPACK\FUNPCK2C.FLC
-    file[]: crc = b938bfd3; size =     41835; name = cd\DUTCH\HIEND\FUNPACK\PARTY1.VOC
-    file[]: crc = cd4aaf02; size =    209360; name = cd\DUTCH\HIEND\FUNPACK\PARTY2.VOC
-    file[]: crc = fa732526; size =    173497; name = cd\DUTCH\HIEND\FUNPACK\PARTY3.VOC
-    file[]: crc = 95cf5d7d; size =     75222; name = cd\DUTCH\HIEND\FUNPACK\PARTY4.VOC
-    file[]: crc = eb004993; size =    292989; name = cd\DUTCH\HIEND\FUNPACK\PARTY5.VOC
-    file[]: crc = 089735ce; size =    131107; name = cd\DUTCH\HIEND\FUNPACK\PARTY6.VOC
-    file[]: crc = b5231548; size =     81575; name = cd\DUTCH\HIEND\FUNPACK\PARTY7.VOC
-    file[]: crc = 2e1d3d50; size =     22588; name = cd\DUTCH\HIEND\LOSTENG\LOST1A.FLC
-    file[]: crc = 4ee68f18; size =   1307680; name = cd\DUTCH\HIEND\LOSTENG\LOST1B.FLC
-    file[]: crc = 7c5191e9; size =    128724; name = cd\DUTCH\HIEND\LOSTENG\LOST1C.FLC
-    file[]: crc = f43e935f; size =    980852; name = cd\DUTCH\HIEND\LOSTENG\LOST1D.FLC
-    file[]: crc = bdd38620; size =   2207740; name = cd\DUTCH\HIEND\LOSTENG\LOST1E.FLC
-    file[]: crc = ed05b3f1; size =    494332; name = cd\DUTCH\HIEND\LOSTENG\LOST1F.FLC
-    file[]: crc = 4fc065ca; size =   1066760; name = cd\DUTCH\HIEND\LOSTENG\LOST1G.FLC
-    file[]: crc = a3b86355; size =     52741; name = cd\DUTCH\HIEND\LOSTENG\SEARCH1.VOC
-    file[]: crc = ff7ed9b7; size =    256289; name = cd\DUTCH\HIEND\LOSTENG\SEARCH2.VOC
-    file[]: crc = d0d62eef; size =    114901; name = cd\DUTCH\HIEND\LOSTENG\SEARCH3.VOC
-    file[]: crc = c145e573; size =    185776; name = cd\DUTCH\HIEND\LOSTENG\SEARCH4.VOC
-    file[]: crc = a26838b0; size =    338780; name = cd\DUTCH\HIEND\LOSTENG\SEARCH5.VOC
-    file[]: crc = 6f53d0f0; size =    216349; name = cd\DUTCH\HIEND\LOSTENG\SEARCH6.VOC
-    file[]: crc = 78c2f56c; size =    104993; name = cd\DUTCH\HIEND\LOSTENG\SEARCH7.VOC
-    file[]: crc = 6dfb8ce3; size =     20210; name = cd\DUTCH\HIEND\LOSTHEB\LOST.PCX
-    file[]: crc = e5e7cd43; size =     27600; name = cd\DUTCH\HIEND\LOSTHEB\LOST1A.FLC
-    file[]: crc = 4ee68f18; size =   1307680; name = cd\DUTCH\HIEND\LOSTHEB\LOST1B.FLC
-    file[]: crc = 7c5191e9; size =    128724; name = cd\DUTCH\HIEND\LOSTHEB\LOST1C.FLC
-    file[]: crc = f43e935f; size =    980852; name = cd\DUTCH\HIEND\LOSTHEB\LOST1D.FLC
-    file[]: crc = bdd38620; size =   2207740; name = cd\DUTCH\HIEND\LOSTHEB\LOST1E.FLC
-    file[]: crc = ed05b3f1; size =    494332; name = cd\DUTCH\HIEND\LOSTHEB\LOST1F.FLC
-    file[]: crc = 6d209f28; size =   1038546; name = cd\DUTCH\HIEND\LOSTHEB\LOST1G.FLC
-    file[]: crc = f4647984; size =     33277; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH1.VOC
-    file[]: crc = 3649788a; size =     79044; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH2.VOC
-    file[]: crc = 57dad708; size =    116610; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH3.VOC
-    file[]: crc = 82f9751e; size =    148275; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH4.VOC
-    file[]: crc = c4874b24; size =    176911; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH5.VOC
-    file[]: crc = 78e96052; size =    176369; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH6.VOC
-    file[]: crc = a57bb7b7; size =    142083; name = cd\DUTCH\HIEND\LOSTHEB\SEARCH7.VOC
-    file[]: crc = 696cf3d4; size =     29519; name = cd\DUTCH\HIEND\MOVIE\HOLLY1.VOC
-    file[]: crc = a61963df; size =    144805; name = cd\DUTCH\HIEND\MOVIE\HOLLY2.VOC
-    file[]: crc = afc2c3af; size =    234408; name = cd\DUTCH\HIEND\MOVIE\HOLLY3.VOC
-    file[]: crc = b920df5b; size =    488948; name = cd\DUTCH\HIEND\MOVIE\HOLLY4.VOC
-    file[]: crc = 5ba7a3ad; size =    178866; name = cd\DUTCH\HIEND\MOVIE\HOLLY5.VOC
-    file[]: crc = 15d84ba7; size =    128506; name = cd\DUTCH\HIEND\MOVIE\HOLLY6.VOC
-    file[]: crc = 090ed90a; size =    364455; name = cd\DUTCH\HIEND\MOVIE\HOLLY7.VOC
-    file[]: crc = 111274a1; size =     86919; name = cd\DUTCH\HIEND\MOVIE\HOLLY8.VOC
-    file[]: crc = d8b50d6b; size =    308278; name = cd\DUTCH\HIEND\MOVIE\MOVIE.BMP
-    file[]: crc = fba8cc5f; size =   5035916; name = cd\DUTCH\HIEND\MOVIE\MOVIE.FLC
-    file[]: crc = fe8380cd; size =     19460; name = cd\DUTCH\HIEND\MOVIE\MOVIE.PCX
-    file[]: crc = e33c4687; size =     16254; name = cd\DUTCH\HIEND\MOVIE\MOVIEA.FLC
-    file[]: crc = fd023153; size =   1235778; name = cd\DUTCH\HIEND\MOVIE\MOVIEB.FLC
-    file[]: crc = 444ab7d6; size =    937766; name = cd\DUTCH\HIEND\MOVIE\MOVIEC.FLC
-    file[]: crc = 6a913ddc; size =    933978; name = cd\DUTCH\HIEND\MOVIE\MOVIEC1.FLC
-    file[]: crc = a88b11c6; size =   1270728; name = cd\DUTCH\HIEND\MOVIE\MOVIED.FLC
-    file[]: crc = 3b592774; size =    605474; name = cd\DUTCH\HIEND\MOVIE\MOVIEE.FLC
-    file[]: crc = f200e2b3; size =    468508; name = cd\DUTCH\HIEND\MOVIE\MOVIEF.FLC
-    file[]: crc = 4c8e0758; size =   1388734; name = cd\DUTCH\HIEND\MOVIE\MOVIEG.FLC
-    file[]: crc = 78ffeac1; size =     36707; name = cd\DUTCH\HIEND\PLAYROOM\PLAY1.VOC
-    file[]: crc = 49ddc0e5; size =    259259; name = cd\DUTCH\HIEND\PLAYROOM\PLAY2.VOC
-    file[]: crc = c6009d06; size =    145703; name = cd\DUTCH\HIEND\PLAYROOM\PLAY3.VOC
-    file[]: crc = 764751e6; size =    256245; name = cd\DUTCH\HIEND\PLAYROOM\PLAY4.VOC
-    file[]: crc = 5bb90c0d; size =    146420; name = cd\DUTCH\HIEND\PLAYROOM\PLAY5.VOC
-    file[]: crc = b143a8d9; size =     21586; name = cd\DUTCH\HIEND\PLAYROOM\PLAYRM1A.FLC
-    file[]: crc = b3f3b1e9; size =    421820; name = cd\DUTCH\HIEND\PLAYROOM\PLAYRM1B.FLC
-    file[]: crc = fe9574de; size =    333392; name = cd\DUTCH\HIEND\PLAYROOM\PLAYRM1C.FLC
-    file[]: crc = fa5dfdac; size =    126266; name = cd\DUTCH\HIEND\PLAYROOM\PLAYRM1D.FLC
-    file[]: crc = f60b0874; size =    452162; name = cd\DUTCH\HIEND\PLAYROOM\PLAYRM1E.FLC
-    file[]: crc = 012fa92b; size =     17609; name = cd\DUTCH\HIEND\PLAYROOM\PLAYROOM.PCX
-    file[]: crc = 1d6496a4; size =     24106; name = cd\DUTCH\HIEND\SUPER\PSYCHO.FLC
-    file[]: crc = 456147b7; size =    719666; name = cd\DUTCH\HIEND\SUPER\PSYCHOA.FLC
-    file[]: crc = aee5fd24; size =    739740; name = cd\DUTCH\HIEND\SUPER\PSYCHOB.FLC
-    file[]: crc = 87390dbd; size =    696268; name = cd\DUTCH\HIEND\SUPER\PSYCHOC.FLC
-    file[]: crc = 0f0aa0aa; size =   1271564; name = cd\DUTCH\HIEND\SUPER\PSYCHOD.FLC
-    file[]: crc = c3a71a64; size =    445024; name = cd\DUTCH\HIEND\SUPER\PSYCHOD1.FLC
-    file[]: crc = 3b364932; size =    661498; name = cd\DUTCH\HIEND\SUPER\PSYCHOE.FLC
-    file[]: crc = e50660d8; size =    308278; name = cd\DUTCH\HIEND\SUPER\SUPER.BMP
-    file[]: crc = 95d0d57b; size =     15948; name = cd\DUTCH\HIEND\SUPER\SUPER.PCX
-    file[]: crc = 49eedc23; size =     33864; name = cd\DUTCH\HIEND\SUPER\THINK1.VOC
-    file[]: crc = 033b0d06; size =    162085; name = cd\DUTCH\HIEND\SUPER\THINK2.VOC
-    file[]: crc = f7e3b2c9; size =    332895; name = cd\DUTCH\HIEND\SUPER\THINK3.VOC
-    file[]: crc = dfe90fba; size =    197606; name = cd\DUTCH\HIEND\SUPER\THINK4.VOC
-    file[]: crc = 6d20095d; size =    241950; name = cd\DUTCH\HIEND\SUPER\THINK5.VOC
-    file[]: crc = c049b274; size =    168192; name = cd\DUTCH\HIEND\SUPER\THINK6.VOC
-    file[]: crc = e1de3e78; size =     22888; name = cd\DUTCH\HIEND\TIMMY1\ITAMAR1.FLC
-    file[]: crc = 19c0d9fc; size =    214336; name = cd\DUTCH\HIEND\TIMMY1\ITAMAR1A.FLC
-    file[]: crc = bb8f32b3; size =    881524; name = cd\DUTCH\HIEND\TIMMY1\ITAMAR1B.FLC
-    file[]: crc = 506d8b48; size =    989454; name = cd\DUTCH\HIEND\TIMMY1\ITAMAR1C.FLC
-    file[]: crc = 6e00b593; size =    456486; name = cd\DUTCH\HIEND\TIMMY1\ITAMAR1D.FLC
-    file[]: crc = 9e718986; size =     19561; name = cd\DUTCH\HIEND\TIMMY1\TIMMY1.PCX
-    file[]: crc = ae995e20; size =     52213; name = cd\DUTCH\HIEND\TIMMY1\TIMMY1.VOC
-    file[]: crc = c095c9cf; size =    323937; name = cd\DUTCH\HIEND\TIMMY1\TIMMY2.VOC
-    file[]: crc = 00e52bff; size =    351374; name = cd\DUTCH\HIEND\TIMMY1\TIMMY3.VOC
-    file[]: crc = 0b65feac; size =    247743; name = cd\DUTCH\HIEND\TIMMY1\TIMMY4.VOC
-    file[]: crc = a402a605; size =     96385; name = cd\DUTCH\HIEND\TIMMY1\TIMMY5.VOC
-    file[]: crc = 506ad258; size =     43357; name = cd\DUTCH\HIEND\TIMMY2\DREAM1.VOC
-    file[]: crc = a7436323; size =    201505; name = cd\DUTCH\HIEND\TIMMY2\DREAM2.VOC
-    file[]: crc = f26cfbd7; size =    299543; name = cd\DUTCH\HIEND\TIMMY2\DREAM3.VOC
-    file[]: crc = fa627987; size =    360313; name = cd\DUTCH\HIEND\TIMMY2\DREAM4.VOC
-    file[]: crc = e5adc923; size =    182465; name = cd\DUTCH\HIEND\TIMMY2\DREAM5.VOC
-    file[]: crc = e2d787ad; size =     87171; name = cd\DUTCH\HIEND\TIMMY2\DREAM6.VOC
-    file[]: crc = ac9e52cb; size =     20090; name = cd\DUTCH\HIEND\TIMMY2\ITAMAR2.FLC
-    file[]: crc = 583491de; size =    749210; name = cd\DUTCH\HIEND\TIMMY2\ITAMAR2A.FLC
-    file[]: crc = f350223c; size =    785900; name = cd\DUTCH\HIEND\TIMMY2\ITAMAR2B.FLC
-    file[]: crc = 5716aa70; size =    973460; name = cd\DUTCH\HIEND\TIMMY2\ITAMAR2C.FLC
-    file[]: crc = 63fa4706; size =    127738; name = cd\DUTCH\HIEND\TIMMY2\ITAMAR2D.FLC
-    file[]: crc = c2e4d1e7; size =     19220; name = cd\DUTCH\HIEND\TIMMY2\TIMMY2.PCX
+
 
 
     CDLABEL = $(NULL)
@@ -799,37 +292,13 @@ game[pc-es-991104]:
     anchorfile = MOVIE.ICO
     rootpath = C:\DINAKIDS\MOVIE
     launch = "C:\DINAKIDS\MOVIE\Movie.exe" /CFG:C:\DINAKIDS\MOVIE\MOVIE.INI
-//    file[]: crc = d8470d31; size =     60082; name = FONDOL.BMP
     file[]: crc = 0bccf65c; size =   6293732; name = INTROA.A
     file[]: crc = 810bc668; size =    473344; name = MOVIE.EXE
-//    file[]: crc = fdc207c8; size =      1049; name = movie.ini
-//    file[]: crc = 99f5fd9e; size =      2762; name = MOVIE.log
-//    file[]: crc = 2245132b; size =        43; name = cd\AUTORUN.INF
-//    file[]: crc = 01065c89; size =     25654; name = cd\Botones.bmp
     file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
-//    file[]: crc = 926ed5b8; size =     40960; name = cd\DMMLchr.exe
-//    file[]: crc = c6d2d7e0; size =     73728; name = cd\DMMUnins.exe
-//    file[]: crc = 0b9017cf; size =    157318; name = cd\fondo_a.bmp
-//    file[]: crc = d8470d31; size =     60082; name = cd\Fondol.bmp
-//    file[]: crc = c1fb1da7; size =     43520; name = cd\Instalar.opt
     file[]: crc = a22e9a7e; size =      4525; name = cd\lang.dat
     file[]: crc = 0806535d; size =    995383; name = cd\MFC42.DLL
     file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE.ICO
     file[]: crc = 6a733c34; size =        91; name = cd\movie.nfo
-//    file[]: crc = 8bac66e9; size =     74528; name = cd\MSCOMSTF.DLL
-//    file[]: crc = 7bb50716; size =     15888; name = cd\MSCUISTF.DLL
-//    file[]: crc = 2bd46f8f; size =     24544; name = cd\MSDETSTF.DLL
-//    file[]: crc = 5a9638c2; size =     65440; name = cd\MSINSSTF.DLL
-//    file[]: crc = bd3d3075; size =     14928; name = cd\MSSHLSTF.DLL
-//    file[]: crc = d342f37d; size =      6144; name = cd\MSUILSTF.DLL
-//    file[]: crc = 0571d0e6; size =     77878; name = cd\MSVCIRT.DLL
-//    file[]: crc = 2b14e071; size =    254005; name = cd\MSVCRT.DLL
-//    file[]: crc = 81919b0e; size =      4921; name = cd\setup.cfg
-//    file[]: crc = 1c4861f4; size =    466944; name = cd\setup.exe
-//    file[]: crc = 0dd56659; size =     31932; name = cd\SETUPHLP.DLL
-//    file[]: crc = 420c7155; size =     92208; name = cd\WING.DLL
-//    file[]: crc = c259f8ca; size =     12800; name = cd\WING32.DLL
-//    file[]: crc = 3b514083; size =    188960; name = cd\WINGDE.DLL
     file[]: crc = 56abf000; size =   4905486; name = cd\SPANISH\DATA.Z
     file[]: crc = 0bccf65c; size =   6293732; name = cd\SPANISH\INTROA.A
     file[]: crc = c7448991; size =  41246882; name = cd\SPANISH\INTROA.B

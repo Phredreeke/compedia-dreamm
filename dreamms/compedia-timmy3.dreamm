@@ -50,34 +50,8 @@ game[pc-es-991212]:
     file[]: crc = 5b1e9ff9; size =     60082; name = FONDOL.BMP
     file[]: crc = f88b549c; size =    474624; name = FUNPACK.EXE
     file[]: crc = 96dad17f; size =       767; name = FUNPACK.ICO
-//    file[]: crc = e56df65f; size =      1742; name = funpack.ini
-//    file[]: crc = 9f7676bc; size =      2755; name = funpack.log
-//    file[]: crc = f98cdc3c; size =        45; name = cd\AUTORUN.INF
-//    file[]: crc = 01065c89; size =     25654; name = cd\Botones.bmp
     file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
-//    file[]: crc = 926ed5b8; size =     40960; name = cd\DMMLchr.exe
-//    file[]: crc = c6d2d7e0; size =     73728; name = cd\DMMUnins.exe
-//    file[]: crc = 2ce00532; size =    157318; name = cd\fondo_h.bmp
-//    file[]: crc = 5b1e9ff9; size =     60082; name = cd\Fondol.bmp
-//    file[]: crc = 96dad17f; size =       767; name = cd\FUNPACK.ICO
-//    file[]: crc = c6f2f498; size =        64; name = cd\funpack.nfo
-//    file[]: crc = c1fb1da7; size =     43520; name = cd\Instalar.opt
     file[]: crc = a22e9a7e; size =      4525; name = cd\lang.dat
-//    file[]: crc = 0806535d; size =    995383; name = cd\MFC42.DLL
-//    file[]: crc = 8bac66e9; size =     74528; name = cd\MSCOMSTF.DLL
-//    file[]: crc = 7bb50716; size =     15888; name = cd\MSCUISTF.DLL
-//    file[]: crc = 2bd46f8f; size =     24544; name = cd\MSDETSTF.DLL
-//    file[]: crc = 5a9638c2; size =     65440; name = cd\MSINSSTF.DLL
-//    file[]: crc = bd3d3075; size =     14928; name = cd\MSSHLSTF.DLL
-//    file[]: crc = d342f37d; size =      6144; name = cd\MSUILSTF.DLL
-//    file[]: crc = 0571d0e6; size =     77878; name = cd\MSVCIRT.DLL
-//    file[]: crc = 2b14e071; size =    254005; name = cd\MSVCRT.DLL
-//    file[]: crc = 2fba174e; size =      4931; name = cd\setup.cfg
-//    file[]: crc = 6e1b5b0d; size =    217088; name = cd\setup.exe
-//    file[]: crc = 0dd56659; size =     31932; name = cd\SETUPHLP.DLL
-//    file[]: crc = 420c7155; size =     92208; name = cd\WING.DLL
-//    file[]: crc = c259f8ca; size =     12800; name = cd\WING32.DLL
-//    file[]: crc = 3b514083; size =    188960; name = cd\WINGDE.DLL
     file[]: crc = a3f49e39; size =    164294; name = cd\SPANISH\DATA.Z
     file[]: crc = f88b549c; size =    474624; name = cd\SPANISH\FUNPACK.EXE
     file[]: crc = 6533b730; size =  19267429; name = cd\SPANISH\FUNPACKE.A
