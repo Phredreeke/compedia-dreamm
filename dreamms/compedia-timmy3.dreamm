@@ -1,14 +1,14 @@
 desc[compedia-timmy3]:
 
-name = Timmy Birthday Party
+name = Timmy's Birthday Party
 icon = compedia-timmy3.png
 machine = pc
 rootpath = ""
 launch = ""
 osenv = windows 98
 winres = 640x480x8
-FUNPACK_CONTENTS =
-HDDPATH =
+CDLABEL = $(NULL)
+
 
 //
 // filesystem
@@ -126,6 +126,83 @@ DiskErrorTitle=La fiesta de cumpleaños de Guille
 [PATH]
 HDPath=C:\DINAKIDS\Timmy3\
 CDPath=D:\Spanish
+
+]]]
+
+
+end
+
+
+game[pc-nl-970722]:
+    name = Dutch 1997-07-22
+    anchorfile = FUNPACK.BMP
+    launch = C:\Progra~1\Kluitman\Jeroen3\FUNPACK.EXE EMME /CFG:C:\Progra~1\Kluitman\Jeroen3\funpack.ini
+    rootpath = D:\Dutch
+    HDDPATH = C:\Progra~1\Kluitman\Jeroen3
+    file[]: crc = 5512c408; size =     12832; name = FILEIO.DLL
+    file[]: crc = f33f4ba8; size =    471296; name = FUNPACK.EXE
+    file[]: crc = 96dad17f; size =       767; name = cd\FUN1.ICO
+    file[]: crc = 152e968a; size =      2012; name = cd\FUNPACK.BMP
+    file[]: crc = bb5a659e; size =   6120928; name = cd\DUTCH\DATA.Z
+    file[]: crc = 1ae439de; size =  20490480; name = cd\DUTCH\FUNPACKH.A
+    file[]: crc = 8eee0e9e; size =  18938919; name = cd\DUTCH\FUNPACKH.B
+    file[]: crc = ea1ce8b5; size =   4103564; name = cd\DUTCH\FUNPACKH.C
+    file[]: crc = 1a3c54f8; size =   2659137; name = cd\DUTCH\FUNPACKH.D
+    file[]: crc = 4e6a1c01; size =   3186552; name = cd\DUTCH\FUNPACKH.E
+    file[]: crc = 7cd31bcc; size =  28486950; name = cd\DUTCH\FUNPACKH.F
+    file[]: crc = 42d69686; size =     13657; name = cd\DUTCH\FUNPACKH.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\DUTCH\FUNPACKH.TXP
+    file[]: crc = 7c973b4e; size =      4848; name = cd\DUTCH\PUZL.DAT
+    file[]: crc = 1fbeeed3; size =    128996; name = cd\DUTCH\WING.Z
+
+
+
+
+
+
+
+    FUNPACK_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=HOL
+StartMaximized=YES
+SaveDir=C:\Progra~1\Kluitman\Jeroen3
+CycleLng=NO
+SoundLevel=10
+MusicLevel=8
+StartLanguage=DUTCH
+StartDir=D:\Dutch
+
+[HOL]
+16ColorMessage=16color.eng
+TextFile=FunPack.txt
+TxpFile=FunPackH.txp
+DatFile=FunPackH.dat
+FontFile=fontsp
+MaxFont=0
+;      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
+;                   Length  InRow  Letter
+Font0=30     32     32     21      32      50         139       0        0       0
+FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_
+SpecialLetters=
+WormLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+DataFiles=funpackh.a funpackh.b funpackh.c funpackh.d funpackh.e funpackh.f
+LodFile=FunPackh.Lod
+Define=newcrd
+UpdateLod=
+WindowTitle=Jeroen-het verjaardagsfeest
+UseHiresFonts=Yes
+DiskErrorTitle=Jeroen-het verjaardagsfeest
+DiskError=Doe de juiste CD in de CD-ROM drive a.u.b.
+[END]
+
+
+
+
+
+
+[PATH]
+HDPath=C:\Progra~1\Kluitman\Jeroen3
+CDPath=D:\Dutch
 
 ]]]
 

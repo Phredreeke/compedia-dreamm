@@ -122,7 +122,7 @@ game[pc-en-011214]:
     anchorfile = GORDIE.AVI
     anchordepth = 1
     rootpath = C:\COMPEDIA\MOVIE
-    launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI
+    launch = "C:\COMPEDIA\MOVIE\Movie.exe" /CFG:C:\COMPEDIA\MOVIE\MOVIE.INI cdok
     file[]: crc = 3e9cd6f8; size =    495104; name = MOVIE.EXE
     file[]: crc = eb702968; size =        48; name = cd\AUTORUN.INF
     file[]: crc = 00e23fb7; size =    686758; name = cd\COMP.DIR
@@ -483,6 +483,92 @@ DiskErrorTitle=TOONING - A Magical Movie Adventure
 [PATH]
 HDPath=C:\COMPEDIA\MOVIE
 CDPath=D:
+
+
+]]]
+
+
+
+
+end
+
+
+game[pc-he-990126]:
+    name = Hebrew 1999-01-26
+    anchorfile = MOVIE.ICO
+    rootpath = C:\Progra~1\Compedia\Movie
+    launch = "C:\Progra~1\Compedia\Movie\Movie.exe" /CFG:C:\Progra~1\Compedia\Movie\MOVIE.INI cdok
+    file[]: crc = 43337aab; size =   6284049; name = INTROH.A
+    file[]: crc = 8958b6da; size =    462336; name = MOVIE.EXE
+    file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
+    file[]: crc = c97d8993; size =      1912; name = cd\MOVIE.BMP
+    file[]: crc = 0ac4f7a7; size =       767; name = cd\MOVIE.ICO
+    file[]: crc = be7223f3; size =   4488079; name = cd\HEBREW\DATA.Z
+    file[]: crc = f13e5563; size =  41040003; name = cd\HEBREW\INTROH.B
+    file[]: crc = 7650f43b; size =   4575569; name = cd\HEBREW\INTROH.C
+    file[]: crc = f7109291; size =      2906; name = cd\HEBREW\INTROH.LOD
+    file[]: crc = 474026b5; size =  27511804; name = cd\HEBREW\MOVIEH.A
+    file[]: crc = b8443368; size = 341718101; name = cd\HEBREW\MOVIEH.C
+    file[]: crc = ef5d92a1; size =  24908569; name = cd\HEBREW\MOVIEH.D
+    file[]: crc = cac209ba; size =  12370312; name = cd\HEBREW\MOVIEH.E
+    file[]: crc = b83b2650; size =  61651679; name = cd\HEBREW\MOVIEH.F
+    file[]: crc = 75979a3d; size =  18786589; name = cd\HEBREW\MOVIEH.G
+    file[]: crc = b69f598f; size =     24584; name = cd\HEBREW\MOVIEH.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\HEBREW\MOVIEH.TXP
+    file[]: crc = d2198e13; size =   3387904; name = cd\HEBREW\SAME.B
+    file[]: crc = a4d2aa4c; size =    149071; name = cd\HEBREW\WING.Z
+
+
+
+
+    CDLABEL =MOVIE
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROHEB HEB 
+SaveDir=C:\Progra~1\Compedia\Movie
+CycleLng=no
+CardPitch=998
+Forcemaximized=yes
+StartLanguage=ENGLISH
+StartDir=D:\hebrew
+
+[HEB]
+16ColorMessage=16color.heb
+TxpFile=MovieH.txp
+DatFile=MovieH.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=movieH.a same.b movieH.c movieH.d movieH.e movieH.f movieH.g
+LodFile=movieH.Lod
+Define=noprelogo
+UpdateLod=
+WindowTitle=âåøãé áäøôú÷ä îäñøèéí
+UseHiresFonts=YES
+DiskErrorTitle=âåøãé áäøôú÷ä îäñøèéí
+DiskError=.äëðñ àú äú÷ìéèåø äðëåï ìëåðï
+[END]
+
+[INTROHEB]
+16ColorMessage=16color.heb
+TxpFile=MovieH.txp
+DatFile=IntroH.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=IntroH.a IntroH.b IntroH.c
+LodFile=IntroH.Lod
+Define=noprelogo
+UpdateLod=
+WindowTitle=âåøãé áäøôú÷ä îäñøèéí
+UseHiresFonts=YES
+DiskErrorTitle=âåøãé áäøôú÷ä îäñøèéí
+DiskError=.äëðñ àú äú÷ìéèåø äðëåï ìëåðï
+[END]
+
+[PATH]
+HDPath=C:\Progra~1\Compedia\Movie
+CDPath=D:\hebrew
 
 
 ]]]

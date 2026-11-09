@@ -6,6 +6,7 @@ machine = pc
 rootpath = D:\
 launch = "$(HDDPATH)\Timmy1.exe" EMME /CFG:$(HDDPATH)\TIMMY1.ini
 osenv = windows 98
+CDLABEL = $(NULL)
 winres = 640x480x8
 
 //
@@ -264,6 +265,58 @@ DiskErrorTitle=Reading Adventure
 [PATH]
 HDPath=C:\TIMMY1
 CDPath=D:
+
+
+
+]]]
+
+
+
+end
+
+
+demo[pc-sv-961017-demo]:
+    name = Swedish Demo 1996-10-17
+    anchorfile = DEMO1S.EXE
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\DEMO1S.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
+    file[]: crc = 84cb33a8; size =    333312; name = DEMO1S.EXE
+    file[]: crc = 7c2981a4; size =   2129194; name = cd\DEMO1S.A
+    file[]: crc = 34ea74c8; size =   5654840; name = cd\DEMO1S.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMO1S.C
+    file[]: crc = 0b7b7132; size =   2824102; name = cd\DEMO1S.D
+    file[]: crc = 50685aef; size =   4313408; name = cd\DEMO1S.E
+    file[]: crc = 31c0be9d; size =      4189; name = cd\DEMO1S.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\DEMO1S.TXP
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SWD       
+StartMaximized=Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[SWD]
+16ColorMessage=16color.swd
+TxpFile=demo1s.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=demo1s.a  demo1S.b  demo1s.c demo1s.d demo1s.e
+LodFile=demo1s.Lod
+Define=NOPCX 
+WindowTitle=Timmys hemlighet
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Veuillez insérer le CD-ROM dans le lecteur.
+DiskErrorTitle=Timmys hemlighet
+[END]
 
 
 
