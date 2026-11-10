@@ -26,6 +26,7 @@ config[langselect]:
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
     option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\TIMMY1H.A")
     option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\Timmy1f.a")
+    option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\Timmy1s.a")
 end
 
 
@@ -325,5 +326,96 @@ DiskErrorTitle=Timmys hemlighet
 
 
 end
+
+
+game[pc-es-991026]:
+    name = Spanish/English 1999-10-26
+    anchorfile = TIMMY1.ICO
+    HDDPATH=C:\DINAKIDS\T1
+    rootpath = D:\spanish
+    launch = "$(HDDPATH)\Timmy1.exe" /CFG:$(HDDPATH)\TIMMY1.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    CDLABEL=T1
+    file[]: crc = efa364a0; size =    338688; name = TIMMY1.EXE
+//    file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
+//    file[]: crc = a22e9a7e; size =      4525; name = cd\lang.dat
+    file[]: crc = bbbf3e17; size =       767; name = cd\TIMMY1.ICO
+    file[]: crc = 095108c6; size =    115212; name = cd\SPANISH\DATA.Z
+    file[]: crc = efa364a0; size =    338688; name = cd\SPANISH\TIMMY1.EXE
+    file[]: crc = 8b72ef9f; size =  18559157; name = cd\SPANISH\TIMMY1E.A
+    file[]: crc = 27e5f8b1; size =   2775786; name = cd\SPANISH\TIMMY1E.D
+    file[]: crc = 0d4d7d48; size =     20332; name = cd\SPANISH\TIMMY1E.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\SPANISH\TIMMY1E.TXP
+    file[]: crc = 738dd7d9; size =  15723351; name = cd\SPANISH\TIMMY1S.A
+    file[]: crc = fe5c2f18; size =  39277156; name = cd\SPANISH\TIMMY1S.B
+    file[]: crc = 4aa69c96; size =  61408499; name = cd\SPANISH\TIMMY1S.C
+    file[]: crc = 41c8ee97; size =   6075998; name = cd\SPANISH\TIMMY1S.D
+    file[]: crc = ab9c6795; size =     60745; name = cd\SPANISH\TIMMY1S.DAT
+    file[]: crc = 6db4bae9; size =    328795; name = cd\SPANISH\TIMMY1S.E
+    file[]: crc = 8adcffad; size =     20019; name = cd\SPANISH\TIMMY1S.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\SPANISH\TIMMY1S.TXP
+    file[]: crc = a4d2aa4c; size =    149071; name = cd\SPANISH\WING.Z
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=spn eng
+StartMaximized=Yes
+Forcemaximized=yes
+Soundlevel=10
+Musiclevel=1
+CardPitch=998
+SaveDir=C:\DINAKIDS\T1\
+StartLanguage=SPANISH
+StartDir=D:\Spanish
+[spn]
+16ColorMessage=16color.bra
+TxpFile=Timmy1s.txp
+DatFile=Timmy1s.dat
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=Timmy1s.a Timmy1s.b Timmy1s.c Timmy1s.d Timmy1s.e
+LodFile=Timmy1s.Lod
+WindowTitle=LA HABITACIÓN DE GUILLE
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Por favor, inserta el CD en la unidad.
+DiskErrorTitle=LA HABITACIÓN DE GUILLE
+[END]
+
+[eng]
+16ColorMessage=16color.bra
+TxpFile=Timmy1e.txp
+DatFile=Timmy1e.dat
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=Timmy1e.a Timmy1s.b Timmy1s.c Timmy1e.d Timmy1s.e
+LodFile=Timmy1e.Lod
+WindowTitle=LA HABITACIÓN DE GUILLE
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Por favor, inserta el CD en la unidad.
+DiskErrorTitle=LA HABITACIÓN DE GUILLE
+[END]
+
+[ACTIVITIES]
+
+[PATH]
+HDPath=C:\DINAKIDS\T1\
+CDPath=D:\Spanish
+
+
+
+
+]]]
+
 
 end
