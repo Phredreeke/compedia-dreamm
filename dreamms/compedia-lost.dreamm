@@ -9,8 +9,7 @@ launch = "$(HDDPATH)\lost.exe" /CFG:$(HDDPATH)\lost.ini
 osenv = windows 98
 winres = 640x480x8
 wincrop = true
-HDDPATH =
-CDLABEL=
+CDLABEL = $(NULL)
 
 //
 // filesystem
@@ -168,5 +167,70 @@ CDPath=D:
 
 end
 
+game[pc-es-980727]:
+    name = Spanish (Mexico) 1998-07-27
+    anchorfile = NREADM.A
+    HDDPATH = C:\Compedia\Lost
+    rootpath = D:\Spanish
+    CDLABEL=LOSTWORDS
+    file[]: crc = 172610bd; size =    393472; name = LOST.EXE
+    file[]: crc = d1261579; size =    136125; name = SPANISH\DATA.Z
+    file[]: crc = 094d3e01; size =  16044345; name = SPANISH\NREADM.A
+    file[]: crc = 22468d3d; size =  57554678; name = SPANISH\NREADM.B
+    file[]: crc = 552c6c12; size =   8223600; name = SPANISH\NREADM.C
+    file[]: crc = f5f313a2; size =  46072574; name = SPANISH\NREADM.D
+    file[]: crc = 98e65e51; size =  15313412; name = SPANISH\NREADM.E
+    file[]: crc = 264bd3c1; size =   2556840; name = SPANISH\NREADM.F
+    file[]: crc = 11585849; size =     23920; name = SPANISH\NREADM.LOD
+    file[]: crc = c4008dad; size =        96; name = SPANISH\NREADM.OFS
+    file[]: crc = 9864850b; size =     18278; name = SPANISH\NREADM.PIC
+    file[]: crc = 85ee2362; size =     18278; name = SPANISH\NREADM.TRS
+    file[]: crc = 85433afa; size =     27841; name = SPANISH\NREADM.TXP
+    file[]: crc = 1fbeeed3; size =    128996; name = SPANISH\WING.Z
+
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=MEX
+SaveDir=C:\Compedia\Lost
+StartLanguage=SPANISH
+StartDir=D:\Spanish\
+
+[MEX]
+16ColorMessage=16Color.bra
+TxpFile=nreadm.TXP
+DatFile=nreadm.dat
+PicFile=nreadm.pic
+TrsFile=nreadm.trs
+WrdFile=nreadm.wrd
+FontFile=Fonts1
+MaxFont=2
+;      l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=15      18      18      21      32     211   205    189      0      0
+Font1=15      18      18      21      54     211   205     0       0     108
+Font2=15      18      18      21      54     211   205     0       0     108
+DataFiles=nreadm.a nreadm.b nreadm.c nreadm.d nreadm.e nreadm.f
+LodFile=nreadm.lod
+Define=
+UpdateLod=
+OfsFile=nreadm.ofs
+WindowTitle=En Busca de las Palabras Perdidas
+DiskErrorTitle=xxxxxxxxxxx
+SaveName=save
+SaveFileName=Nreadb.Gam
+UseHiresFonts=
+TransLang=eng
+HelpsLang=
+[END]
+[PATH]
+HDPath=C:\Compedia\Lost
+CDPath=D:\Spanish
+
+
+
+
+
+end
 
 end
