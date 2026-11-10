@@ -7,7 +7,7 @@ rootpath = D:\
 launch = "$(HDDPATH)\Timmy2.exe" EMME /CFG:$(HDDPATH)\itamar2.ini
 osenv = windows 98
 winres = 640x480x8
-CDLABEL=
+CDLABEL = $(NULL)
 HDDPATH =
 
 //
@@ -17,6 +17,17 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
 mount[]: vpath = D:\; srcpath = $(ifsinstallpath)
 mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
 
+//
+// Language options
+//
+LANGSELECT = false
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[en]: name = English; LANGCONFIG =eng; priority = 1;
+    option[de]: name = German; LANGCONFIG =ger; condition = file_exists("$$(rootpath)\\ITAMAR2G.A")
+
+end
 
 script[cd-init]:
     code = [[[$(CRLF)
@@ -189,5 +200,75 @@ CDPath=D:\Dutch
 
 end
 
+
+
+game[pc-de-961002]:
+    name = German/English 1996-10-02
+    anchorfile = ITAMAR2G.A
+    HDDPATH = C:\CHAMP\TIMMY2
+    launch = "$(HDDPATH)\ITAMAR2.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    file[]: crc = e5814350; size =       259; name = 16COLOR.ENG
+    file[]: crc = 9e7e877c; size =       271; name = 16COLOR.GER
+    file[]: crc = 1430bf4b; size =  18029066; name = GAMES.C
+    file[]: crc = e049d63d; size =    413184; name = ITAMAR2.EXE
+    file[]: crc = f809da5f; size =  27479411; name = ITAMAR2E.A
+    file[]: crc = d115a750; size =     23823; name = ITAMAR2E.LOD
+    file[]: crc = 7f63e11d; size =         4; name = ITAMAR2E.TXP
+    file[]: crc = 440ae170; size =  29922093; name = ITAMAR2G.A
+    file[]: crc = 3759ac8c; size =     23757; name = ITAMAR2G.LOD
+    file[]: crc = 7f63e11d; size =         4; name = ITAMAR2G.TXP
+    file[]: crc = a78c06c1; size =  47248021; name = MUSIC.D
+    file[]: crc = 9fac77dc; size =  29009087; name = SAME.B
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=GER ENG   
+StartMaximized = Yes
+SaveDir=C:\CHAMP\TIMMY2
+
+[ger]
+16ColorMessage=16color.ger
+TxpFile=itamar2g.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+define=nopcx hremme
+DataFiles=Itamar2g.a Same.b Games.c Music.d  
+LodFile=itamar2g.Lod
+WindowTitle=TIMMY UND DIE TRAUMFALLE
+UseHiresFonts=YES
+DiskError=Bitte legen Sie die richtige CD-ROM in das Laufwerk ein.
+DiskErrorTitle=CHAMP Software
+[END]
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=itamar2E.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=Itamar2E.a  Same.b  Games.c  Music.d  
+LodFile=itamar2E.Lod
+WindowTitle=Timmy the Dream Hunter
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Timmy the Dream Hunter
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+
+
+
+
+
+
+
+]]]
+
+
+
+end
 
 end
