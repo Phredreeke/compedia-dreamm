@@ -1,3 +1,6 @@
+# Compedia pack for DREAMM
+This pack requires an experimental build of DREAMM available on the [DREAMM discord](https://discord.gg/MABzJBWj7W)
+
 | Game | Languages | Notes |
 | --- | --- | --- |
 | Gordi's Enchanted Playroom | (🇺🇸 🇪🇸) 🇸🇪 |  |
