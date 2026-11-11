@@ -26,6 +26,7 @@ config[langselect]:
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
     option[de]: name = German; LANGCONFIG =ger; condition = file_exists("$$(rootpath)\\ITAMAR2G.A")
+    option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("D:\\SPANISH\\TIMMY2S.A")
 
 end
 
@@ -264,6 +265,83 @@ STATUS=
 
 
 
+
+]]]
+
+
+
+end
+
+
+
+game[pc-es-990923]:
+    name = Spanish/English 1999-09-23
+    anchorfile = FONDOL.BMP
+    HDDPATH = C:\DINAKIDS\GUILLE2
+    launch = "$(HDDPATH)\TIMMY2.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    file[]: crc = 401f3fcb; size =     60082; name = FONDOL.BMP
+    file[]: crc = 17620c07; size =    420096; name = TIMMY2.EXE
+    file[]: crc = 43f05170; size =    148109; name = SPANISH\DATA.Z
+    file[]: crc = 17620c07; size =    420096; name = SPANISH\TIMMY2.EXE
+    file[]: crc = fafaa94e; size =  27045039; name = SPANISH\TIMMY2E.A
+    file[]: crc = 884b6fb3; size =  31999368; name = SPANISH\TIMMY2E.B
+    file[]: crc = ddf68a30; size =  17948720; name = SPANISH\TIMMY2E.C
+    file[]: crc = a78c06c1; size =  47248021; name = SPANISH\TIMMY2E.D
+    file[]: crc = 00000000; size =         0; name = SPANISH\TIMMY2E.E
+    file[]: crc = 382bff75; size =     23971; name = SPANISH\TIMMY2E.LOD
+    file[]: crc = 7f63e11d; size =         4; name = SPANISH\TIMMY2E.TXP
+    file[]: crc = 89f6a2ff; size =  21255878; name = SPANISH\TIMMY2S.A
+    file[]: crc = 1325f412; size =     65060; name = SPANISH\TIMMY2S.DAT
+    file[]: crc = 0beecc9b; size =   2477081; name = SPANISH\TIMMY2S.E
+    file[]: crc = d9dbfd7d; size =     24062; name = SPANISH\TIMMY2S.LOD
+    file[]: crc = 7f63e11d; size =         4; name = SPANISH\TIMMY2S.TXP
+    file[]: crc = a4d2aa4c; size =    149071; name = SPANISH\WING.Z
+
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SPN ENG
+StartMaximized=Yes
+Musiclevel=0
+Soundlevel=10
+CardPitch=998
+Forcemaximized=yes
+
+SaveDir= C:\DINAKIDS\GUILLE2\ 
+StartLanguage=SPANISH 
+StartDir=D:\Spanish\
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=Timmy2e.txp
+DatFile=Timmy2e.dat
+FontFile=fontsp
+MaxFont=0
+Define=noprelogo
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=timmy2e.a timmy2e.b timmy2e.c timmy2e.d timmy2e.e
+LodFile=Timmy2e.lod
+WindowTitle=Los Sueños de Guille
+UseHiresFonts=yes
+[END]
+[SPN]
+16ColorMessage=16color.eng
+TextFile=Timmy2.txt
+TxpFile=Timmy2s.txp
+DatFile=Timmy2s.dat
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=timmy2s.a timmy2e.b timmy2e.c timmy2e.d timmy2s.e
+LodFile=Timmy2s.lod
+WindowTitle=Los Sueños de Guille
+UseHiresFonts=yes
+[END]
+[ACTIVITIES]
+[PATH]
+HDPath= C:\DINAKIDS\GUILLE2\ 
+CDPath=D:\Spanish\
 
 ]]]
 
