@@ -27,6 +27,7 @@ config[langselect]:
     option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\TIMMY1H.A")
     option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\Timmy1f.a")
     option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\Timmy1s.a")
+    option[ar]: name = Spanish; LANGCONFIG =arg; condition = file_exists("$$(rootpath)\\Timmy1a.a")
 end
 
 
@@ -417,5 +418,102 @@ CDPath=D:\Spanish
 
 ]]]
 
+end
+
+
+game[pc-es-980529]:
+    name = Spanish/English (Argentina) 1998-05-29
+    anchorfile = TIMMY1.ICO
+    HDDPATH=C:\Compedia\tim1arg
+    rootpath = D:\spanish
+    launch = "$(HDDPATH)\Timmy1.exe" /CFG:$(HDDPATH)\TIMMY1.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    CDLABEL=SINTESOFT
+    file[]: crc = 4049e921; size =    337152; name = TIMMY1.EXE
+    file[]: crc = 21d67927; size =      2012; name = cd\TIMMY1.BMP
+    file[]: crc = bbbf3e17; size =       767; name = cd\TIMMY1.ICO
+    file[]: crc = 1bfc8d28; size =    114481; name = cd\SPANISH\DATA.Z
+    file[]: crc = b6d95b3f; size =  15728525; name = cd\SPANISH\TIMMY1A.A
+    file[]: crc = 9f2f7b5c; size =  39508630; name = cd\SPANISH\TIMMY1A.B
+    file[]: crc = 4aa69c96; size =  61408499; name = cd\SPANISH\TIMMY1A.C
+    file[]: crc = 5a52342a; size =   2497325; name = cd\SPANISH\TIMMY1A.D
+    file[]: crc = 02df40f9; size =   5174659; name = cd\SPANISH\TIMMY1A.E
+    file[]: crc = 90a273a2; size =     19766; name = cd\SPANISH\TIMMY1A.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\SPANISH\TIMMY1A.TXP
+    file[]: crc = 2fe4f360; size =  15052404; name = cd\SPANISH\TIMMY1E.A
+    file[]: crc = a2b90bbb; size =   2775786; name = cd\SPANISH\TIMMY1E.D
+    file[]: crc = 64084fc7; size =   4784723; name = cd\SPANISH\TIMMY1E.E
+    file[]: crc = 24afe372; size =     20148; name = cd\SPANISH\TIMMY1E.LOD
+    file[]: crc = 1fbeeed3; size =    128996; name = cd\SPANISH\WING.Z
+
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=ARG ENG
+StartMaximized=Yes
+Forcemaximized=yes
+Soundlevel=10
+Musiclevel=1
+Savedir=C:\Compedia\tim1arg
+StartLanguage=SPANISH
+StartDir=D:\Spanish
+
+[ARG]
+16ColorMessage=16color.bra
+TxpFile=Timmy1a.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=TIMMY1a.a TIMMY1a.b TIMMY1a.c TIMMY1a.d TIMMY1a.e
+LodFile=TIMMY1a.Lod
+WindowTitle=Lucas en los Cuadros Mágicos
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Lucas en los Cuadros Mágicos
+[END]
+
+[ENG]
+16ColorMessage=16color.bra
+TxpFile=Timmy1a.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=TIMMY1e.a TIMMY1a.b TIMMY1a.c TIMMY1e.d TIMMY1e.e
+LodFile=TIMMY1e.Lod
+WindowTitle=Timmy Climbs the walls
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Timmy Climbs the walls
+[END]
+
+
+[ACTIVITIES]
+
+
+
+
+
+
+
+
+
+
+
+[PATH]
+HDPath=C:\Compedia\tim1arg
+CDPath=D:\Spanish
+
+
+
+]]]
+
+end
 
 end

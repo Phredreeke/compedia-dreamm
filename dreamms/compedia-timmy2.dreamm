@@ -27,6 +27,7 @@ config[langselect]:
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
     option[de]: name = German; LANGCONFIG =ger; condition = file_exists("$$(rootpath)\\ITAMAR2G.A")
     option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("D:\\SPANISH\\TIMMY2S.A")
+    option[de]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\timmy2f.a")
 
 end
 
@@ -349,4 +350,72 @@ CDPath=D:\Spanish\
 
 end
 
+game[pc-fr-050621]:
+    name = French/English 2005-06-21
+    anchorfile = timmy2.bmp
+    HDDPATH = C:\TIMMY2
+    launch = "$(HDDPATH)\TIMMY2.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini /lng:$(LANGCONFIG) cdok
+    LANGSELECT = true
+    file[]: crc = b97d31d4; size =    424704; name = TIMMY2.EXE
+    file[]: crc = 95f5422e; size =    308278; name = timmy2.bmp
+    file[]: crc = c3939f0a; size =       767; name = TIMMY2.ico
+    file[]: crc = d70f14b6; size =  22830917; name = TIMMY2E.A
+    file[]: crc = b1210cf4; size =     24011; name = TIMMY2E.LOD
+    file[]: crc = 7f63e11d; size =         4; name = TIMMY2E.TXP
+    file[]: crc = 26ff02af; size =  22381071; name = TIMMY2F.A
+    file[]: crc = f17c13f6; size =  32414663; name = TIMMY2F.B
+    file[]: crc = e78569ee; size =  18136285; name = TIMMY2F.C
+    file[]: crc = a78c06c1; size =  47248021; name = TIMMY2F.D
+    file[]: crc = a047264f; size =     23980; name = TIMMY2F.LOD
+    file[]: crc = 7f63e11d; size =         4; name = TIMMY2F.TXP
+
+
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=FRE ENG  
+Musiclevel=1
+Soundlevel=10
+Forcemaximized=yes
+setres=yes
+SaveDir=C:\TIMMY2
+StartDir=D:
+
+[FRE]
+TxpFile=Timmy2f.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=timmy2f.a timmy2f.b timmy2f.c timmy2f.d
+LodFile=timmy2f.lod
+WindowTitle=Timmy chasseur de rêves
+UseHiresFonts=yes
+DiskError=Veuillez insérer le CD-ROM dans le lecteur.
+DiskErrorTitle=Timmy chasseur de rêves
+[END]
+
+[ENG]
+TxpFile=Timmy2e.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=timmy2e.a timmy2f.b timmy2f.c timmy2f.d
+LodFile=timmy2e.lod
+WindowTitle=Dream Hunter Adventure
+UseHiresFonts=yes
+DiskError=Please insert the correct CD-Rom into the drive.
+DiskErrorTitle=Dream Hunter Adventure
+[END]
+
+[PATH]
+HDPath=C:\TIMMY2
+CDPath=D:
+
+
+]]]
+
+
+
+end
 end
