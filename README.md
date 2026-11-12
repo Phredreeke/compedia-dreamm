@@ -9,8 +9,8 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | In Search of the Lost Words | 🇺🇸 🇸🇪 🇲🇽 |  |
 | Quantum Castle | 🇺🇸 |  |
 | Sprogland | 🇩🇰 |  |
-| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) |  |
+| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇦🇷) (🇺🇸 🇫🇷) |  |
 | Timmy and the Magic Pictures (Demo) | 🇸🇪 | Found on Jakten på de försvunna orden CD |
-| Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
+| Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
 | Timmy's Birthday Party | (🇺🇸 🇪🇸) 🇳🇱 |  |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇸🇪 |  |
