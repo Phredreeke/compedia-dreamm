@@ -7,8 +7,7 @@ rootpath = ""
 launch = ""
 osenv = windows 98
 winres = 640x480x8
-WTHINK_CONTENTS =
-HDDPATH =
+CDLABEL = $(NULL)
 wincrop = true
 
 //
@@ -159,7 +158,7 @@ game[pc-sv]:
 //    file[]: crc = b5786357; size =     89504; name = cd\_MSTEST.EXE
 //    file[]: crc = 345cd097; size =      1966; name = cd\_VA.386
 //    file[]: crc = e1c57195; size =        45; name = cd\AUTORUN.INF
-    file[]: crc = e03a59e8; size =   7110251; name = cd\COMMON.B
+//    file[]: crc = e03a59e8; size =   7110251; name = cd\COMMON.B
 //    file[]: crc = 7932f2c4; size =    615226; name = cd\DATA.C
 //    file[]: crc = 0c45cc2d; size =       760; name = cd\DATA.DEM
 //    file[]: crc = e2423186; size =   4925531; name = cd\DEMO2S.A
@@ -181,7 +180,7 @@ game[pc-sv]:
 //    file[]: crc = 5e707909; size =   1462766; name = cd\LOGO.C
 //    file[]: crc = f794279c; size =    388864; name = cd\LOST.EXE
 //    file[]: crc = b7743e1a; size =       982; name = cd\LOST.INI
-//    file[]: crc = 28356e2e; size =     10890; name = cd\MAZE.DAT
+    file[]: crc = 28356e2e; size =     10890; name = cd\MAZE.DAT
 //    file[]: crc = f9ce582b; size =    458240; name = cd\MOVIE.EXE
 //    file[]: crc = c9fdd13f; size =       758; name = cd\MOVIE.INI
 //    file[]: crc = 6a433d59; size =   6901886; name = cd\MOVIES.A
@@ -263,5 +262,131 @@ CDPATH=D:\
 
 
 end
+
+
+game[pc-ar-980825]:
+    name = Spanish (Argentina) 1998-08-25
+    anchorfile = WTHINK.BMP
+    launch = C:\Smagia\Wthink\WTHINK.EXE /CFG:C:\Smagia\Wthink\WTHINK.ini
+    rootpath = D:\SPANISH
+    LANGSELECT = false
+    CDLABEL=Gordi2
+    HDDPATH = C:\Smagia\Wthink
+    file[]: crc = 74b8b8ea; size =    385024; name = WTHINK.EXE
+    file[]: crc = 87d48c6a; size =      2012; name = cd\WTHINK.BMP
+    file[]: crc = 86aaeedf; size =       767; name = cd\WTHINK.ICO
+    file[]: crc = 3d7a6dc7; size =    130504; name = cd\SPANISH\DATA.Z
+    file[]: crc = 28356e2e; size =     10890; name = cd\SPANISH\MAZE.DAT
+    file[]: crc = 7c973b4e; size =      4848; name = cd\SPANISH\PUZL.DAT
+    file[]: crc = 1fbeeed3; size =    128996; name = cd\SPANISH\WING.Z
+    file[]: crc = 8864e140; size =  23795994; name = cd\SPANISH\WTHINKA.A
+    file[]: crc = 0025cb35; size =  38713724; name = cd\SPANISH\WTHINKA.B
+    file[]: crc = e244fb77; size =      4192; name = cd\SPANISH\WTHINKA.C
+    file[]: crc = f48a4802; size =    335906; name = cd\SPANISH\WTHINKA.D
+    file[]: crc = 3897ecdd; size =     59020; name = cd\SPANISH\WTHINKA.DAT
+    file[]: crc = 1aa0af93; size =      8061; name = cd\SPANISH\WTHINKA.LOD
+    file[]: crc = 36e77f4f; size =       812; name = cd\SPANISH\WTHINKA.TXP
+
+
+
+
+
+
+    WTHINK_CONTENTS = [[[$(CRLF)
+[Globals]
+SaveDir=C:\Smagia\Wthink
+Languages=ARG
+
+StartLanguage=SPANISH
+StartDir=D:\Spanish
+
+[ARG]
+TxpFile=WThinka.txp
+DatFile=WThinka.dat
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=wthinka.a wthinka.b wthinka.c wthinka.d
+LodFile=WThinka.Lod
+WindowTitle=El Cuarto de Juegos Encantada
+UseHiresFonts=yes
+[END]
+
+[PATH]
+HDPath=C:\Smagia\Wthink
+CDPath=D:\Spanish
+
+]]]
+
+
+end
+
+
+game[pc-nl-970729]:
+    name = Dutch 1997-07-29
+    anchorfile = WTHINK.BMP
+    launch = C:\Kluitman\Speelhoe\WTHINK.EXE /CFG:C:\Kluitman\Speelhoe\WTHINK.ini
+    rootpath = D:\DUTCH
+    LANGSELECT = false
+    HDDPATH = C:\Kluitman\Speelhoe
+    file[]: crc = e8271262; size =    379904; name = WTHINK.EXE
+    file[]: crc = 87d48c6a; size =      2012; name = cd\WTHINK.BMP
+    file[]: crc = 86aaeedf; size =       767; name = cd\WTHINK.ICO
+    file[]: crc = 192e3022; size =   6121191; name = cd\DUTCH\DATA.Z
+    file[]: crc = 28356e2e; size =     10890; name = cd\DUTCH\MAZE.DAT
+    file[]: crc = 7c973b4e; size =      4848; name = cd\DUTCH\PUZL.DAT
+    file[]: crc = 1fbeeed3; size =    128996; name = cd\DUTCH\WING.Z
+    file[]: crc = 316ef2eb; size =  23224686; name = cd\DUTCH\WTHINKH.A
+    file[]: crc = 101bdbe2; size =  39007829; name = cd\DUTCH\WTHINKH.B
+    file[]: crc = e244fb77; size =      4192; name = cd\DUTCH\WTHINKH.C
+    file[]: crc = f48a4802; size =    335906; name = cd\DUTCH\WTHINKH.D
+    file[]: crc = 2ca0400c; size =      8110; name = cd\DUTCH\WTHINKH.LOD
+    file[]: crc = 36e77f4f; size =       812; name = cd\DUTCH\WTHINKH.TXP
+
+
+
+
+
+
+
+    WTHINK_CONTENTS = [[[$(CRLF)
+[Globals]
+SaveDir=C:\Kluitman\Speelhoe
+Languages=HOL
+StartLanguage=DUTCH
+StartDir=D:\Dutch
+
+[HOL]
+TxpFile=WThinkH.txp
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=wthinkh.a wthinkh.b wthinkh.c wthinkh.d
+LodFile=WThinkH.Lod
+OfsFile=WThinkh.ofs
+WindowTitle=De Betoverde Speelhoek
+Diskerrortitle=Doe de juiste CD in de CD-ROM drive a.u.b.
+UseHiresFonts=yes
+[END]
+
+[PATH]
+HDPath=C:\Kluitman\Speelhoe
+CDPath=D:\Dutch
+
+]]]
+
+
+end
+
 
 end
