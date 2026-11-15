@@ -199,7 +199,7 @@ game[pc-dk-971113]:
 
 
 
-    CDLABEL =JAKTEN_PA_MATTEVIRUSET
+    CDLABEL =MatPat
     INI_CONTENTS = [[[$(CRLF)
 [GLOBALS]
 Languages=DAN
