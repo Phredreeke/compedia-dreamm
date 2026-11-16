@@ -113,7 +113,7 @@ MaxFont=0
 $(SEMI)      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
 $(SEMI)                   Length  InRow  Letter
 Font0=30     32     32     21      32      50         139       0        0       0
-;FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_æåÅÄÇÉëÿîÖûÜ
+$(SEMI)FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_æåÅÄÇÉëÿîÖûÜ
 FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_ÁÑÉÍÓÚ
 SpecialLetters=áÁñÑéÉíÍóÓúÚ
 WormLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEF
@@ -279,8 +279,8 @@ TxpFile=FunPackc.txp
 DatFile=FunPackc.dat
 FontFile=fontsp
 MaxFont=0
-;      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
-;                   Length  InRow  Letter
+$(SEMI)      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
+$(SEMI)                   Length  InRow  Letter
 Font0=30     32     32     21      32      50         139       0        0       0
 FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_ÁÈÏÉÌÍÓØÚÙÝÒ
 SpecialLetters=áÁèÈïÏéÉìÌíÍóÓøØúÚùÙýÝòÒ

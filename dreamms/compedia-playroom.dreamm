@@ -94,7 +94,7 @@ MskFile=Puzl.dat
 MazeFile=Maze.dat
 FontFile=NewFont
 MaxFont=2
-;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
 Font0=22         23      21       25      32     255   0    0    0        10
 Font1=22         23      21       25      32     255   0    0    0        10
 Font2=22         23      21       25      32     255   0    0    0        170
@@ -112,7 +112,7 @@ MskFile=Puzl.dat
 MazeFile=Maze.dat
 FontFile=NewFont
 MaxFont=2
-;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
 Font0=22         23      21       25      32     255   0    0    0        10
 Font1=22         23      21       25      32     255   0    0    0        10
 Font2=22         23      21       25      32     255   0    0    0        170
@@ -242,7 +242,7 @@ MskFile=Puzl.dat
 MazeFile=Maze.dat
 FontFile=NewFont
 MaxFont=2
-;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
 Font0=22         23      21       25      32     255   0    0    0        10
 Font1=22         23      21       25      32     255   0    0    0        10
 Font2=22         23      21       25      32     255   0    0    0        170
@@ -307,7 +307,7 @@ MskFile=Puzl.dat
 MazeFile=Maze.dat
 FontFile=NewFont
 MaxFont=2
-;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
 Font0=22         23      21       25      32     255   0    0    0        10
 Font1=22         23      21       25      32     255   0    0    0        10
 Font2=22         23      21       25      32     255   0    0    0        170
@@ -367,7 +367,7 @@ MskFile=Puzl.dat
 MazeFile=Maze.dat
 FontFile=NewFont
 MaxFont=2
-;              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
 Font0=22         23      21       25      32     255   0    0    0        10
 Font1=22         23      21       25      32     255   0    0    0        10
 Font2=22         23      21       25      32     255   0    0    0        170

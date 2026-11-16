@@ -7,6 +7,7 @@ rootpath = ""
 launch = $(HDDPATH)\timmy4.exe EMME /CFG:$(HDDPATH)\Timmy4.ini /lng:$(LANGCONFIG) cdok
 osenv = windows 98
 winres = 640x480x8
+CDLABEL = $(NULL)
 TIMMY4_CONTENTS =
 HDDPATH =
 
@@ -27,8 +28,8 @@ config[langselect]:
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
     option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\TIMMY4H.DAT")
-    option[sp]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\TIMMY4S.DAT")
-    option[se]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\TIMMY4F.DAT")
+    option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\TIMMY4S.DAT")
+    option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\TIMMY4F.DAT")
 end
 
 
