@@ -26,7 +26,7 @@ config[langselect]:
     condition = $(LANGSELECT)
     title = Language Configuration
     option[en]: name = English; LANGCONFIG =eng; priority = 1;
-//    option[se]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\FUNPACKH.A")
+    option[se]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\FUNPACKH.A")
     option[es]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\FUNPACKS.A")
     option[cz]: name = Czech; LANGCONFIG =cze; condition = file_exists("$$(rootpath)\\FUNPACKC.A")
 end
@@ -311,5 +311,92 @@ CDPath=D:
 
 end
 
+//
+// Note: the following variant could possibly have corrupted data
+//
+game[pc-he-970106]:
+    name = Hebrew/English 1997-01-06
+    anchorfile = FUNPACKH.A
+    launch = C:\Compedia\FUNPACK\FUNPACK.EXE /CFG:C:\Compedia\FUNPACK\funpack.ini /lng:he cdok
+    rootpath = D:\
+    LANGSELECT = false
+    HDDPATH = C:\Compedia\FUNPACK
+    file[]: crc = 0e0d4df5; size =   2474509; name = DATAE.D
+    file[]: crc = cc16e039; size =   2474593; name = DATAH.D
+    file[]: crc = c456ae3d; size =    465664; name = FUNPACK.EXE
+    file[]: crc = e5814350; size =       259; name = cd\16COLOR.ENG
+    file[]: crc = 6d985b34; size =       188; name = cd\16COLOR.HEB
+    file[]: crc = 0e0d4df5; size =   2474509; name = cd\DATAE.D
+    file[]: crc = cc16e039; size =   2474593; name = cd\DATAH.D
+    file[]: crc = d5fd756a; size =  19079511; name = cd\FCOMMON.B
+    file[]: crc = 7cd31bcc; size =  28486950; name = cd\FMUSIC.F
+    file[]: crc = c456ae3d; size =    465664; name = cd\FUNPACK.EXE
+    file[]: crc = fafcf244; size =       977; name = cd\FUNPACK.INI
+    file[]: crc = f5b6c63d; size =  18738475; name = cd\FUNPACKE.A
+    file[]: crc = 651870a6; size =     12927; name = cd\FUNPACKE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\FUNPACKE.TXP
+    file[]: crc = 88bb4a36; size =  17387509; name = cd\FUNPACKH.A
+    file[]: crc = 005681fd; size =     12999; name = cd\FUNPACKH.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\FUNPACKH.TXP
+    file[]: crc = 38773075; size =   6435187; name = cd\INTROE.C
+    file[]: crc = 2ea4823d; size =   7209453; name = cd\INTROH.C
+    file[]: crc = 2efbcdbe; size =   3243040; name = cd\LOGO.E
+    file[]: crc = 6d807e51; size =   3773792; name = cd\LOGOH.E
+    file[]: crc = 3085e0b8; size =  25827813; name = cd\MUSIC.F
+    file[]: crc = 7c973b4e; size =      4848; name = cd\PUZL.DAT
+
+
+
+
+
+
+
+
+
+    FUNPACK_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=HEB ENG     
+StartMaximized=YES
+SaveDir=C:\COMPEDIA\FUNPACK
+CycleLng = NO
+
+[HEB]
+16ColorMessage=16color.heb
+TxpFile=FunPackH.txp
+MaxFont=2
+Font0=12  16 12 26  32 255 205 245   0   1
+Font1=17  22 17 18 128 215 205   0   0  81
+Font2=17  22 17 18 128 215 205   0   0  81
+DataFiles=funpackH.a Fcommon.b introH.c dataH.d logoH.e Fmusic.f
+LodFile=FunPackH.Lod
+Define=
+WindowTitle=éåí äåìãú ìàéúîø
+UseHiresFonts=Yes
+DiskErrorTitle=éåí äåìãú ìàéúîø
+DiskError=äëðñ àú äú÷ìéèåø äîúàéí àì ëåðï äú÷ìéèåøéí
+[END]
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=FunPackE.txp
+MaxFont=2
+Font0=12  16 12 26  32 255 205 245   0   1
+Font1=17  22 17 18 128 215 205   0   0  81
+Font2=17  22 17 18 128 215 205   0   0  81
+DataFiles=FunpackE.a FCommon.b IntroE.c DataE.d LogoH.e FMusic.f
+LodFile=FunPackE.Lod
+Define=
+WindowTitle=Timmy's Birthday Party
+UseHiresFonts=Yes
+DiskErrorTitle=Timmy's Birthday Party
+DiskError=Please put the correct CD-ROM in drive.
+[END]
+
+
+
+]]]
+
+
+end
 
 end
