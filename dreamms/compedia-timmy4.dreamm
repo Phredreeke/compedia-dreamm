@@ -8,8 +8,8 @@ launch = $(HDDPATH)\timmy4.exe EMME /CFG:$(HDDPATH)\Timmy4.ini /lng:$(LANGCONFIG
 osenv = windows 98
 winres = 640x480x8
 CDLABEL = $(NULL)
-TIMMY4_CONTENTS =
-HDDPATH =
+TIMMY4_CONTENTS =$(NULL)
+HDDPATH =$(NULL)
 
 //
 // filesystem
@@ -46,7 +46,7 @@ game[pc-he-971203]:
     name = Hebrew/English 1997-12-03
     anchorfile = TIMMY4.BMP
     HDDPATH = C:\Compedia\Timmy4
-    rootpath = D:\HEBREW 
+    rootpath = D:\HEBREW
     LANGSELECT = true
     CDLABEL=TIMMY4
     file[]: crc = 644996f0; size =      3314; name = GARBAGE.INI
@@ -401,6 +401,64 @@ end
 
 
 
+game[pc-ru-031019]:
+    name = Russian 2003-10-19
+    anchorfile = TIMMY4.BMP
+    LANGCONFIG =rus
+    rootpath = D:\
+    HDDPATH = C:\COMPEDIA\TIMMY4
+    file[]: crc = 7b09eb3b; size =    483840; name = Timmy4.exe
+    file[]: crc = 6770c924; size =      3796; name = cd\GARBAGE.INI
+    file[]: crc = d7f99f22; size =       417; name = cd\layout.bin
+    file[]: crc = ca136f9d; size =      9660; name = cd\PAPERS.INI
+    file[]: crc = 1fa02295; size =      2102; name = cd\TIMMY4.BMP
+    file[]: crc = 7679f258; size =       766; name = cd\TIMMY4.ICO
+    file[]: crc = ca93de60; size =  51391989; name = cd\TIMMY4R.A
+    file[]: crc = 6ce0ba8a; size = 266213228; name = cd\TIMMY4R.B
+    file[]: crc = 379c241b; size =   2113876; name = cd\TIMMY4R.C
+    file[]: crc = aaeb046a; size =    135451; name = cd\TIMMY4R.DAT
+    file[]: crc = edacbe1f; size =    841890; name = cd\rus\intro0.avi
+    file[]: crc = 020da8af; size =   3799142; name = cd\rus\intro1.avi
+    file[]: crc = 1132437a; size =   9320198; name = cd\rus\intro2a.avi
+    file[]: crc = 4c5ab4f9; size =   9748360; name = cd\rus\intro2b.avi
+    file[]: crc = 38fe89bb; size =   3172372; name = cd\rus\intro3.avi
+
+
+
+
+    TIMMY4_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=RUS   
+forcemaximized=YES
+SaveDir=C:\COMPEDIA\TIMMY4
+WinClass=Timmy4Class
+PlayIntro=yes
+MusicVolume=3
+SoundVolume=10
+StartDir=D:
+
+[RUS]
+16ColorMessage=16color.bra
+DatFile=TIMMY4r.dat
+DataFiles=TIMMY4r.A TIMMY4r.B TIMMY4r.c
+WindowTitle=Àíòîøêà - Ìîðñêîå Ïðèêëþ÷åíèå
+DiskError=Ïîæaëóéñòà, âñòàâüòå äèñê èãðû â äèñêîâîä !
+DiskErrorTitle=Àíòîøêà - Ìîðñêîå Ïðèêëþ÷åíèå
+PlayChanel4=NO
+PlayChanel2=NO
+DisableQuestCell=no
+PapersFile=papers.ini
+Garbagegame=garbage.ini
+[END]
+
+[PATH]
+HDPath=C:\COMPEDIA\TIMMY4
+CDPath=D:
+
+]]]
+
+
+end
 
 
 
