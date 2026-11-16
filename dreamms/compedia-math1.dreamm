@@ -16,6 +16,18 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
 mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
 mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
 
+//
+// Language options
+//
+LANGSELECT = false
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[en]: name = English; LANGCONFIG =eng; priority = 1;
+    option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\MATH1H.A")
+//    option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\TIMMY4S.DAT")
+//    option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\TIMMY4F.DAT")
+end
 
 script[cd-init]:
     code = [[[$(CRLF)
@@ -30,21 +42,12 @@ game[pc-en-022201]:
     HDDPATH = C:\GSP\math1
     launch = "C:\GSP\math1\Math.exe" /CFG:C:\GSP\math1\Math.ini /lng:eng
     file[]: crc = 0b950dcc; size =    395264; name = Math.exe
-    file[]: crc = 017b2224; size =        49; name = cd\AUTORUN.INF
-    file[]: crc = f55c96f7; size =    458091; name = cd\data1.cab
-    file[]: crc = c9827cf6; size =     34638; name = cd\data1.hdr
-    file[]: crc = 8dd3272d; size =    220311; name = cd\data2.cab
     file[]: crc = a392469d; size =      3304; name = cd\DELETE.INI
     file[]: crc = 0f916957; size =  26347414; name = cd\FINALE.AVI
-    file[]: crc = 5166b5d6; size =   2681493; name = cd\gsp_run.dat
-    file[]: crc = a856b840; size =    506368; name = cd\gsp_run.exe
-    file[]: crc = 1e8d8155; size =     32308; name = cd\gsp_run.gsp
-    file[]: crc = f1d5ec52; size =    344923; name = cd\ikernel.ex_
     file[]: crc = b9a2c61e; size =     59804; name = cd\LAUNCH1.BMP
     file[]: crc = 7cb1d0f8; size =    229632; name = cd\LAUNCHER.EXE
     file[]: crc = cca9c320; size =       435; name = cd\layout.bin
     file[]: crc = a352cc9d; size =      4602; name = cd\logo.jpg
-    file[]: crc = 124353bf; size =   8849745; name = cd\Manual.DOC
     file[]: crc = 9fe549be; size =       630; name = cd\MATH.BMP
     file[]: crc = a9ba5976; size =       766; name = cd\MATH.ICO
     file[]: crc = d2e9a374; size =  34699515; name = cd\MATH1E.A
@@ -52,15 +55,8 @@ game[pc-en-022201]:
     file[]: crc = 7240d04d; size = 281172320; name = cd\MATH1E.C
     file[]: crc = 76ef65f4; size =    121582; name = cd\MATH1E.DAT
     file[]: crc = 85452b80; size =      5892; name = cd\MAZE.INI
-    file[]: crc = 7975ac08; size =      7488; name = cd\registration.htm
-    file[]: crc = 428700a2; size =       630; name = cd\RUNFILE.BMP
-    file[]: crc = 4a3c4018; size =     30720; name = cd\RUNFILE.EXE
-    file[]: crc = 246f329a; size =     54272; name = cd\Setup.exe
-    file[]: crc = 7ef30b15; size =       119; name = cd\Setup.ini
-    file[]: crc = 5b63125a; size =    140615; name = cd\setup.inx
     file[]: crc = b37d17a0; size =      1694; name = cd\SHAPES.INI
     file[]: crc = cb296081; size =      3787; name = cd\sound.ini
-    file[]: crc = 335d92c6; size =    359942; name = cd\TechHelp.exe
     file[]: crc = 22b29bbb; size =      4129; name = cd\TETRIS.INI
 
 
@@ -248,6 +244,94 @@ CDPath=D:\Danish
 
 end
 
+
+game[pc-he-030520]:
+    name = Hebrew 2003-05-20
+    anchorfile = MATH.ICO
+    rootpath = D:\
+    HDDPATH = C:\COMPEDIA\MATH1
+    LANGSELECT = true
+    launch = "$(HDDPATH)\Math.exe" /CFG:$(HDDPATH)\Math.ini /lng:$(LANGCONFIG) cdok
+    file[]: crc = 6c4ba164; size =    395776; name = Math.exe
+//    file[]: crc = acdb198f; size =   8981440; name = cd\ar505enu.exe
+    file[]: crc = a392469d; size =      3304; name = cd\DELETE.INI
+    file[]: crc = 0f916957; size =  26347414; name = cd\FINALE.AVI
+    file[]: crc = 6677313d; size =  26363052; name = cd\FINALH.AVI
+//    file[]: crc = bc9c83fb; size =   4961993; name = cd\GAME3.A
+//    file[]: crc = c78056e0; size =       861; name = cd\GAME3.LOD
+//    file[]: crc = 67ed29b9; size =         3; name = cd\GAME3.TXP
+    file[]: crc = 77fcc93e; size =       417; name = cd\layout.bin
+    file[]: crc = a9ba5976; size =       766; name = cd\MATH.ICO
+    file[]: crc = 926480ab; size =  35386238; name = cd\MATH1E.A
+    file[]: crc = 8e3d7d9a; size =  13525491; name = cd\MATH1E.B
+    file[]: crc = b61c0056; size = 281174611; name = cd\MATH1E.C
+    file[]: crc = b4ffddb3; size =    121776; name = cd\MATH1E.DAT
+    file[]: crc = a15f6dc1; size =  32670103; name = cd\MATH1H.A
+    file[]: crc = 28001edd; size =  13525491; name = cd\MATH1H.B
+    file[]: crc = a6049448; size =    121725; name = cd\MATH1H.DAT
+    file[]: crc = 85452b80; size =      5892; name = cd\MAZE.INI
+    file[]: crc = b37d17a0; size =      1694; name = cd\SHAPES.INI
+    file[]: crc = cb296081; size =      3787; name = cd\sound.ini
+    file[]: crc = 22b29bbb; size =      4129; name = cd\TETRIS.INI
+
+
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=HEB ENG   
+SaveDir=C:\COMPEDIA\MATH1
+WinClass=Math1
+Forcemaximized=yes
+StartDir=D:
+
+[ENG]
+TRIANGLE=0
+SQUARE=0
+CIRCLE=0
+RECTANGLE=0
+SEMICIRCLE=0
+Strvoice=PCSDRE
+16ColorMessage=16color.eng
+DatFile=math1e.dat
+DataFiles=math1e.a math1e.b math1e.c
+WindowTitle=MATH
+Define=noprelogo
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Gordi and the Math invaders
+FINALAVI=finale.avi
+[END]
+
+[HEB]
+TRIANGLE=0
+SQUARE=0
+CIRCLE=0
+RECTANGLE=0
+SEMICIRCLE=0
+Strvoice=PSCDER
+16ColorMessage=16color.heb
+DatFile=Math1H.dat
+DataFiles=math1h.a math1h.b math1e.c
+Define=NOPRELOGO$(SEMI)FLIPARROWS
+WindowTitle=MATH
+UseHiresFonts=YES
+DiskErrorTitle=áà áçùáåï
+DiskError=.äëðñ àú äú÷ìéèåø äðëåï ìëåðï
+FINALAVI=finalh.avi
+[END]
+
+
+[PATH]
+HDPath=C:\COMPEDIA\MATH1
+CDPath=D:
+
+
+]]]
+
+
+end
 
 
 end
