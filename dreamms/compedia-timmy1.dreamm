@@ -516,4 +516,60 @@ CDPath=D:\Spanish
 
 end
 
+
+game[pc-no-961204]:
+    name = Norwegian 1996-12-04
+    anchorfile = TIMMY1.EXE
+    HDDPATH=C:\BONNIER\TIMMY1N
+    file[]: crc = b0f602ab; size =    334080; name = TIMMY1.EXE
+    file[]: crc = dd507c41; size =       271; name = cd\16COLOR.NOR
+    file[]: crc = 50685aef; size =   4313408; name = cd\LOGO.E
+    file[]: crc = 4aa69c96; size =  61408499; name = cd\MUSIC.C
+    file[]: crc = 1b31b3e8; size =  39509384; name = cd\SAME.B
+    file[]: crc = d443431b; size =      1293; name = cd\SPECS.INC
+    file[]: crc = 99e24714; size =   8270429; name = cd\TIMMY1N.A
+    file[]: crc = 9e1a35df; size =   9112596; name = cd\TIMMY1N.D
+    file[]: crc = f01d82a2; size =     20134; name = cd\TIMMY1N.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\TIMMY1N.TXP
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=NOR
+StartMaximized=Yes
+SaveDir=C:\BONNIER\TIMMY1N
+
+[NOR]
+16ColorMessage=16color.eng
+TxpFile=timmy1N.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=timmy1n.a Same.b Music.c timmy1n.d logo.e
+LodFile=timmy1n.Lod
+Define=HREMME NOPCX 
+WindowTitle=Timmys hemmelighet
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Sett inn riktig CD-ROM i stasjonen
+DiskErrorTitle=Timmys hemmelighet 
+
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+
+
+
+]]]
+
+
+
+end
+
+
 end
