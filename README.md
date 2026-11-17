@@ -13,5 +13,5 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇦🇷) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇳🇴|  |
 | Timmy and the Magic Pictures (Demo) | 🇸🇪 | Found on Jakten på de försvunna orden CD |
 | Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
-| Timmy's Birthday Party | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇨🇿) 🇳🇱 |  |
+| Timmy's Birthday Party | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇨🇿) 🇳🇱 🇦🇺 |  |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇸🇪 🇷🇺 |  |
