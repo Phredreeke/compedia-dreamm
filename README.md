@@ -3,10 +3,12 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 
 | Game | Languages | Notes |
 | --- | --- | --- |
+| Baby Gordi's First Adventure (Demo) | 🇨🇿 |  |
 | Gordi's Enchanted Playroom | (🇺🇸 🇪🇸) 🇦🇷 🇳🇱 🇸🇪 |  |
 | Gordi's Magical Movie Adventure | 🇺🇸 🇮🇱 🇳🇱 🇸🇪 (🇳🇴 🇸🇪) 🇪🇸 | English version bugged on x64 |
 | Gordi and the Math Invaders | 🇺🇸 (🇺🇸 🇮🇱) 🇸🇪 🇩🇰 |  |
 | In Search of the Lost Words | 🇺🇸 🇸🇪 🇲🇽 |  |
+| In Search of the Lost Words (Demo) | 🇺🇸 🇳🇴 🇩🇪 |  |
 | Quantum Castle | 🇺🇸 |  |
 | Sprogland | 🇩🇰 |  |
 | Supermind | 🇺🇸 | intro video skips |
