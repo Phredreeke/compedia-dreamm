@@ -227,10 +227,203 @@ HelpsLang=
 HDPath=C:\Compedia\Lost
 CDPath=D:\Spanish
 
-
+]]]
 
 
 
 end
+
+
+
+demo[pc-no-demo-961202]:
+    name = Norwegian Demo 1996-12-02
+    anchorfile = NREADN.A
+    HDDPATH=C:\LOSTDEMO
+    launch = "$(HDDPATH)\lostdemo.exe" /CFG:$(HDDPATH)\lost.ini
+    file[]: crc = 4bae6d4b; size =    388608; name = LOSTDEMO.EXE
+    file[]: crc = dd507c41; size =       271; name = 16COLOR.NOR
+    file[]: crc = 96246622; size =   7083965; name = COMMON.B
+    file[]: crc = 3355f9df; size =    615226; name = DATA.C
+    file[]: crc = aa5e2439; size =   9528520; name = HELPSVOC.E
+    file[]: crc = 361160b8; size =   3494190; name = MUSIC1.D
+    file[]: crc = 693fcf7c; size =   2871622; name = NREADN.A
+    file[]: crc = e82e8e85; size =   3767681; name = NREADN.F
+    file[]: crc = cbbaadaa; size =      5786; name = NREADN.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADN.OFS
+    file[]: crc = 7448bfca; size =     12654; name = NREADN.PIC
+    file[]: crc = 2ed7d4a2; size =     12654; name = NREADN.TRS
+    file[]: crc = 16afd63d; size =     28436; name = NREADN.TXP
+    file[]: crc = 7714a65c; size =     30142; name = NREADN.TXT
+    file[]: crc = 195cd410; size =     13508; name = NREADN.WRD
+
+
+
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages= NOR       
+SaveDir=C:\LOSTDEMO
+StartMaximized=YES
+[END]
+
+[NOR]
+16ColorMessage=16Color.Nor
+TxpFile=nreadn.txp
+PicFile=nreadn.pic
+TrsFile=nreadn.trs
+$(SEMI)              l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+MaxFont=2
+$(SEMI)      l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=    15      18      18      21      32     211   205    189      0      0
+Font1=    15      18      18      21      54     211   205     0       0     108
+Font2=    15      18      18      21      54     211   205     0       0     108
+DataFiles=nreadn.a common.b data.c music1.d helpsvoc.e nreadn.f
+LodFile=nreadn.Lod
+Define=BONNIER
+OfsFile=nreadn.ofs
+WindowTitle=Jakten på de forsvunne ordene
+SaveName=NYTT 
+SaveFileName=Nreadn.Gam
+UseHiresFonts=
+TransLang=NOR
+HelpsLang=
+DiskError=Sett inn riktig CD-ROM i stasjonen
+DiskErrorTitle=Jakten på de forsvunne ordene
+UseIntDemo=No
+[END]
+
+
+]]]
+
+
+
+end
+
+
+demo[pc-en-demo-961001]:
+    name = English Demo 1996-10-01
+    anchorfile = NREADENG.A
+    HDDPATH=C:\LOSTDEMO
+    launch = "$(HDDPATH)\lostdemo.exe" /CFG:$(HDDPATH)\lost.ini
+    file[]: crc = e5814350; size =       259; name = 16COLOR.ENG
+    file[]: crc = a21d9432; size =   7110251; name = COMMON.B
+    file[]: crc = 1544c6aa; size =   4378082; name = DATA.C
+    file[]: crc = 9fd4f8ec; size =   6085767; name = HELPSVOC.E
+    file[]: crc = 811fb39c; size =    387840; name = LOSTDEMO.EXE
+    file[]: crc = 361160b8; size =   3494190; name = MUSIC.D
+    file[]: crc = dbae0bd8; size =   4052350; name = NREADE.F
+    file[]: crc = 40029d4a; size =      5745; name = NREADE.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADE.OFS
+    file[]: crc = bae84241; size =     11248; name = NREADE.PIC
+    file[]: crc = e6b7c284; size =     22060; name = NREADE.TXP
+    file[]: crc = 693fcf7c; size =   2871622; name = NREADENG.A
+
+
+
+
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages= ENG    
+SaveDir=C:\LOSTDEMO
+StartMaximized=YES
+[END]
+
+[ENG]
+16ColorMessage=16Color.Eng
+TxpFile=nreadE.txp
+PicFile=nreadE.pic
+TrsFile=
+MaxFont=2
+$(SEMI)              l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=12         16      16     26        32     211   205    189      0      0
+Font1=17         22      22     18        97     212   205     0       0      99
+Font2=12         16      16     26        58     211   205     0       0     149
+DataFiles=nreadeng.a common.b data.c music.d helpsvoc.e nreade.f
+LodFile=nreadE.Lod
+Define=
+OfsFile=nreadE.ofs
+WindowTitle=In Search of the Lost Words
+SaveName=NEW GAME
+SaveFileName=NreadE.Gam
+UseHiresFonts=
+TransLang=
+HelpsLang=
+DiskError=Insert the correct CD into the drive
+DiskErrorTitle=In Search of the Lost Words
+[END]
+
+
+
+
+]]]
+
+
+
+end
+
+
+demo[pc-de-demo-961001]:
+    name = German Demo 1996-10-01
+    anchorfile = NREADG.A
+    HDDPATH=C:\LOSTDEMO
+    launch = "$(HDDPATH)\LOST.EXE" /CFG:$(HDDPATH)\lost.ini
+    file[]: crc = 9e7e877c; size =       271; name = 16COLOR.GER
+    file[]: crc = 8b530d32; size =    387840; name = LOST.EXE
+    file[]: crc = 693fcf7c; size =   2871622; name = NREADG.A
+    file[]: crc = 8cda8359; size =   7110251; name = NREADG.B
+    file[]: crc = 2cd49a4c; size =   4333486; name = NREADG.C
+    file[]: crc = 361160b8; size =   3494190; name = NREADG.D
+    file[]: crc = a7f8cd8c; size =     65500; name = NREADG.DAT
+    file[]: crc = 4c18affb; size =   6622569; name = NREADG.E
+    file[]: crc = 4eb5b121; size =   2460055; name = NREADG.F
+    file[]: crc = a447dd8c; size =      5752; name = NREADG.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADG.OFS
+    file[]: crc = 46ad6e46; size =     11248; name = NREADG.PIC
+    file[]: crc = 383784d5; size =     11248; name = NREADG.TRS
+    file[]: crc = 2464c4b1; size =     29089; name = NREADG.TXP
+
+
+
+
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+StartMaximized=YES
+Languages=GER  
+[END]
+
+[GER]
+16ColorMessage=16Color.GER
+TxpFile=nreadG.txp
+PicFile=NreadG.pic
+TrsFile=nreadG.trs
+MaxFont=2
+$(SEMI)      l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=12       16      16      26       32    211   205   189      0        0
+Font1=17       22      22      18       96    212   205    0       0      144
+Font2=12       16      16      26       58    211   205    0       0       80
+DataFiles=Nreadg.a Nreadg.b Nreadg.c nreadg.d Nreadg.e Nreadg.f
+LodFile=nreadG.lod
+OfsFile=nreadG.ofs
+WindowTitle=Die geheimnisvolle Suche nach den verlorenen Wörtern
+SaveName=Neue
+SaveFileName=NreadG.Gam
+UseHiresFonts=NO
+TransLang=GER
+HelpsLang=
+[END]
+
+
+
+]]]
+
+
+
+end
+
 
 end

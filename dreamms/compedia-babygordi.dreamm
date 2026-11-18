@@ -1,0 +1,72 @@
+desc[compedia-babygordi]:
+
+name = Baby Gordi's First Adventure
+icon = compedia-babygordi.png
+machine = pc
+rootpath = D:\
+launch = "$(HDDPATH)\BabyGor.exe" /CFG:$(HDDPATH)\BabyGor.ini
+osenv = windows 98
+CDLABEL = $(NULL)
+winres = 640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
+mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\cd
+mount[]: vpath = $(HDDPATH); srcpath = $(ifsinstallpath)
+
+script[cd-init]:
+    code = [[[$(CRLF)
+        drive_set_label("D", "$$(CDLABEL)")
+        if (!!file_exists("$$(HDDPATH)\\BABYGOR.ini")) { file_save("$$(HDDPATH)\\BABYGOR.ini", "$$(INI_CONTENTS)") }
+    ]]]
+end
+
+
+demo[pc-cz-010605]:
+    name = Czech Demo 2001-06-05
+    anchorfile = BABYGORC.A
+    HDDPATH=C:\BABYGOR
+    file[]: crc = 1377e100; size =    331776; name = BabyGor.exe
+    file[]: crc = 771ad8d4; size =  36068833; name = cd\BABYGORC.A
+    file[]: crc = cba20798; size =  50678008; name = cd\BABYGORC.B
+    file[]: crc = 35871a27; size =   2696913; name = cd\BABYGORC.C
+    file[]: crc = 0a281880; size =     68476; name = cd\BABYGORC.DAT
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=CZE
+WinClass=BabyGor
+StartMaximize=YES
+forcemaximized=YES
+MusicVolume=2
+SoundVolume=7
+SaveDir=C:\BABYGOR
+StartDir=D:
+
+[Cze]
+DatFile=BabyGorc.dat
+DataFiles=BabyGorc.a BabyGorc.b BabyGorc.c
+WindowTitle=Baby Gordi's First Adventure
+Define=PRELOGO,demodres
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=Baby Gordi's First Adventure
+[END]
+
+
+[PATH]
+HDPath=C:\BABYGOR
+CDPath=D:
+
+
+]]]
+
+
+
+end
+
+
+end
