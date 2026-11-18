@@ -30,6 +30,7 @@ config[langselect]:
     option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\TIMMY4H.DAT")
     option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\TIMMY4S.DAT")
     option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\TIMMY4F.DAT")
+    option[br]: name = Portuguese; LANGCONFIG =bra; condition = file_exists("$$(rootpath)\\TIMMY4B.DAT")
 end
 
 
@@ -460,6 +461,92 @@ CDPath=D:
 
 end
 
+
+game[pc-pt-br-010730]:
+    name = Portuguese/English (Brazil) 2001-07-30
+    anchorfile = TIMMY4.BMP
+    rootpath = D:\
+    LANGSELECT = true
+    CDLABEL=Timmy4
+    HDDPATH = C:\COMPEDIA\TIMMY4
+    file[]: crc = 94e5fb83; size =    482816; name = TIMMY4.exe
+    file[]: crc = 6770c924; size =      3796; name = cd\GARBAGE.INI
+    file[]: crc = ca136f9d; size =      9660; name = cd\PAPERS.INI
+    file[]: crc = 1fa02295; size =      2102; name = cd\TIMMY4.BMP
+    file[]: crc = 7679f258; size =       766; name = cd\TIMMY4.ICO
+    file[]: crc = 40a39d0a; size =  45397672; name = cd\TIMMY4B.A
+    file[]: crc = 5d9a10b1; size = 266213228; name = cd\TIMMY4B.B
+    file[]: crc = 34124a46; size =   1044024; name = cd\TIMMY4B.C
+    file[]: crc = 5c67b4c0; size =    135604; name = cd\TIMMY4B.DAT
+    file[]: crc = 01d8bc47; size =  49787888; name = cd\TIMMY4E.A
+    file[]: crc = bd549232; size =    977170; name = cd\TIMMY4E.C
+    file[]: crc = 5b65e658; size =    135502; name = cd\TIMMY4E.DAT
+    file[]: crc = e2114cd6; size =    363692; name = cd\BRA\INTRO0.AVI
+    file[]: crc = 649a714b; size =   6412636; name = cd\BRA\INTRO1.AVI
+    file[]: crc = 36c8019c; size =  11335420; name = cd\BRA\INTRO2A.AVI
+    file[]: crc = d631c2d3; size =  12239116; name = cd\BRA\INTRO2B.AVI
+    file[]: crc = e21dba40; size =   2417312; name = cd\BRA\Intro3.avi
+    file[]: crc = 268309a9; size =    617938; name = cd\ENG\INTRO0.AVI
+    file[]: crc = 3f6a4e50; size =   7279328; name = cd\ENG\INTRO1.AVI
+    file[]: crc = c4b7b7f1; size =  12463430; name = cd\ENG\INTRO2A.AVI
+    file[]: crc = c61180e0; size =  12666602; name = cd\ENG\INTRO2B.AVI
+    file[]: crc = 221829d1; size =   4792696; name = cd\ENG\INTRO3.AVI
+
+
+
+
+
+
+
+    TIMMY4_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=BRA ENG
+forcemaximized=YES
+SaveDir=C:\COMPEDIA\TIMMY4
+CycleLng=NO
+CngLang=yes
+WinClass=Timmy4Class
+PlayIntro=YES
+MusicVolume=3
+SoundVolume=10
+StartDir=D:
+
+[ENG]
+16ColorMessage=16color.eng
+DatFile=Timmy4e.dat
+DataFiles=Timmy4e.A Timmy4b.b Timmy4e.c
+WindowTitle=Timmy's Sea Adventure
+DiskErrorTitle=Timmy's Sea Adventure
+DiskError=Please put the correct CD-ROM in drive.
+PapersFile=papers.ini
+Garbagegame=garbage.ini
+DisableQuestCell=yes
+[END]
+
+
+[BRA]
+16ColorMessage=16color.bra
+DatFile=TIMMY4b.dat
+DataFiles=Timmy4b.A Timmy4b.B Timmy4b.c
+WindowTitle=Téo - aventura no mar
+DiskErrorTitle=Téo - aventura no mar
+DiskError=Please put the correct CD-ROM in drive.
+PlayChanel4=NO
+PlayChanel2=no
+PapersFile=papers.ini
+Garbagegame=garbage.ini
+DisableQuestCell=yes
+[END]
+
+[PATH]
+HDPath=C:\COMPEDIA\TIMMY4
+CDPath=D:
+
+
+]]]
+
+
+end
 
 
 
