@@ -13,7 +13,19 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Sprogland | 🇩🇰 |  |
 | Supermind | 🇺🇸 | intro video skips |
 | Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇦🇷) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇳🇴|  |
-| Timmy and the Magic Pictures (Demo) | 🇸🇪 | Found on Jakten på de försvunna orden CD |
+| Timmy and the Magic Pictures (Demo) | 🇳🇱 🇸🇪 🇩🇪 | |
 | Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
 | Timmy's Birthday Party | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇨🇿) 🇳🇱 🇦🇺 |  |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇧🇷) 🇸🇪 🇷🇺 |  |
+
+# Demo sources
+
+| Game | Source |
+| --- | --- |
+| Baby Gordi's First Adventure 🇨🇿 | Timmy's Birthday Party |
+| In Search of the Lost Words 🇺🇸 | Timmy and the Magic Pictures |
+| In Search of the Lost Words 🇳🇴 | Timmy and the Magic Pictures |
+| In Search of the Lost Words 🇩🇪 | Timmy the Dream Hunter |
+| Timmy and the Magic Pictures 🇳🇱 | Gordi's Enchanted Playroom <br> Timmy the Dream Hunter |
+| Timmy and the Magic Pictures 🇸🇪 | In Search of the Lost Words |
+| Timmy and the Magic Pictures 🇩🇪 | Timmy the Dream Hunter |
