@@ -277,57 +277,6 @@ CDPath=D:
 end
 
 
-demo[pc-sv-961017-demo]:
-    name = Swedish Demo 1996-10-17
-    anchorfile = DEMO1S.EXE
-    HDDPATH=C:\TIMMY1
-    rootpath = D:\
-    launch = "$(HDDPATH)\DEMO1S.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
-    file[]: crc = 84cb33a8; size =    333312; name = DEMO1S.EXE
-    file[]: crc = 7c2981a4; size =   2129194; name = cd\DEMO1S.A
-    file[]: crc = 34ea74c8; size =   5654840; name = cd\DEMO1S.B
-    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMO1S.C
-    file[]: crc = 0b7b7132; size =   2824102; name = cd\DEMO1S.D
-    file[]: crc = 50685aef; size =   4313408; name = cd\DEMO1S.E
-    file[]: crc = 31c0be9d; size =      4189; name = cd\DEMO1S.LOD
-    file[]: crc = 22fa3eee; size =        24; name = cd\DEMO1S.TXP
-
-
-
-
-    INI_CONTENTS = [[[$(CRLF)
-[GLOBALS]
-Languages=SWD       
-StartMaximized=Yes
-ReadToMePages=5
-ReadAndPlayPages=1
-
-[SWD]
-16ColorMessage=16color.swd
-TxpFile=demo1s.txp
-FontFile=fontsp
-MaxFont=0
-Font0=12  16 12 26  32 255 205 245   0   1
-DataFiles=demo1s.a  demo1S.b  demo1s.c demo1s.d demo1s.e
-LodFile=demo1s.Lod
-Define=NOPCX 
-WindowTitle=Timmys hemlighet
-UseHiresFonts=YES
-Sng1=33333335123444433322323333333512344443354321
-Sng2=1444122166554144412216655414441444141414441444122166554
-Sng3=134513451345313233211355443453121
-DiskError=Veuillez insérer le CD-ROM dans le lecteur.
-DiskErrorTitle=Timmys hemlighet
-[END]
-
-
-
-]]]
-
-
-
-end
-
 
 game[pc-es-991026]:
     name = Spanish/English 1999-10-26
@@ -572,4 +521,166 @@ STATUS=
 end
 
 
+demo[pc-sv-961017-demo]:
+    name = Swedish Demo 1996-10-17
+    anchorfile = DEMO1S.EXE
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\DEMO1S.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
+    file[]: crc = 84cb33a8; size =    333312; name = DEMO1S.EXE
+    file[]: crc = 7c2981a4; size =   2129194; name = cd\DEMO1S.A
+    file[]: crc = 34ea74c8; size =   5654840; name = cd\DEMO1S.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMO1S.C
+    file[]: crc = 0b7b7132; size =   2824102; name = cd\DEMO1S.D
+    file[]: crc = 50685aef; size =   4313408; name = cd\DEMO1S.E
+    file[]: crc = 31c0be9d; size =      4189; name = cd\DEMO1S.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\DEMO1S.TXP
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SWD       
+StartMaximized=Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[SWD]
+16ColorMessage=16color.swd
+TxpFile=demo1s.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=demo1s.a  demo1S.b  demo1s.c demo1s.d demo1s.e
+LodFile=demo1s.Lod
+Define=NOPCX 
+WindowTitle=Timmys hemlighet
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Veuillez insérer le CD-ROM dans le lecteur.
+DiskErrorTitle=Timmys hemlighet
+[END]
+
+
+
+]]]
+
+
+
+end
+
+demo[pc-de-960930-demo]:
+    name = German Demo 1996-09-30
+    anchorfile = ITAMAR1.EXE
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\ITAMAR1.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
+    file[]: crc = f5ec6802; size =    332544; name = ITAMAR1.EXE
+    file[]: crc = 9e7e877c; size =       271; name = cd\16COLOR.GER
+    file[]: crc = b6d4693c; size =   2217188; name = cd\DEMOE.A
+    file[]: crc = 52ef84d6; size =   5654840; name = cd\DEMOE.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMOE.C
+    file[]: crc = fef2a505; size =   3118846; name = cd\DEMOE.D
+    file[]: crc = c9c1eff1; size =   2988393; name = cd\DEMOE.E
+    file[]: crc = 1a53c4d2; size =      4130; name = cd\DEMOE.LOD
+    file[]: crc = 7f63e11d; size =         4; name = cd\DEMOG.TXP
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=GER 
+ReadToMePages=5
+ReadAndPlayPages=1
+StartMaximized=yes
+
+[GER]
+16ColorMessage=16color.ger
+TxpFile=demoG.txp
+FontFile=fontsp
+MaxFont=2
+Font0=12  16 12 26  32 255 205 245   0   1
+Font1=17  22 17 18 128 215 205   0   0  81
+Font2=17  22 17 18 128 215 205   0   0  81
+DataFiles=demoe.a demoe.b demoe.c demoe.d demoe.e 
+LodFile=demoE.Lod
+Define=nopcx hremme
+UpdateLod=
+WindowTitle=Timmy und das Löwenkind - Demoversion
+UseHiresFonts=Yes
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+[END]
+[ACTIVITIES]
+STATUS=00001
+
+
+
+]]]
+
+
+
+end
+
+
+demo[pc-nl-970717-demo]:
+    name = Dutch Demo 1997-07-17
+    anchorfile = DEMO1H.A
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\TIMMY1.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
+    file[]: crc = 424ce9d5; size =    335872; name = TIMMY1.EXE
+    file[]: crc = b6e3cf79; size =   2111249; name = cd\DEMO1H.A
+    file[]: crc = 32d25734; size =   5742496; name = cd\DEMO1H.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMO1H.C
+    file[]: crc = ccfcd55d; size =   3388412; name = cd\DEMO1H.D
+    file[]: crc = 7ce5e699; size =   3186552; name = cd\DEMO1H.E
+    file[]: crc = 6e1e65b8; size =      4091; name = cd\DEMO1H.LOD
+    file[]: crc = 22fa3eee; size =        24; name = cd\DEMO1H.TXP
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=HOL
+ReadToMePages=5
+ReadAndPlayPages=1
+Savedir=
+Stardmaximized=yes
+
+[HOL]
+16ColorMessage=16color.hol
+TextFile=timmy1h.txt
+TxpFile=Demo1h.txp
+DatFile=Demo1h.dat
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=demo1h.a demo1h.b demo1h.c demo1h.d demo1h.e
+LodFile=Demo1h.lod
+WindowTitle=Avontuur in de jungle
+UseHiresFonts=yes
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Doe de juiste CD in de CD-ROM drive a.u.b.
+DiskErrorTitle=Avontuur in de jungle
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+
+
+]]]
+
+
+
+end
 end
