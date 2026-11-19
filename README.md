@@ -15,7 +15,9 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇦🇷) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇳🇴|  |
 | Timmy and the Magic Pictures (Demo) | 🇳🇱 🇸🇪 🇩🇪 | |
 | Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
+| Timmy the Dream Hunter (Demo) | 🇸🇪 | |
 | Timmy's Birthday Party | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇨🇿) 🇳🇱 🇦🇺 |  |
+| Timmy's Birthday Party (Demo) | 🇸🇪 | |
 | Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇧🇷) 🇸🇪 🇷🇺 |  |
 
 # Demo sources
@@ -27,5 +29,7 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | In Search of the Lost Words 🇳🇴 | Timmy and the Magic Pictures |
 | In Search of the Lost Words 🇩🇪 | Timmy the Dream Hunter |
 | Timmy and the Magic Pictures 🇳🇱 | Gordi's Enchanted Playroom <br> Timmy the Dream Hunter |
-| Timmy and the Magic Pictures 🇸🇪 | In Search of the Lost Words |
+| Timmy and the Magic Pictures 🇸🇪 | In Search of the Lost Words <br> Lär känna Timmy |
 | Timmy and the Magic Pictures 🇩🇪 | Timmy the Dream Hunter |
+| Timmy the Dream Hunter 🇸🇪 | Lär känna Timmy |
+| Timmy's Birthday Party 🇸🇪 | Lär känna Timmy |
