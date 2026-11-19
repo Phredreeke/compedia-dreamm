@@ -572,6 +572,57 @@ DiskErrorTitle=Timmys hemlighet
 
 end
 
+demo[pc-sv-970902-demo]:
+    name = Swedish Demo 1997-09-02
+    anchorfile = DEMO1S.A
+    HDDPATH=C:\TIMMY1
+    rootpath = D:\
+    launch = "$(HDDPATH)\TIMMY1.EXE" /CFG:$(HDDPATH)\TIMMY1.ini cdok
+    file[]: crc = 690bc4de; size =    335872; name = TIMMY1.EXE
+    file[]: crc = 4ba521ee; size =   2114726; name = cd\DEMO1S.A
+    file[]: crc = 345d8ce0; size =   5849358; name = cd\DEMO1S.B
+    file[]: crc = 7bdbe8f8; size =  15179708; name = cd\DEMO1S.C
+    file[]: crc = fdda81b3; size =   6424732; name = cd\DEMO1S.D
+    file[]: crc = 2c04cbfa; size =      4173; name = cd\DEMO1S.LOD
+    file[]: crc = 453be5ed; size =        14; name = cd\DEMO1S.TXP
+
+
+
+
+
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SWD
+StartMaximized=Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[SWD]
+16ColorMessage=16color.swd
+TxpFile=demo1s.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=demo1s.a  demo1S.b  demo1s.c demo1s.d
+LodFile=demo1s.Lod
+Define=NOPCX 
+WindowTitle=Timmys hemlighet
+UseHiresFonts=YES
+Sng1=33333335123444433322323333333512344443354321
+Sng2=1444122166554144412216655414441444141414441444122166554
+Sng3=134513451345313233211355443453121
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Timmys hemlighet
+[END]
+
+
+]]]
+
+
+
+end
+
+
 demo[pc-de-960930-demo]:
     name = German Demo 1996-09-30
     anchorfile = ITAMAR1.EXE
@@ -683,4 +734,7 @@ STATUS=
 
 
 end
+
+
+
 end

@@ -384,8 +384,60 @@ DiskError=Please put the correct CD-ROM in drive.
 [PATH]
 HDPath=C:\Compedia\funpack
 CDPath=D:\english
+]]]
+
+end
+
+
+demo[pc-sv-970902-demo]:
+    name = Swedish Demo 1997-09-02
+    anchorfile = FUNPACKS.A
+    anchordepth = 1
+    HDDPATH=C:\funpack
+    rootpath = D:\
+    launch = "$(HDDPATH)\FUNPACK.EXE" /CFG:$(HDDPATH)\FUNPACK.ini cdok
+    file[]: crc = a38b3d32; size =    471296; name = FUNPACK.EXE
+    file[]: crc = 84eb8738; size =   3635880; name = cd\FUNPACKS.A
+    file[]: crc = 8e819453; size =   8145741; name = cd\FUNPACKS.B
+    file[]: crc = 858f1681; size =   4129743; name = cd\FUNPACKS.C
+    file[]: crc = 805dd757; size =   2485281; name = cd\FUNPACKS.D
+    file[]: crc = 06f8efac; size =   2974087; name = cd\FUNPACKS.E
+    file[]: crc = 7cd31bcc; size =  28486950; name = cd\FUNPACKS.F
+    file[]: crc = 4dbaaf42; size =      4408; name = cd\FUNPACKS.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\FUNPACKS.TXP
+
+    FUNPACK_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SWE 
+StartMaximized=YES
+SaveDir=
+CycleLng=NO
+
+[SWE]                                      
+16ColorMessage=16color.swe
+TxpFile=FunPackS.txp
+DatFile=FunPackS.dat
+FontFile=fontsp
+MaxFont=0
+$(SEMI)      Width,Length, Real ,Letters, First,Foreground,Background,Shadow1,Shadow2,BaseLine
+$(SEMI)                   Length  InRow  Letter
+Font0=30     32     32     21      32      50         139       0        0       0
+FontLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZ!:,.?-+()'0123456789_ÅÄÖ
+SpecialLetters=åÅäÄöÖ
+WormLetters=ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ
+DataFiles=FunPackS.a FunPackS.b FunPackS.c FunPackS.d FunPackS.e FunPackS.f
+LodFile=FunPackS.Lod
+WindowTitle=Timmy fyller år
+UseHiresFonts=Yes
+DiskErrorTitle=Timmy fyller år
+DiskError=Sätt in korrekt CD-ROM i enheten!
+[END]
+]]]
 
 
 end
+
+
+
 
 end
