@@ -28,6 +28,7 @@ config[langselect]:
     option[en]: name = English; LANGCONFIG =eng; priority = 1; condition = file_exists("$$(rootpath)\\WTHINKE.A")
 //    option[he]: name = Hebrew; LANGCONFIG =heb; condition = file_exists("$$(rootpath)\\WTHINKH.A")
     option[es]: name = Spanish; LANGCONFIG =span; condition = file_exists("$$(rootpath)\\WTHINKS.A")
+    option[cz]: name = Czech; LANGCONFIG =cze; condition = file_exists("$$(rootpath)\\WTHINKC.A")
 end
 
 
@@ -50,15 +51,15 @@ game[pc-es-991216]:
     file[]: crc = 841336b8; size =     60082; name = FONDOL.BMP
     file[]: crc = 111644ad; size =    383744; name = WTHINK.EXE
     file[]: crc = 86aaeedf; size =       767; name = WTHINK.ICO
-    file[]: crc = f0145bb1; size =         3; name = CD\DISK1.ID
-    file[]: crc = 6d534325; size =     73803; name = CD\KPPLAY.DLL
-    file[]: crc = a22e9a7e; size =      4525; name = CD\LANG.DAT
-    file[]: crc = 96776220; size =        96; name = CD\SUPERM.NFO
-    file[]: crc = 28a85a32; size =   1666128; name = CD\UTPTHINK.FRT
-    file[]: crc = 420b3439; size =   3616347; name = CD\WCUARTOH.FX
-    file[]: crc = b57b7504; size =        61; name = CD\WTHINK.NFO
-    file[]: crc = fd565dc3; size =   1546830; name = CD\WTNK.FRT
-    file[]: crc = 972b19d9; size =    377729; name = CD\SPANISH\COPIA DE WTHINKS.C
+//    file[]: crc = f0145bb1; size =         3; name = CD\DISK1.ID
+//    file[]: crc = 6d534325; size =     73803; name = CD\KPPLAY.DLL
+//    file[]: crc = a22e9a7e; size =      4525; name = CD\LANG.DAT
+//    file[]: crc = 96776220; size =        96; name = CD\SUPERM.NFO
+//    file[]: crc = 28a85a32; size =   1666128; name = CD\UTPTHINK.FRT
+//    file[]: crc = 420b3439; size =   3616347; name = CD\WCUARTOH.FX
+//    file[]: crc = b57b7504; size =        61; name = CD\WTHINK.NFO
+//    file[]: crc = fd565dc3; size =   1546830; name = CD\WTNK.FRT
+//    file[]: crc = 972b19d9; size =    377729; name = CD\SPANISH\COPIA DE WTHINKS.C
     file[]: crc = 74204113; size =    130644; name = CD\SPANISH\DATA.Z
     file[]: crc = 28356e2e; size =     10890; name = CD\SPANISH\MAZE.DAT
     file[]: crc = 7c973b4e; size =      4848; name = CD\SPANISH\PUZL.DAT
@@ -388,5 +389,88 @@ CDPath=D:\Dutch
 
 end
 
+
+game[pc-cz-990801]:
+    name = Czech/English 1998-08-01
+    anchorfile = WTHINK.BMP
+    launch = $(HDDPATH)\WTHINK.EXE /CFG:$(HDDPATH)\WTHINK.ini /lng:$(LANGCONFIG)
+    rootpath = D:\CZECH
+    LANGSELECT = true
+    HDDPATH = C:\Compedia\Play
+    file[]: crc = 912afb3b; size =    383744; name = WTHINK.EXE
+    file[]: crc = f0145bb1; size =         3; name = CD\DISK1.ID
+    file[]: crc = 87d48c6a; size =      2012; name = CD\WTHINK.BMP
+    file[]: crc = 86aaeedf; size =       767; name = CD\WTHINK.ICO
+    file[]: crc = 36e77f4f; size =       812; name = CD\WTHINKC.TXP
+    file[]: crc = 3a383eef; size =    130619; name = CD\CZECH\DATA.Z
+    file[]: crc = 28356e2e; size =     10890; name = CD\CZECH\MAZE.DAT
+    file[]: crc = 7c973b4e; size =      4848; name = CD\CZECH\PUZL.DAT
+    file[]: crc = a4d2aa4c; size =    149071; name = CD\CZECH\WING.Z
+    file[]: crc = 89866801; size =  22010947; name = CD\CZECH\WTHINKC.A
+    file[]: crc = 6b6caf70; size =      8095; name = CD\CZECH\WTHINKC.LOD
+    file[]: crc = 36e77f4f; size =       812; name = CD\CZECH\WTHINKC.TXP
+    file[]: crc = f6512d2d; size =  22251059; name = CD\CZECH\WTHINKE.A
+    file[]: crc = 58b412d8; size =  38732044; name = CD\CZECH\WTHINKE.B
+    file[]: crc = e244fb77; size =      4192; name = CD\CZECH\WTHINKE.C
+    file[]: crc = f48a4802; size =    335906; name = CD\CZECH\WTHINKE.D
+    file[]: crc = 351847e6; size =      8162; name = CD\CZECH\WTHINKE.LOD
+    file[]: crc = 36e77f4f; size =       812; name = CD\CZECH\WTHINKE.TXP
+
+
+
+
+
+    WTHINK_CONTENTS = [[[$(CRLF)
+[Globals]
+SaveDir=C:\Compedia\Play
+Languages=CZE ENG
+StartLanguage=CZECH
+StartDir=D:\czech\
+
+[ENG]
+TxpFile=WThinkE.txp
+DatFile=WThinkE.dat
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=WThinke.a WThinke.b WThinke.c WThinke.d
+LodFile=WThinke.Lod
+Define=NOPRELOGO,nodemomenu
+OfsFile=WThinkg.ofs
+WindowTitle=Gordi's Enchanted Playroom
+UseHiresFonts=yes
+[END]
+
+[CZE]
+TxpFile=WThinkc.txp
+DatFile=WThinkc.dat
+MskFile=Puzl.dat
+MazeFile=Maze.dat
+FontFile=NewFont
+MaxFont=2
+$(SEMI)              l-width l-height r-width l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=22         23      21       25      32     255   0    0    0        10
+Font1=22         23      21       25      32     255   0    0    0        10
+Font2=22         23      21       25      32     255   0    0    0        170
+DataFiles=WThinkc.a WThinke.b WThinke.c WThinke.d
+LodFile=WThinkc.Lod
+Define=nodemomenu
+OfsFile=WThinkg.ofs
+WindowTitle=Gordiho kouzelné hraèky
+UseHiresFonts=yes
+[END]
+[PATH]
+HDPath=C:\Compedia\Play
+CDPath=D:\czech
+
+]]]
+
+
+end
 
 end

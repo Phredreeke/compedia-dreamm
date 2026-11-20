@@ -334,4 +334,74 @@ CDPath=D:
 end
 
 
+game[pc-cz-980909]:
+    name = Czech 1998-09-09
+    anchorfile = Math.bmp
+    HDDPATH = C:\Compedia\Math
+    launch = "$(HDDPATH)\Math.exe" /CFG:$(HDDPATH)\Math.ini
+    file[]: crc = df880204; size =    389632; name = MATH.EXE
+    file[]: crc = a3ad99fc; size =  13525491; name = MATHC.B
+    file[]: crc = 696eff11; size =     81920; name = LZSCMPRS.DLL
+    file[]: crc = aa1dbfb7; size =        45; name = CD\AUTORUN.INF
+    file[]: crc = f0145bb1; size =         3; name = CD\DISK1.ID
+    file[]: crc = 9fe549be; size =       630; name = CD\MATH.BMP
+    file[]: crc = a9ba5976; size =       766; name = CD\MATH.ICO
+    file[]: crc = 3c999c75; size =  10902125; name = CD\CZECH\DATA.Z
+    file[]: crc = a392469d; size =      3304; name = CD\CZECH\DELETE.INI
+    file[]: crc = 9fbab75d; size =  25802700; name = CD\CZECH\FINALC.AVI
+    file[]: crc = 35344d82; size = 578274876; name = CD\CZECH\MATHC.A
+    file[]: crc = c3944912; size =    120988; name = CD\CZECH\MATHC.DAT
+    file[]: crc = 85452b80; size =      5892; name = CD\CZECH\MAZE.INI
+    file[]: crc = b37d17a0; size =      1694; name = CD\CZECH\SHAPES.INI
+    file[]: crc = ef0f5427; size =      3824; name = CD\CZECH\SOUND.INI
+    file[]: crc = 22b29bbb; size =      4129; name = CD\CZECH\TETRIS.INI
+    file[]: crc = a4d2aa4c; size =    149071; name = CD\CZECH\WING.Z
+
+
+
+
+    CDLABEL = GSPCD0911A
+    INI_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=CHE               
+WinClass=Math1
+SaveDir=C:\Compedia\Math
+StartLanguage=CZECH
+StartDir=D:\czech\
+
+
+[CHE]
+$(SEMI)---------------------------------- Electric Game ------------------------------
+$(SEMI)What kind of article fits to triangle?{'0' or '1' }(The1=0,The2=1)
+TRIANGLE=0
+SQUARE=0
+CIRCLE=0
+RECTANGLE=0
+SEMICIRCLE=0
+$(SEMI)
+$(SEMI)Strvoice=(Put='P', Shape='S', Color='C', Directions='D', target shapE='E', target coloR='R')
+Strvoice=PCSDRE
+$(SEMI)-------------------------------------------------------------------------------
+16ColorMessage=16color.eng
+DatFile=Mathc.dat
+DataFiles=Mathc.a Mathc.b
+WindowTitle=MATH
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=TOONING - A Magical Math Adventure
+FINALAVI=finalc.avi
+$(SEMI)ELECTRIC=2
+[END]
+
+[PATH]
+
+
+HDPath=C:\Compedia\Math
+CDPath=D:\czech
+
+
+]]]
+
+
+end
+
 end
