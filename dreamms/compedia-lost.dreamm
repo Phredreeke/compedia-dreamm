@@ -235,7 +235,7 @@ end
 
 
 
-demo[pc-no-demo-961202]:
+demo[pc-no-961202-demo]:
     name = Norwegian Demo 1996-12-02
     anchorfile = NREADN.A
     HDDPATH=C:\LOSTDEMO
@@ -301,7 +301,7 @@ UseIntDemo=No
 end
 
 
-demo[pc-en-demo-961001]:
+demo[pc-en-961001-demo]:
     name = English Demo 1996-10-01
     anchorfile = NREADENG.A
     HDDPATH=C:\LOSTDEMO
@@ -365,7 +365,7 @@ DiskErrorTitle=In Search of the Lost Words
 end
 
 
-demo[pc-de-demo-961001]:
+demo[pc-de-961001-demo]:
     name = German Demo 1996-10-01
     anchorfile = NREADG.A
     HDDPATH=C:\LOSTDEMO
@@ -425,5 +425,70 @@ HelpsLang=
 
 end
 
+demo[pc-sv-970108-demo]:
+    name = Swediah Demo 1997-01-08
+    anchorfile = LOSTDEMO.EXE
+    HDDPATH=C:\LOSTDEMO
+    launch = "$(HDDPATH)\LOSTDEMO.EXE" /CFG:$(HDDPATH)\lost.ini
+    file[]: crc = e5814350; size =       259; name = 16COLOR.ENG
+    file[]: crc = e03a59e8; size =   7110251; name = COMMON.B
+    file[]: crc = 7932f2c4; size =    615226; name = DATA.C
+    file[]: crc = da7b3d05; size =  11210914; name = HELPSVOC.E
+    file[]: crc = f794279c; size =    388864; name = LOSTDEMO.EXE
+    file[]: crc = 361160b8; size =   3494190; name = MUSIC.D
+    file[]: crc = 4b4720dd; size =   2871485; name = NREADSW.A
+    file[]: crc = c7f1d08c; size =   2682384; name = NREADSW.F
+    file[]: crc = b889e6dd; size =      5781; name = NREADSW.LOD
+    file[]: crc = c4008dad; size =        96; name = NREADSW.OFS
+    file[]: crc = 7448bfca; size =     12654; name = NREADSW.PIC
+    file[]: crc = 3a825422; size =     12654; name = NREADSW.TRS
+    file[]: crc = 764db71e; size =     28404; name = NREADSW.TXP
+
+
+
+
+
+
+    LOST_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages= SWE       
+SaveDir=C:\LOSTDEMO
+StartMaximized=YES
+[END]
+
+[SWE]
+16ColorMessage=16Color.Eng
+TxpFile=nreadSw.txp
+PicFile=nreadSw.pic
+TrsFile=nreadSw.trs
+;              l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+MaxFont=2
+;      l-width l-height r-high l-in-row first-l fgcol bgcol shadow1 shadow2  base
+Font0=    15      18      18      21      32     211   205    189      0      0
+Font1=    15      18      18      21      54     211   205     0       0     108
+Font2=    15      18      18      21      54     211   205     0       0     108
+DataFiles=nreadSw.a common.b data.c music.d helpsvoc.e nreadSw.f
+LodFile=nreadSw.Lod
+Define=BONNIER
+OfsFile=nreadSw.ofs
+WindowTitle=Jakten på de försvunna orden
+SaveName=NYTT 
+SaveFileName=NreadSw.Gam
+UseHiresFonts=
+TransLang=SWE
+HelpsLang=
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Jakten på de försunna order
+UseIntDemo=No
+[END]
+
+
+
+
+]]]
+
+
+
+end
 
 end

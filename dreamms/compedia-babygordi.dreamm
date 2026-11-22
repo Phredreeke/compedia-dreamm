@@ -24,7 +24,7 @@ script[cd-init]:
 end
 
 
-demo[pc-cz-010605]:
+demo[pc-cz-010605-demo]:
     name = Czech Demo 2001-06-05
     anchorfile = BABYGORC.A
     HDDPATH=C:\BABYGOR

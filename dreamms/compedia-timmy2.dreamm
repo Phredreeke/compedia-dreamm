@@ -35,9 +35,6 @@ script[cd-init]:
     code = [[[$(CRLF)
         drive_set_label("D", "$$(CDLABEL)")
         if (!!file_exists("$$(HDDPATH)\\ITAMAR2.INI")) { file_save("$$(HDDPATH)\\ITAMAR2.INI", "$$(ITAMAR2_CONTENTS)") }
-        if (is_windows()) {
-            winregistry_import_raw("$$(REGISTRY)");
-        }
     ]]]
 end
 
@@ -419,7 +416,7 @@ CDPath=D:
 
 end
 
-game[pc-sv-970902]:
+game[pc-sv-970902-demo]:
     name = Swedish Demo 1997-09-02
     anchorfile = DEMO2S.A
     HDDPATH = C:\TIMMY2
@@ -459,6 +456,54 @@ DiskErrorTitle=Timmy och monstret under sängen
 [ACTIVITIES]
 STATUS=
 
+
+]]]
+
+
+
+end
+
+
+game[pc-sv-970108-demo]:
+    name = Swedish Demo 1997-01-08
+    anchorfile = DEMO2S.A
+    HDDPATH = C:\TIMMY2
+    launch = "$(HDDPATH)\DEMO2S.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini cdok
+    file[]: crc = b98f3e3a; size =    417024; name = DEMO2S.EXE
+    file[]: crc = e7aa6510; size =   4930734; name = DEMO2S.A
+    file[]: crc = b56b0902; size =   5622598; name = DEMO2S.B
+    file[]: crc = bbc12398; size =   2205661; name = DEMO2S.C
+    file[]: crc = 5d4b1698; size =  20367736; name = DEMO2S.D
+    file[]: crc = 25ae84f0; size =   1485593; name = DEMO2S.E
+    file[]: crc = 8bbc7dc4; size =      4705; name = DEMO2S.LOD
+    file[]: crc = 7f63e11d; size =         4; name = DEMO2S.TXP
+
+
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=swd   
+StartMaximized = Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[swd]
+16ColorMessage=16color.swd
+TxpFile=demo2s.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+define=nopcx 
+DataFiles=demo2s.a demo2s.b demo2s.c demo2s.d demo2s.e
+LodFile=demo2s.Lod
+WindowTitle=Timmy och monstret under sängen
+UseHiresFonts=YES
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Timmy och monstret under sängen
+[END]
+
+[ACTIVITIES]
+STATUS=
 
 ]]]
 
