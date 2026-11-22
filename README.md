@@ -8,7 +8,7 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Gordi's Magical Movie Adventure | 🇺🇸 🇮🇱 🇳🇱 🇸🇪 (🇳🇴 🇸🇪) 🇪🇸 | English version bugged on x64 |
 | Gordi and the Math Invaders | 🇺🇸 (🇺🇸 🇮🇱) 🇸🇪 🇩🇰 🇨🇿 |  |
 | In Search of the Lost Words | 🇺🇸 🇸🇪 🇲🇽 |  |
-| In Search of the Lost Words (Demo) | 🇺🇸 🇳🇴 🇩🇪 |  |
+| In Search of the Lost Words (Demo) | 🇺🇸 🇸🇪 🇳🇴 🇩🇪 |  |
 | Quantum Castle | 🇺🇸 |  |
 | Sprogland | 🇩🇰 |  |
 | Supermind | 🇺🇸 | intro video skips |
@@ -26,10 +26,11 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | --- | --- |
 | Baby Gordi's First Adventure 🇨🇿 | Timmy's Birthday Party |
 | In Search of the Lost Words 🇺🇸 | Timmy and the Magic Pictures |
+| In Search of the Lost Words 🇸🇪 | Gordi's Magical Movie Adventure |
 | In Search of the Lost Words 🇳🇴 | Timmy and the Magic Pictures |
 | In Search of the Lost Words 🇩🇪 | Timmy the Dream Hunter |
 | Timmy and the Magic Pictures 🇳🇱 | Gordi's Enchanted Playroom <br> Timmy the Dream Hunter |
 | Timmy and the Magic Pictures 🇸🇪 | In Search of the Lost Words <br> Lär känna Timmy |
 | Timmy and the Magic Pictures 🇩🇪 | Timmy the Dream Hunter |
-| Timmy the Dream Hunter 🇸🇪 | Lär känna Timmy |
+| Timmy the Dream Hunter 🇸🇪 | Gordi's Magical Movie Adventure <br> Lär känna Timmy |
 | Timmy's Birthday Party 🇸🇪 | Lär känna Timmy |
