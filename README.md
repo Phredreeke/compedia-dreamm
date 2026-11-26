@@ -12,13 +12,14 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Quantum Castle | 🇺🇸 |  |
 | Sprogland | 🇩🇰 |  |
 | Supermind | 🇺🇸 | intro video skips |
-| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇦🇷) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇳🇴|  |
+| Timmy and the Magic Pictures | 🇺🇸 (🇺🇸 🇮🇱) (🇺🇸 🇦🇷) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) 🇳🇴 |  |
 | Timmy and the Magic Pictures (Demo) | 🇳🇱 🇸🇪 🇩🇪 | |
 | Timmy the Dream Hunter | 🇺🇸 (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇩🇪) 🇳🇱 🇸🇪 |  |
 | Timmy the Dream Hunter (Demo) | 🇸🇪 | |
 | Timmy's Birthday Party | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇨🇿) 🇳🇱 🇦🇺 |  |
 | Timmy's Birthday Party (Demo) | 🇸🇪 | |
-| Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇧🇷) 🇸🇪 🇷🇺 |  |
+| Timmy's Sea Adventure | (🇺🇸 🇮🇱) (🇺🇸 🇪🇸) (🇺🇸 🇫🇷) (🇺🇸 🇨🇿) (🇺🇸 🇧🇷) 🇸🇪 🇷🇺 |  |
+| Timmy's Sea Adventure (Demo) | 🇸🇪 |  |
 
 # Demo sources
 
@@ -34,3 +35,4 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Timmy and the Magic Pictures 🇩🇪 | Timmy the Dream Hunter |
 | Timmy the Dream Hunter 🇸🇪 | Gordi's Magical Movie Adventure <br> Lär känna Timmy |
 | Timmy's Birthday Party 🇸🇪 | Lär känna Timmy |
+| Timmy's Sea Adventure 🇸🇪 | Demo disc |
