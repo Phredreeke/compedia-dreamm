@@ -31,6 +31,7 @@ config[langselect]:
     option[es]: name = Spanish; LANGCONFIG =spn; condition = file_exists("$$(rootpath)\\TIMMY4S.DAT")
     option[fr]: name = French; LANGCONFIG =fre; condition = file_exists("$$(rootpath)\\TIMMY4F.DAT")
     option[br]: name = Portuguese; LANGCONFIG =bra; condition = file_exists("$$(rootpath)\\TIMMY4B.DAT")
+    option[br]: name = Czech; LANGCONFIG =cze; condition = file_exists("$$(rootpath)\\TIMMY4C.DAT")
 end
 
 
@@ -548,6 +549,132 @@ CDPath=D:
 
 end
 
+
+game[pc-cz-010604]:
+    name = Czech 2001-06-01
+    anchorfile = TIMMY4.BMP
+    rootpath = D:\
+    LANGSELECT = true
+    CDLABEL=TIMMY4
+    HDDPATH = C:\COMPEDIA\TIMMY4
+    file[]: crc = 5512c408; size =     12832; name = FILEIO.DLL
+    file[]: crc = 742d0bbf; size =    483328; name = Timmy4.exe
+    file[]: crc = 6770c924; size =      3796; name = cd\GARBAGE.INI
+    file[]: crc = ca136f9d; size =      9660; name = cd\PAPERS.INI
+    file[]: crc = 1fa02295; size =      2102; name = cd\TIMMY4.BMP
+    file[]: crc = 7679f258; size =       766; name = cd\TIMMY4.ICO
+    file[]: crc = f20a403b; size =  70159738; name = cd\TIMMY4C.A
+    file[]: crc = c3cb35ed; size = 255073741; name = cd\TIMMY4C.B
+    file[]: crc = 66826d45; size =    991170; name = cd\TIMMY4C.C
+    file[]: crc = d233850a; size =    135655; name = cd\TIMMY4C.DAT
+    file[]: crc = 9a27b5eb; size =  60956464; name = cd\TIMMY4E.A
+    file[]: crc = 5c0b9e2b; size =    977170; name = cd\TIMMY4E.C
+    file[]: crc = 3de6d8bc; size =    135553; name = cd\TIMMY4E.DAT
+    file[]: crc = 9018f23c; size =    406912; name = cd\cze\Intro0.avi
+    file[]: crc = b9bc1b3f; size =   6472068; name = cd\cze\intro1.AVI
+    file[]: crc = fb9db31c; size =  11338528; name = cd\cze\Intro2a.avi
+    file[]: crc = b61cbaa8; size =  12246416; name = cd\cze\Intro2b.avi
+    file[]: crc = 3868bda7; size =   3929014; name = cd\cze\Intro3.avi
+    file[]: crc = 37e8a428; size =      9260; name = cd\DATA\AUTOLOOP.FLC
+    file[]: crc = e2d2e84a; size =      7234; name = cd\DATA\babygor.FLC
+    file[]: crc = 11fd9153; size =      6574; name = cd\DATA\CHAZARA.FLC
+    file[]: crc = 46d83985; size =     48812; name = cd\DATA\COMP.FLC
+    file[]: crc = c76ae392; size =     62265; name = cd\DATA\COMPED.PCX
+    file[]: crc = 73a7bd76; size =     62265; name = cd\DATA\COMPED2.PCX
+    file[]: crc = 8f9b4a31; size =     11457; name = cd\DATA\DELAY.PCX
+    file[]: crc = b79147a2; size =     11457; name = cd\DATA\DEMVERR.PCX
+    file[]: crc = 59f7fb6c; size =       712; name = cd\DATA\DUMMY.VOC
+    file[]: crc = a0d96997; size =      7188; name = cd\DATA\EXIT.FLC
+    file[]: crc = 92d26097; size =      5036; name = cd\DATA\FUNPACK.FLC
+    file[]: crc = 7ff989ff; size =     12253; name = cd\DATA\ICONS.PCX
+    file[]: crc = 4da70f24; size =      8132; name = cd\DATA\INTERACT.FLC
+    file[]: crc = f9114c18; size =      7936; name = cd\DATA\MATH1.FLC
+    file[]: crc = d037ea28; size =      7958; name = cd\DATA\MATH2.FLC
+    file[]: crc = 32a51f2d; size =   2924525; name = cd\DATA\MUSIC.VOC
+    file[]: crc = 779abdf0; size =      7098; name = cd\DATA\PASSIVE.FLC
+    file[]: crc = 1e19d484; size =      6790; name = cd\DATA\PLAYALL.FLC
+    file[]: crc = 37b67936; size =      7538; name = cd\DATA\PLAYROOM.FLC
+    file[]: crc = 6c7c86bd; size =      6600; name = cd\DATA\PREVIOUS.FLC
+    file[]: crc = 6dbd5fce; size =     25974; name = cd\DATA\REKA.PCX
+    file[]: crc = a4907141; size =      7618; name = cd\DATA\SUPER.FLC
+    file[]: crc = d4effc3a; size =      6198; name = cd\DATA\TIMMY4.FLC
+    file[]: crc = 5b142334; size =     13744; name = cd\DATA\TITLE.FLC
+    file[]: crc = f234e858; size =      8358; name = cd\DATA\TOONING.FLC
+    file[]: crc = 268309a9; size =    617938; name = cd\eng\INTRO0.AVI
+    file[]: crc = 3f6a4e50; size =   7279328; name = cd\eng\INTRO1.AVI
+    file[]: crc = c4b7b7f1; size =  12463430; name = cd\eng\INTRO2A.AVI
+    file[]: crc = c61180e0; size =  12666602; name = cd\eng\INTRO2B.AVI
+    file[]: crc = 221829d1; size =   4792696; name = cd\eng\INTRO3.AVI
+
+
+
+
+
+    TIMMY4_CONTENTS =`h:5B 47 4C 4F 42 41 4C 53 5D 0D 0A 4C 61 6E 67 75 61 67 65 73 3D 43 5A 45 20 45 4E 47 0D 0A 53 74 61 72 74 4D 61 78 69 6D 69 7A 65 3D 59 45 53 0D 0A 66 6F 72 63 65 6D 61 78 69 6D 69 7A 65 64 3D 59 45 53 0D 0A 53 61 76 65 44 69 72 3D 43 3A 5C 43 4F 4D 50 45 44 49 41 5C 54 49 4D 4D 59 34 0D 0A 43 79 63 6C 65 4C 6E 67 3D 4E 4F 0D 0A 43 6E 67 4C 61 6E 67 3D 79 65 73 0D 0A 57 69 6E 43 6C 61 73 73 3D 54 69 6D 6D 79 34 43 6C 61 73 73 0D 0A 50 6C 61 79 49 6E 74 72 6F 3D 59 65 73 0D 0A 4D 75 73 69 63 56 6F 6C 75 6D 65 3D 33 0D 0A 53 6F 75 6E 64 56 6F 6C 75 6D 65 3D 31 30 0D 0A 43 72 65 64 69 74 73 3D 79 65 73 0D 0A 53 74 61 72 74 4C 61 6E 67 75 61 67 65 3D 0D 0A 53 74 61 72 74 44 69 72 3D 44 3A 0D 0A 0D 0A 0D 0A 5B 45 4E 47 5D 0D 0A 31 36 43 6F 6C 6F 72 4D 65 73 73 61 67 65 3D 31 36 63 6F 6C 6F 72 2E 65 6E 67 0D 0A 44 61 74 46 69 6C 65 3D 54 49 4D 4D 59 34 65 2E 64 61 74 0D 0A 44 61 74 61 46 69 6C 65 73 3D 54 69 6D 6D 79 34 45 2E 41 20 54 69 6D 6D 79 34 63 2E 42 20 54 69 6D 6D 79 34 65 2E 63 0D 0A 57 69 6E 64 6F 77 54 69 74 6C 65 3D 54 69 6D 6D 79 27 73 20 53 65 61 20 41 64 76 65 6E 74 75 72 61 20 0D 0A 44 69 73 6B 45 72 72 6F 72 54 69 74 6C 65 3D 54 69 6D 6D 79 27 73 20 53 65 61 20 41 64 76 65 6E 74 75 72 61 20 0D 0A 50 6C 61 79 43 68 61 6E 65 6C 34 3D 6E 6F 0D 0A 50 6C 61 79 43 68 61 6E 65 6C 32 3D 6E 6F 0D 0A 44 69 73 6B 45 72 72 6F 72 3D 50 6C 65 61 73 65 20 70 75 74 20 74 68 65 20 63 6F 72 72 65 63 74 20 43 44 2D 52 4F 4D 20 69 6E 20 64 72 69 76 65 2E 0D 0A 44 69 73 61 62 6C 65 51 75 65 73 74 43 65 6C 6C 3D 79 65 73 0D 0A 50 61 70 65 72 73 46 69 6C 65 3D 70 61 70 65 72 73 2E 69 6E 69 0D 0A 5B 45 4E 44 5D 0D 0A 0D 0A 0D 0A 5B 43 5A 45 5D 0D 0A 31 36 43 6F 6C 6F 72 4D 65 73 73 61 67 65 3D 31 36 63 6F 6C 6F 72 2E 62 72 61 0D 0A 44 61 74 46 69 6C 65 3D 54 49 4D 4D 59 34 63 2E 64 61 74 0D 0A 44 61 74 61 46 69 6C 65 73 3D 54 69 6D 6D 79 34 63 2E 41 20 54 69 6D 6D 79 34 63 2E 42 20 54 69 6D 6D 79 34 63 2E 63 0D 0A 57 69 6E 64 6F 77 54 69 74 6C 65 3D 54 6F 6D ED 6B 6F 76 6F 20 70 6F 64 6D 6F F8 73 6B E9 20 64 6F 62 72 6F 64 72 75 9E 73 74 76 ED 0D 0A 44 69 73 6B 45 72 72 6F 72 54 69 74 6C 65 3D 54 6F 6D ED 6B 6F 76 6F 20 70 6F 64 6D 6F F8 73 6B E9 20 64 6F 62 72 6F 64 72 75 9E 73 74 76 ED 0D 0A 44 69 73 6B 45 72 72 6F 72 3D 50 6C 65 61 73 65 20 70 75 74 20 74 68 65 20 63 6F 72 72 65 63 74 20 43 44 2D 52 4F 4D 20 69 6E 20 64 72 69 76 65 2E 0D 0A 50 6C 61 79 43 68 61 6E 65 6C 34 3D 59 45 53 0D 0A 50 6C 61 79 43 68 61 6E 65 6C 32 3D 79 65 73 0D 0A 44 69 73 61 62 6C 65 51 75 65 73 74 43 65 6C 6C 3D 79 65 73 0D 0A 50 61 70 65 72 73 46 69 6C 65 3D 70 61 70 65 72 73 2E 69 6E 69 0D 0A 5B 45 4E 44 5D 0D 0A 0D 0A 0D 0A 0D 0A 0D 0A 0D 0A 0D 0A 5B 50 41 54 48 5D 0D 0A 48 44 50 61 74 68 3D 43 3A 5C 43 4F 4D 50 45 44 49 41 5C 54 49 4D 4D 59 34 0D 0A 43 44 50 61 74 68 3D 44 3A 0D 0A
+
+
+end
+
+
+
+demo[pc-sv-980218-demo]:
+    name = Swedish Demo 1998-02-18
+    anchorfile = TIMMY4.BMP
+    rootpath = D:\SWEDISH
+    HDDPATH=C:\bonnier\Tim4demo
+    launch = $(HDDPATH)\timmy4.exe EMME /CFG:$(HDDPATH)\Timmy4.ini
+    file[]: crc = 8d53b65e; size =    333312; name = TIMMY4.EXE
+    file[]: crc = f0145bb1; size =         3; name = cd\DISK1.ID
+    file[]: crc = 1fa02295; size =      2102; name = cd\TIMMY4.BMP
+    file[]: crc = 7679f258; size =       766; name = cd\TIMMY4.ICO
+    file[]: crc = 845a2be1; size =    131130; name = cd\SWEDISH\DATA.Z
+    file[]: crc = 6770c924; size =      3796; name = cd\SWEDISH\GARBAGE.INI
+    file[]: crc = 405a2544; size =  30689461; name = cd\SWEDISH\TIMMY4S.A
+    file[]: crc = 055f2a94; size =     27032; name = cd\SWEDISH\TIMMY4S.DAT
+    file[]: crc = 1fbeeed3; size =    128996; name = cd\SWEDISH\WING.Z
+    file[]: crc = 921ab8d9; size =    465492; name = cd\SWEDISH\SWD\INTRO0.AVI
+    file[]: crc = f328370c; size =   9082580; name = cd\SWEDISH\SWD\INTRO1.AVI
+    file[]: crc = 7a8c34a6; size =  12468818; name = cd\SWEDISH\SWD\INTRO2A.AVI
+    file[]: crc = bc2b6606; size =  12671966; name = cd\SWEDISH\SWD\INTRO2B.AVI
+    file[]: crc = 92187541; size =   3675722; name = cd\SWEDISH\SWD\INTRO3.AVI
+
+    TIMMY4_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=SWD
+StartMaximize=YES
+forcemaximized=YES
+SaveDir=C:\bonnier\Tim4demo
+CycleLng=YES
+WinClass=Timmy4Class
+PlayIntro=yes
+MusicVolume=3
+SoundVolume=10
+StartLanguage=SWEDISH
+StartDir=D:\Swedish
+
+
+[SWD]
+16ColorMessage=16color.swd
+DatFile=TIMMY4S.dat
+DataFiles=Timmy4S.A
+WindowTitle=Undervattensmysteriet
+DiskErrorTitle=Undervattensmysteriet
+DiskError=Please put the correct CD-ROM in drive.
+PlayChanel4=NO
+PlayChanel2=YES
+DisableQuestCell=yes
+PapersFile=papers.ini
+Waitmessage=Laddar...
+[END]
+
+[PATH]
+HDPath=C:\bonnier\Tim4demo
+CDPath=D:\Swedish
+
+]]]
+
+
+end
 
 
 
