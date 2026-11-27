@@ -426,7 +426,7 @@ HelpsLang=
 end
 
 demo[pc-sv-970108-demo]:
-    name = Swediah Demo 1997-01-08
+    name = Swedish Demo 1997-01-08
     anchorfile = LOSTDEMO.EXE
     HDDPATH=C:\LOSTDEMO
     launch = "$(HDDPATH)\LOSTDEMO.EXE" /CFG:$(HDDPATH)\lost.ini

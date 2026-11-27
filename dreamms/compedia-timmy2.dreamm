@@ -416,6 +416,7 @@ CDPath=D:
 
 end
 
+// Found on Lär känna Timmy
 game[pc-sv-970902-demo]:
     name = Swedish Demo 1997-09-02
     anchorfile = DEMO2S.A
@@ -463,7 +464,7 @@ STATUS=
 
 end
 
-
+// Found on Filmgurun
 game[pc-sv-970108-demo]:
     name = Swedish Demo 1997-01-08
     anchorfile = DEMO2S.A
@@ -511,6 +512,53 @@ STATUS=
 
 end
 
+// Found on Jakten på de försvunna orden
+game[pc-sv-961030-demo]:
+    name = Swedish Demo 1996-10-30
+    anchorfile = DEMO2S.A
+    HDDPATH = C:\TIMMY2
+    launch = "$(HDDPATH)\DEMO2S.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini cdok
+    file[]: crc = b98f3e3a; size =    417024; name = DEMO2S.EXE
+    file[]: crc = a3f994e3; size =   4906910; name = DEMO2S.A
+    file[]: crc = 617158ee; size =   5646421; name = DEMO2S.B
+    file[]: crc = 312cd6d8; size =   2205661; name = DEMO2S.C
+    file[]: crc = 5d4b1698; size =  20367736; name = DEMO2S.D
+    file[]: crc = 25ae84f0; size =   1485593; name = DEMO2S.E
+    file[]: crc = 1de88697; size =      4707; name = DEMO2S.LOD
+    file[]: crc = 7f63e11d; size =         4; name = DEMO2S.TXP
+
+
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=swd   
+StartMaximized = Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[swd]
+16ColorMessage=16color.swd
+TxpFile=demo2s.txp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+define=nopcx 
+DataFiles=demo2s.a demo2s.b demo2s.c demo2s.d demo2s.e
+LodFile=demo2s.Lod
+WindowTitle=Timmy och monstret under sängen
+UseHiresFonts=YES
+DiskError=Sätt in korrekt CD-ROM i enheten!
+DiskErrorTitle=Timmy och monstret under sängen
+[END]
+
+[ACTIVITIES]
+STATUS=
+
+]]]
+
+
+
+end
 
 game[pc-no-961204-demo]:
     name = Norwegian Demo 1996-12-04
