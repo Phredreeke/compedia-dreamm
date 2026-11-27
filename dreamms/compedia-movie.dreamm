@@ -13,8 +13,6 @@ CDLABEL = $(NULL)
 // filesystem
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true
-// mount[]: vpath = C:\BONNIER\FILMGURU\; srcpath = $(ifsinstallpath)
-// mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
 mount[]: vpath = D:\; srcpath = $(ifsinstallpath)\CD
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)\CD
@@ -27,6 +25,15 @@ script[cd-init]:
 end
 
 //
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = Game crashes in intro
+end
+
+//
 // Language options
 //
 LANGSELECT = false
@@ -35,6 +42,17 @@ config[langselect]:
     title = Language Configuration
     option[no]: name = Norwegian; LANGCONFIG =intronor; priority = 1;
     option[se]: name = Swedish; LANGCONFIG =introswd; 
+end
+
+//
+// Language options
+//
+LANG2SELECT = false
+config[lang2select]:
+    condition = $(LANG2SELECT)
+    title = Intro Configuration
+    option[skip]: name = Skip Intro; LANGCONFIG =eng; priority = 1;
+    option[intro]: name = Run Intro; LANGCONFIG =introeng; 
 end
 
 game[pc-sv-970108]:
@@ -577,5 +595,84 @@ CDPath=D:\hebrew
 
 
 end
+
+
+
+game[pc-en-011218-demo]:
+    name = English Demo 2001-12-18
+    anchorfile = MOVIEE.A
+    rootpath = C:\MOVIE
+    INCOMPATIBLE = true
+    LANG2SELECT = true
+    launch = "$(rootpath)\MOVIE.EXE" /CFG:$(rootpath)\MOVIE.ini /lng:$(LANGCONFIG) cdok
+    file[]: crc = 3e9cd6f8; size =    495104; name = MOVIE.EXE
+    file[]: crc = 0c45cc2d; size =       760; name = cd\Data.dem
+    file[]: crc = fb4628a4; size =   9556503; name = cd\INTROE.A
+    file[]: crc = 8e26f54b; size =   1665024; name = cd\INTROE.B
+    file[]: crc = f6e88d44; size =   1167360; name = cd\INTROE.C
+    file[]: crc = 2aaa4572; size =      2904; name = cd\INTROE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\INTROE.TXP
+    file[]: crc = ca26968a; size =   8788107; name = cd\MOVIEE.A
+    file[]: crc = 5ed614ad; size =  63786977; name = cd\MOVIEE.C
+    file[]: crc = 00cde1e6; size =   1789806; name = cd\MOVIEE.D
+    file[]: crc = bf794eb3; size =    839882; name = cd\MOVIEE.E
+    file[]: crc = 895c6964; size =  11788956; name = cd\MOVIEE.F
+    file[]: crc = 00000000; size =         0; name = cd\MOVIEE.G
+    file[]: crc = d20d6b0c; size =      6493; name = cd\MOVIEE.LOD
+    file[]: crc = 67ed29b9; size =         3; name = cd\MOVIEE.TXP
+    file[]: crc = 165e2772; size =   1891603; name = cd\same.B
+
+
+
+
+    MOVIE_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=INTROENG ENG
+SaveDir=C:\MOVIE
+CycleLng=no
+CardPitch=998
+Forcemaximized=yes
+
+[ENG]
+16ColorMessage=16color.eng
+TxpFile=MovieE.txp
+DatFile=MovieE.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=MovieE.a same.b MovieE.c MovieE.d MovieE.e MovieE.f MovieE.g
+LodFile=MovieE.Lod
+WindowTitle=TOONING - A Magical Movie Adventure
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=TOONING - A Magical Movie Adventure
+[END]
+
+
+[INTROENG]
+16ColorMessage=16color.eng
+TxpFile=introe.txp
+DatFile=IntroE.dat
+FontFile=fonts
+MaxFont=0
+Font0=22   23    21     25     32    255   0  0  0  50
+DataFiles=IntroE.a IntroE.b IntroE.c
+LodFile=IntroE.Lod
+WindowTitle=TOONING - A Magical Movie Adventure
+UseHiresFonts=YES
+DiskError=Please insert the correct CD into the CD-ROM drive.
+DiskErrorTitle=TOONING - A Magical Movie Adventure
+[END]
+
+]]]
+
+
+
+end
+
+
+
+
+
 
 end
