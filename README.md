@@ -35,7 +35,7 @@ This pack requires an experimental build of DREAMM available on the [DREAMM disc
 | Timmy and the Magic Pictures 🇳🇱 | Gordi's Enchanted Playroom <br> Timmy the Dream Hunter |
 | Timmy and the Magic Pictures 🇸🇪 | In Search of the Lost Words <br> Lär känna Timmy |
 | Timmy and the Magic Pictures 🇩🇪 | Timmy the Dream Hunter |
-| Timmy the Dream Hunter 🇸🇪 | Gordi's Magical Movie Adventure <br> Lär känna Timmy |
+| Timmy the Dream Hunter 🇸🇪 | Gordi's Magical Movie Adventure <br> In Search of the Lost Words <br> Lär känna Timmy |
 | Timmy the Dream Hunter 🇳🇴 | Timmy and the Magic Pictures |
 | Timmy's Birthday Party 🇸🇪 | Lär känna Timmy |
 | Timmy's Sea Adventure 🇸🇪 | Demo disc |
