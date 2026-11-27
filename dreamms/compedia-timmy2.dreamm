@@ -511,4 +511,55 @@ STATUS=
 
 end
 
+
+game[pc-no-961204-demo]:
+    name = Norwegian Demo 1996-12-04
+    anchorfile = DEMO2N.A
+    HDDPATH = C:\TIMMY2
+    launch = "$(HDDPATH)\DEMO2N.EXE" /CFG:$(HDDPATH)\ITAMAR2.ini cdok
+    file[]: crc = dd507c41; size =       271; name = 16COLOR.NOR
+    file[]: crc = 3e50d1c9; size =   4531853; name = DEMO2N.A
+    file[]: crc = 6a205439; size =   5622598; name = DEMO2N.B
+    file[]: crc = b52b8297; size =   2205661; name = DEMO2N.C
+    file[]: crc = 5d4b1698; size =  20367736; name = DEMO2N.D
+    file[]: crc = 25ae84f0; size =   1485593; name = DEMO2N.E
+    file[]: crc = d8655e99; size =    415488; name = DEMO2N.EXE
+    file[]: crc = b41f3a12; size =      4702; name = DEMO2N.LOD
+    file[]: crc = 7f63e11d; size =         4; name = DEMO2N.TXP
+
+
+
+
+    ITAMAR2_CONTENTS = [[[$(CRLF)
+[GLOBALS]
+Languages=NOR
+StartMaximized=Yes
+ReadToMePages=5
+ReadAndPlayPages=1
+
+[NOR]
+16ColorMessage=16color.NOR
+TxpFile=demo2n.txp
+FontFile=fontsp
+MaxFont=0
+Font0=12  16 12 26  32 255 205 245   0   1
+DataFiles=demo2n.a demo2n.b demo2n.c demo2n.d demo2n.e
+LodFile=demo2n.lod
+Define=nopcx 
+UpdateLod=
+WindowTitle=TIMMY OG UHYRET UNDER SENGEN
+DiskerrorTitle=Sett inn riktig CD-ROM i stasjonen
+UseHiresFonts=yes
+[END]
+
+
+[ACTIVITIES]
+STATUS=
+
+]]]
+
+
+
+end
+
 end
